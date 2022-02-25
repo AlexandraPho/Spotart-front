@@ -1,0 +1,27 @@
+décrit, 11 Métadonnée_Terme, 0N Terme
+Métadonnée_Terme: id_métadonnée_terme, clé, valeur
+renseigne, 0N Utilisateur, 11 Metadonnée_Utilisateur
+Utilisateur: id_utilisateur, identifiant, mot_de_passe, slug, email, url, date_d_inscription, statut, nom_d_affichage,
+rédige, 0N Utilisateur, 01 Commentaire
+répond, 11 Commentaire, 0N Commentaire
+
+Terme: id_terme, nom, slug, groupé
+organise, 1N Taxinomie_Terme, 11 Terme
+Metadonnée_Utilisateur: id_métadonnée_utilisateur, clé, valeur
+écrit, 0N Utilisateur, 11 Article
+commente, 0N Article, 11 Commentaire
+Commentaire: id_commentaire, auteur, email_auteur, url_auteur, IP_auteur, date, contenu, karma, approuvé, agent_utilisateur, type
+
+:
+Taxinomie_Terme: id_taxinomie_terme, nom_taxinomie, description, nombre_contenus
+classe, 0N Taxinomie_Terme, 0N Article: ordre
+Article: id_article, date_de_publication, contenu, titre, extrait, statut, statut_commentaire, statut_ping, mot_de_passe, slug, liste_url_à_ping, liste_url_pinguées, date_de_modification, contenu_filtre, identifiant_global_unique, ordre_menu, type_de_contenu, type_mime, nombre_de_commentaire
+contient, 0N Article, 11 Article
+informe, 0N Commentaire, 11 Métadonnée_Commentaire
+
+:
+Lien: id_lien, url, nom, image, cible, description, visibilité, propriétaire, note, date_de_mise_a_jour, relation, notes, rss
+Métadonnée_Article: id_métadonnée_article, clé, valeur
+complète, 0N Article, 11 Métadonnée_Article
+Option: id_option, nom, valeur, chargement_automatique
+Métadonnée_Commentaire: id_métadonnée_commentaire, clé, valeur
