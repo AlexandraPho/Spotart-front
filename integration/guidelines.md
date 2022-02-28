@@ -4,7 +4,7 @@
 
 | Color             | Hexadecimal code | Elements affected                        |
 | ----------------- | ---------------- | ---------------------------------------- |
-| Yellow gold       | #000000          | Background for Header and Footer         |
+| Yellow gold       | #ffde59          | Background for Header and Footer         |
 | Black             | #000000          | Background for Header and Footer         |
 | Grey              | #f1f0f0          | Background of pages                      |
 | Faint yellow      | #faf7eb          | Color of first wave on homepage          |
