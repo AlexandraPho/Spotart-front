@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/reboot.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Belleza&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./scss/signup.scss">
+
+    <title>SpotArt</title>
+</head>
+
+<main class="main-container">
+    <h1>Créer un compte</h1>
+    <form>
+        <div class="account_section_creation">
+        <fieldset class="right_section">
+            <div class="field">
+                <label class="field__label">Adresse électronique :</label>
+                <input class="field__input" type="text" placeholder="patate@gmail.com">
+            </div>
+            <div class="field">
+                <label class="field__label">Mot de passe :</label>
+                <input class="field__input" type="password" placeholder="Mot de passe">
+            </div>
+            <div class="field">
+                <label class="field__label">Confirmation du mot de passe :</label>
+                <input class="field__input" type="password" placeholder="Confirmez le mot de passe">
+            </div>
+            <div class="field">
+                <label class="field__label">Prénom :</label>
+                <input class="field__input" type="text" placeholder="John">
+            </div>
+            <div class="field">
+                <label class="field__label">Nom :</label>
+                <input class="field__input" type="text" placeholder="Doe">
+            </div>
+            <div class="field">
+                <label class="field__label">Pseudo :</label>
+                <input class="field__input" type="text" placeholder="johndoe">
+            </div>
+            <div class="field">
+                <label class="field__label">Role :</label>
+                <select name="role">
+                    <option>Artiste</option>
+                    <option>Abonné</option>
+                </select>
+            </div>
+        </fieldset>
+        <fieldset class="left_section">
+            <div class="image">
+                <i class="fa-solid fa-user"></i>
+                <label class="field__label">Ajouter une photo de profil :</label>
+                <input class="field__input" type="file">
+                <input type="hidden" name="MAX_FILE_SIZE" value="4194304" />
+            </div>
+            <div class="field">
+                <textarea placeholder="Présentez vous" class="field__input" rows="10" cols="50"></textarea>
+            </div>
+        </fieldset>
+        </div> 
+            <div class="div_button_submit">      
+                <button type="submit" class="button">Créer le compte
+                </button>
+            </div>
+      </form>
+      </main>
+</html>

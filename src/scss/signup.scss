@@ -1,0 +1,130 @@
+
+.main-container{
+    padding: 0.5rem;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    h1 {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    h1::after{
+        border-top: 0.2rem solid #FFDE59;
+        display: block;
+        position: relative;
+        top: 0.5rem;
+        margin: 0 auto;
+        width: 10%;
+        content: ""; 
+    }
+      .field {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+      .field > * {
+        width: 90%;
+      }
+      .field__label {
+        text-align: left;
+      }
+      .field__input {
+        border: 1px solid rgb(184, 182, 182);
+        border-radius: 0.5rem;
+        background-color: #f0f4ee;
+        margin-bottom: 0.5rem;
+      }
+      .field__input:focus {
+        outline-color: #FFDE59;
+        outline-width: 1px;
+      }
+      .field--error .field__label {
+        color: #FF3333;
+      }
+      .field--error .field__input {
+        border-color: #FF3333;
+        color: #FF3333;
+      }
+      .field--error .field__input::placeholder {
+        color: #FF3333;
+      }
+      .field__error-list {
+        color: #FF3333;
+        list-style: none;
+        text-align: left;
+        padding-left: 0;
+      }
+      .textarea.field__input {
+        width: 100%;
+        height: 8rem;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 0.5rem;
+        background-color: #f0f4ee;
+        margin-bottom: 1rem;
+      }
+      .alert {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+      }
+      .alert.error {
+        background-color: #FF3333;
+        color: white;
+      }
+      .alert.success {
+        background-color: #cad6c4;
+        color: white;
+      }
+
+    .div_button_submit{
+        display:flex;
+        justify-content: center;
+
+        .button {
+            text-align: center;
+            border-radius: 10px;
+            background-color: #FFDE59;
+            margin: 1em;
+            padding: 0.5em;
+            display: inline-block;
+            border: 4px #cccccc;
+            width: 15%;
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #faecb3;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 700px) {
+
+.main-container{
+        padding: 0.5rem;
+        width: 100%;
+}
+
+.field > * {
+        width: 80%;
+      }
+
+.account_section_creation{
+    display: flex;
+    margin: 1.5rem;
+    padding: 0.5rem;
+
+    .right_section{
+        width: 50%;
+        margin-left: 5rem;
+        text-align: center;
+    }
+    .left_section{
+        width: 50%;
+    }
+
+}
+
+}
