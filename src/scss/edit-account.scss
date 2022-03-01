@@ -1,0 +1,359 @@
+/* GENERAL */
+
+*
+{
+    font-family: Belleza;
+}
+
+.title-logo 
+{
+    font-family: Cormorant Garamond;
+    font-size: xxx-large;
+    color: #ffffff;
+    padding: 0px;
+    margin: 0px;
+    text-transform: uppercase;
+}
+
+/* HEADER */
+
+header
+{
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    max-width: 100%;
+
+    .title-logo
+    {
+        padding-left: 40px;
+        flex-grow: 1;
+    }
+    .header-links-list
+    {
+        list-style: none;
+        display: inline-flex;
+        justify-content: center;
+        gap: 20px;
+        flex-grow: 2;
+        color: #ffffff;
+        font-size: xx-large;
+
+        .header-anchor-element
+        {
+            color: #ffffff;
+            font-size: xx-large;
+            text-decoration: none;
+        }
+    }
+
+    div
+    {
+        display: flex;
+        flex-grow: 1;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 40px;
+        gap: 20px;
+
+        .connexion-link
+        {
+            font-size: xx-large;
+            color: #ffde59;
+        }
+        .publish-button
+        {
+            background-color: #ffde59;
+            border-color: #ffde59;
+            font-size: x-large;
+            width: 250px;
+            height: 50px;
+            cursor: pointer;
+        }
+    }
+}
+
+/* MAIN */
+
+.content
+{
+    h2
+    {
+        text-align: center;
+        font-size: xx-large;
+        margin-bottom: 5px;
+    }
+    hr
+    {
+        border: #ffde59 solid 1px;
+        width: 8%;
+    }
+
+    .picture-container
+    {   
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+        height: 100vw;
+        max-width: 100%;
+        max-height: 200px;
+        padding: 20px 0 20px 0;
+
+        .profile-picture
+        {
+            background-image: url(../images/eliotporter.jpg);
+            background-repeat: no-repeat;
+            overflow: hidden;
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            filter: drop-shadow(0px 0px 5px #000000)
+        }
+    }
+    .edition-section
+    {
+        .edition-form
+        {
+            padding: 0 300px 0 300px;
+            height: 300px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 50px;
+
+            fieldset
+            {
+                border: #ffffff 0px;
+            }
+
+            label
+            {
+                font-size: x-large;
+            }
+
+            input
+            {
+                border-radius: 10px;
+                width: 300px;
+                height: 30px;
+                font-size: x-large;
+            }
+
+            .naming-section
+            {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                #firstname
+                {
+                    grid-column: start / end;
+                    grid-row: start / row1;
+                }
+                #lastname
+                {
+                    grid-column: start / end;
+                    grid-row: row1 / row2;
+                }
+                #pseudo
+                {
+                    grid-column: start / end;
+                    grid-row: row2 / end;
+                }
+            }
+
+            .security-section
+            {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                #email
+                {
+                    grid-column: column1 / end;
+                    grid-row: start / row1;
+                }
+                #password
+                {
+                    grid-column: column1 / end;
+                    grid-row: row1 / row2;
+                }
+                #password-verification
+                {
+                    grid-column: column1 / end;
+                    grid-row: row2 / end;
+                }
+            }
+        }
+        .edition-button
+        {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 10px;
+            
+            button
+            {
+                border-radius: 5px;
+                background-color: #ffde59;
+                border-color: #ffde59;
+                font-size: x-large;
+                width: 300px;
+                height: 50px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .my-artworks
+    {
+        padding: 0 300px 0 300px;
+
+        div
+        {
+            display: inline-flex;
+            height: 500px;
+            width: 1870px;
+            justify-content: center;
+            gap: 30px;
+
+            .artwork-item1
+            {
+                box-sizing: border-box;
+                width: 20%;
+                background-image: url(../images/eliot-porter-fractured-obsidian.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .artwork-item2
+            {
+                box-sizing: border-box;
+                width: 20%;
+                background-image: url(../images/eliot-porter-glen-canyon.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .artwork-item3
+            {
+                box-sizing: border-box;
+                width: 20%;
+                background-image: url(../images/eliot-porter-in-wildness.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .artwork-item4
+            {
+                box-sizing: border-box;
+                width: 20%;
+                background-image: url(../images/eliot-porter-river-canyon-junction.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .artwork-item5
+            {
+                box-sizing: border-box;
+                width: 20%;
+                background-image: url(../images/eliot-porter-steam-vent.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            i
+            {
+                color: #ffde59;
+                font-size: xxx-large;
+                cursor: pointer;
+            }
+        }
+
+        .lni-circle-plus
+        {
+            font-size: xxx-large;
+            width: 100%;
+            text-align: center;
+            cursor: pointer;
+        }
+    }
+
+    .my-favourites
+    {
+        text-align: center;
+        font-size: large;
+    }
+}
+/* FOOTER */
+
+footer
+{
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    max-width: 100%;
+
+    .footer-links-list
+    {
+        padding-left: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .footer-link-element
+        {
+            .footer-anchor-element
+            {
+                font-size: xx-large;
+                color: #ffde59;
+            }
+        }
+    }
+
+    .footer-middle-section
+    {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        .icons-list
+        {
+            display: flex;
+            gap: 30px;
+            font-size: xx-large;
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+            
+            i
+            {
+                color: #ffde59;
+            }
+        }
+    }
+
+    .newsletter-form
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        border-color: #000000;
+        border-style: solid;
+        padding-right: 40px;
+    
+        label
+        {
+            color: #ffffff;
+            font-size: x-large;
+            justify-content: center;
+        }
+        input
+        {
+            padding-left: 15px;
+            font-size: x-large;
+            width: 300px;
+            height: 35px;
+            border-radius: 10px;
+        }
+    }
+}
