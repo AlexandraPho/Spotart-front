@@ -1,16 +1,16 @@
 <template>
-  <div>
-      <router-view/>
-  </div>
+    <div>
+        <router-view/>
+    </div>
 </template>
 
 <script>
 
+    export default
+    {
+        name: 'App',
+    }
 
-  export default
-  {
-    name: 'App',
-  }
 </script>
 
 
@@ -23,5 +23,19 @@
         font-family: "Merienda";
         src: local("Merienda"),   url(./fonts/Merienda/Merienda-Regular.ttf) format("truetype");}
     */
+
+
+  /* GENERAL */
+    * {
+        font-family: Belleza;
+    }
+    .title-logo {
+        font-family: Cormorant Garamond;
+        font-size: xxx-large;
+        color: #ffffff;
+        padding: 0px;
+        margin: 0px;
+        text-transform: uppercase;
+    }
 
 </style>
