@@ -1,0 +1,30 @@
+<template>
+    <div class="artist-detail-container">
+        <h1 class="title">{{ title }}</h1>
+         <p class="border-artist"></p>
+        <p class="text" v-html="content"></p>
+ <section class="artist">
+        <img src="https://images.assetsdelivery.com/compings_v2/martinedf/martinedf1701/martinedf170100148.jpg" alt="img-artist">
+   </section>
+  
+    </div>
+</template>
+
+
+
+
+
+<script>
+export default {
+    name: 'ArtistDetailLayout',
+    props: {
+        title: String,
+        content: String,
+        image: String,
+        id: Number
+    }
+}
+</script>
+
+<style  src="../assets/artist-profile.css">
+</style>

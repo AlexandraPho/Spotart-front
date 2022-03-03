@@ -1,0 +1,319 @@
+body {
+
+    border-right: 20px solid rgb(112, 108, 108);
+    border-left: 20px solid rgb(112, 108, 108);
+    border-top: 20px solid rgb(112, 108, 108);
+    border-bottom: 20px solid rgb(112, 108, 108);
+    padding-bottom: 50%;
+}
+
+header {
+
+
+    position: relative;
+    width: 100%;
+}
+
+h1.title {
+    padding-top: 150px;
+    text-align: center;
+    font-family: Cormorant Garamond;
+    /* position: relative; */
+    font-size: 40px;
+    left: 35px;
+}
+
+
+p.border-artist {
+    border-bottom: 4px solid;
+    margin-right: 45%;
+    margin-left: 45%;
+    color: #FFDE59;
+}
+
+
+
+.logo-title {
+    color: antiquewhite;
+    top: 50%;
+
+}
+
+label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input,
+label {
+    margin: .4rem 0;
+}
+
+
+
+
+
+
+
+
+.newsletter {
+    position: relative;
+    top: 15%;
+    color: aliceblue;
+    left: 50px;
+}
+
+
+
+button {
+    height: 30px;
+    width: 150px;
+    margin-top: 15px;
+    color: black;
+    background-color: #FFDE59;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+p.text {
+    
+        font-family: 'Belleza';
+        display: flex;
+        /* margin-left: 50px; */
+        /* position: relative; */
+        left: 1;
+        /* display: contents; */
+        /* text-overflow: clip; */
+        justify-items: baseline;
+        width: 38%;
+        padding-right: 5%;
+        float: right;
+    }
+
+
+p.border {
+    border-bottom: 4px solid;
+    margin-left: 40%;
+    margin-right: 40%;
+    color: #FFDE59;
+}
+
+
+
+
+
+    
+
+
+img.\31{
+width: 250px;
+height: 400px;
+clear: both;
+float: right;
+}
+
+img.\32 {
+    width: 250px;
+    height: 250px;
+    padding-left: 95px;
+    position: relative;
+    right: 21px;
+
+}
+img.\33 {
+    width: 250px;
+    height: 250px;
+}
+
+img.\34 {
+    width: 200px;
+    height: 200px;
+  
+}
+
+
+img.\35 {
+    width: 350px;
+    height: 350px;
+    position: relative;
+    bottom: 150px;
+}
+
+img.\36 {
+
+    width: 250px;
+    height: 350px;
+    position: relative;
+    bottom: 150px;
+}
+
+
+
+
+
+section.artist {
+    display: flex;
+    /* padding: 21px; */
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+section.oeuvre-1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    margin-left: 5%;
+    margin-right: 5%;
+
+
+}
+
+
+section.oeuvre-2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    margin-left: 5%;
+    margin-right: 5%;
+
+
+}
+
+h2 {
+    text-align: center;
+    font-family: Cormorant Garamond;
+    font-size: 50px;
+}
+
+
+@media (max-width: 1220px)  {
+
+
+    body{
+
+        
+        
+            border: none;
+            margin-left:15%;
+            
+        
+
+    }
+  
+
+
+
+ 
+   
+
+
+button {
+
+        display: flex;
+        flex-direction: column;
+
+}
+
+ 
+
+
+
+
+    h1.title {
+        font-size: 30px;
+        color: black;
+
+    }
+
+    p.border-artist {
+
+        color: black;
+    }
+    
+
+    section.artist{
+
+        margin-right: 65%;
+    
+    
+     }
+    
+
+
+
+
+
+}
+
+
+@media (max-width:568px) {
+
+
+ body{
+
+ border: 5px solid #FFDE59;
+
+ }
+ img.\34, img.\35, img.\36 {
+    position: relative;
+    bottom: 60%;
+}
+h1.title {
+    text-align: left;
+}
+
+
+
+}
+section.oeuvre-1{
+   margin-left: -10px;
+}
+section.oeuvre-2 {
+
+    margin-left: -10px;
+
+}
+
+
+
+
+
+
+@media (max-width:1222px) {
+
+    img.\31,
+    img.\32,
+    img.\33,
+    img.\34,
+    img.\35,
+    img.\36 {
+
+        width: 76px;
+        
+    }
+    img.\35,
+    img.\36 {
+        position: relative;
+        right: 5px;
+
+
+
+    }
+
+    img.\32,
+    img.\33 
+   
+
+    {
+        position: relative;
+        right: 100px;
+
+    }
+  
+
+   
+  
+
+}
