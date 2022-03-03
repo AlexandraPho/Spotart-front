@@ -1,11 +1,18 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import SingleArtwork from '../views/SingleArtwork.vue'
 import Home from '../views/Home.vue'
+
 
 const routes = [
 {
     path: '/',
     name: 'Home',
     component: Home
+},
+{
+  path: '/artwork/:id',
+  name: 'SingleArtwork',
+  component: SingleArtwork
 },
 {
     path: '/publishartwork',

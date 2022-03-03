@@ -1,4 +1,12 @@
 <template>
+<<<<<<< HEAD
+  <router-view/>
+</template>
+
+<style>
+
+</style>
+=======
     <div>
         <router-view/>
     </div>
@@ -39,3 +47,4 @@
     }
 
 </style>
+>>>>>>> eff5b9e3867649b2ab895e6bfd129bee2d2f811b
