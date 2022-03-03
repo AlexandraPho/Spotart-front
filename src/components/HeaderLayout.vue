@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>HOLLA, YO SOY UNA HEADER</h1>
+        <h1>HOLA, SOY EL HEADER</h1>
     </div>
 </template>
 
