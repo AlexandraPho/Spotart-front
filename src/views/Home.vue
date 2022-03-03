@@ -45,7 +45,7 @@
                     <div class="background">
                         <div class="arrows-events">
                             <i class="lni lni-arrow-left-circle"></i>
-                            <i class="lni lni-arrow-right-circle"></i>
+                            <i cla="@/assets/css/home.css">ss="lni lni-arrow-right-circle"></i>
                         </div>
                     </div>
                 </div>
