@@ -56,12 +56,7 @@ label {
 
 
 
-.newsletter {
-    position: relative;
-    top: 15%;
-    color: aliceblue;
-    left: 50px;
-}
+
 
 
 
@@ -77,20 +72,6 @@ button {
     border-bottom-right-radius: 10px;
 }
 
-p.text {
-    
-        font-family: 'Belleza';
-        display: flex;
-        /* margin-left: 50px; */
-        /* position: relative; */
-        left: 1;
-        /* display: contents; */
-        /* text-overflow: clip; */
-        justify-items: baseline;
-        width: 38%;
-        padding-right: 5%;
-        float: right;
-    }
 
 
 p.border {
@@ -100,8 +81,28 @@ p.border {
     color: #FFDE59;
 }
 
+p{
 
 
+    margin-right: 20px;
+}
+p.text {
+    font-family: 'Belleza';
+    display: flex;
+    /* margin-left: 50px; */
+    /* position: relative; */
+    left: 1;
+    /* display: contents; */
+    /* text-overflow: clip; */
+    justify-items: baseline;
+    width: 38%;
+    padding-right: 35%;
+    float: inline-end;
+    flex-direction: row-reverse;
+    position: relative;
+    left: 31%;
+    margin: 1;
+}
 
 
     
@@ -141,6 +142,8 @@ img.\35 {
     bottom: 150px;
 }
 
+
+
 img.\36 {
 
     width: 250px;
@@ -150,7 +153,19 @@ img.\36 {
 }
 
 
+.media-details {
+    margin-bottom: 1;
+    width: 40%;
+    height: 57%;
+    
 
+    padding-top: 15;
+    margin: 25px;
+    position: absolute;
+ 
+    top: 98%;
+    right: 448px;
+}
 
 
 section.artist {
