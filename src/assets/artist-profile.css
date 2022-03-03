@@ -5,6 +5,7 @@ body {
     border-top: 20px solid rgb(112, 108, 108);
     border-bottom: 20px solid rgb(112, 108, 108);
     padding-bottom: 50%;
+
 }
 
 header {
@@ -51,17 +52,6 @@ label {
 
 
 
-
-
-
-
-
-.newsletter {
-    position: relative;
-    top: 15%;
-    color: aliceblue;
-    left: 50px;
-}
 
 
 

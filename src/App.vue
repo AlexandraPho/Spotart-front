@@ -1,9 +1,10 @@
 <template>
   <nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/recipe/:id">ArtistProfile</router-link>
-  </nav>
+    <router-link to="/recipe/:id">ArtistProfile</router-link> |
+   <router-link to="/registration">Registration</router-link>
   <router-view/>
+  </nav>
 </template>
 
 <style>
@@ -15,16 +16,14 @@
   color: #2c3e50;
 }
 
-nav {
+#nav {
   padding: 30px;
 }
 
-nav a {
+#nav a {
   font-weight: bold;
   color: #2c3e50;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
-}
+
 </style>
