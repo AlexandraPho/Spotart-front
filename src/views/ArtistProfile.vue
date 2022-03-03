@@ -1,8 +1,6 @@
 <template>
   <div>
-    
-    <ArtistDetailLayout v-if="artist" v-bind:title="artist.title.rendered" v-bind:content="artist.content.rendered"/>
-   
+   <ArtistDetailLayout v-if="artist" v-bind:id="artist.id" v-bind:image="artist._embedded ? artist._embedded['wp:featuredmedia'][0].source_url :'http://spotart.local/app/uploads/2022/02/exo5.png' " v-bind:title="artist.title.rendered" v-bind:content="artist.content.rendered"  />
   </div>
 </template>
 

@@ -6,7 +6,7 @@
  <section class="artist">
         <img src="https://images.assetsdelivery.com/compings_v2/martinedf/martinedf1701/martinedf170100148.jpg" alt="img-artist">
    </section>
-  
+   <div class="media_details" v-bind:style="'background-image:url(' + image + ')'"></div>
     </div>
 </template>
 
