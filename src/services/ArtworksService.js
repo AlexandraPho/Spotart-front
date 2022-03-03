@@ -14,7 +14,6 @@ const apiClient = axios.create({
 
 
 // Every thing we put in the "export default" will be available in the other components and fileswith an import
-
 export default {
 
     // Function permitting to find one specific artwork (with its ID)
@@ -22,6 +21,10 @@ export default {
         return apiClient.get(`/artwork/${id}?_embed`);
     },
     
+    findAll() {
+        return apiClient.get('/artwork?_embed');
+    },
+
     //Function permitting to find all artworks linked to a category
     findByCategory(id) {
         return apiClient.get(`artwork?category=${id}`);

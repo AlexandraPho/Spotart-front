@@ -32,8 +32,8 @@
 
 | En tant que | Je veux                                                    | Afin de (si besoin/nécessaire) |
 | ----------- | ---------------------------------------------------------- | ------------------------------ |
-| visiteur    | voir 5 artistes mis en avant sur la page d'accueil         | -                              |
-| visiteur    | voir 5 oeuvres mis en avant sur la page d'accueil          | -                              |
+| visiteur    | voir 4 artistes mis en avant sur la page d'accueil         | -                              |
+| visiteur    | voir 4 oeuvres mis en avant sur la page d'accueil          | -                              |
 | visiteur    | être informé d'événéments artistiques comme une exposition | -                              |
 
 # EVOLUTIONS
