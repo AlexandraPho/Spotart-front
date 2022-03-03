@@ -1,7 +1,7 @@
 <template>
   <nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/recipe/:id">ArtistProfile</router-link> |
+    <router-link to="/artist/:id">ArtistProfile</router-link> |
    <router-link to="/registration">Registration</router-link>
   <router-view/>
   </nav>
