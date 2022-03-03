@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Belleza&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./scss/publish-your-artwork.scss">
+    <link rel="stylesheet" href="./scss/publish_or_edit_your_artwork.scss">
 
   <title>SpotArt</title>
 </head>
@@ -21,48 +21,49 @@
 
   <form method="POST">
 
-    <section class="artwork">
+    <div class="artwork">
       <label class="artwork_title">Titre de l'oeuvre :</label>
-      <fieldset class="artwork_champ"></fieldset>
+      <input class="artwork_champ"></input>
 
-    </section><br>
+    </div><br>
 
-  <section class="art_form">
+  <div class="art_form">
     <label class="art_form_title">Forme d'art :</label>
       <select class="art_form_category">
         <option valeur="sculpture">Sculpture</option>
         <option valeur="paint">Peinture</option>
         <option valeur="photography">Photographie</option>
       </select>
-  </section><br>
+  </div><br>
 
-  <section class="dimension">
+  <div class="dimension">
     <label class="dimension_title">Dimensions (en cm):</label><br>
 
   <div class="dimension_length">
     <label> Longeur = </label>
-      <fieldset></fieldset>
+      <input></input>
+
     <label> Largeur = </label>
-      <fieldset></fieldset>
+      <input></input>
     <label> Hauteur = </label>
-      <fieldset></fieldset><br>
+      <input></input><br>
   </div>
    
-  </section>
+  </div>
 
-  <section class="artwork_pic">
+  <div class="artwork_pic">
     <label class="artwork_pic_title">Ajouter une photo</label><br>
     <input type="file" class="artwork_pic_file" name="file"accept=".jpg, .jpeg, .png"><br>
-  </section>
+  </div>
   
-  <section class="description_artwok">
+  <div class="description_artwok">
     <label class="description_artwork_title"> Description de l'oeuvre</label>
-    <fieldset class="description_artwok_cadre"></fieldset><br>
-  </section> 
+    <input class="description_artwok_cadre"></input><br>
+  </div> 
 
   <div >
     <p>
-      <a class="bouton" href="#"> Publier </a>
+      <a class="save" href="#"> Publier </a>
     </p>
   </div>
   </form>

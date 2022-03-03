@@ -4,7 +4,7 @@
 
 | URL                               | HTTP Method | Title                   | Content                                 | Comment                                                           |
 | --------------------------------- | ----------- | ----------------------- | --------------------------------------- | ----------------------------------------------------------------- |
-| `/`                               | `GET`       | Accueil                 | Get 5 artists and artworks              | -                                                                 |
+| `/`                               | `GET`       | Accueil                 | Get 4 artists and artworks              | -                                                                 |
 | `/artwork/sculptureList`          | `GET`       | Liste des sculptures    | Get all sculptures                      | -                                                                 |
 | `/artwork/paintingList`           | `GET`       | Liste des peintures     | Get all paintings                       | -                                                                 |
 | `/artwork/drawingList`            | `GET`       | Liste des dessins       | Get all drawings                        | -                                                                 |
@@ -29,7 +29,7 @@
 
 | URL                               | HTTP Method | Title                   | Content                                                      | Comment                                                         |
 | --------------------------------- | ----------- | ----------------------- | ------------------------------------------------------------ | --------------------------------------------------------------- |
-| `/`                               | `GET`       | Accueil                 | Access to 5 artists and artworks                             | -                                                               |
+| `/`                               | `GET`       | Accueil                 | Access to 4 artists and artworks                             | -                                                               |
 | `/artwork/sculptureList`          | `GET`       | Liste des sculptures    | List of sculptures                                           | -                                                               |
 | `/artwork/paintingList`           | `GET`       | Liste des peintures     | List of paintings                                            | -                                                               |
 | `/artwork/drawingList`            | `GET`       | Liste des dessins       | List of drawings                                             | -                                                               |
