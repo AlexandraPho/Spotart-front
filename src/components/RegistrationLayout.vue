@@ -115,8 +115,8 @@ export default {
     return {
       errors: [],
       email: null,
-      firstname: null,
-      lastname: null,
+      username: null,
+      
       password: null,
       password_check: null,
       pseudo: null,
@@ -129,12 +129,8 @@ export default {
       if (!this.email) {
         this.errors.push("Email must not be empty");
       }
-      if (!this.firstname) {
+      if (!this.username) {
         this.errors.push("firstname must not be empty");
-      }
-
-      if (!this.lastname) {
-        this.errors.push("lastname must not be empty");
       }
       if (!this.pseudo) {
         this.errors.push("pseudo must not be empty");
@@ -151,8 +147,8 @@ export default {
       }
       UsersService.register(
         {
-          firstname: this.firstname,
-          lastname: this.lastname,
+          firstname: this.username,
+        
           email: this.email,
           pseudo: this.pseudo,
           password: this.password,
