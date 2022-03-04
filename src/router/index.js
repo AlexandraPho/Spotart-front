@@ -10,12 +10,7 @@ const routes = [{
     component: HomeView
   },
 
-  {
-    path: '/artist/:id',
-    name: 'Artist',
-    
-    component: () => import( /*   webpackChunkName: "connection" */ '../views/ArtistProfile.vue')
-  },
+
   {
     path: '/registration',
     name: 'Registration',
