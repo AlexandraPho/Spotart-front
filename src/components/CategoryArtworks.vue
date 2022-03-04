@@ -1,18 +1,21 @@
 <template>
     <div class="artist-artwork">
         <div class="photos-titles">
-            <img v-bind:src="image" v-bind:alt="title" @click='goToSingleArtwork()'>
+            <img v-bind:src="image" v-bind:alt="title" @click='goToSingleArtwork()' >
             <p class="artwork-title">{{title}}</p>
-        </div>  
+            <p class="artwork-author">{{author}}</p>
+        </div>
     </div> 
 </template>
 
 <script>
     export default {
-        name: 'CategoryPortraitArtist',
+        name: 'CategoryArtworks',
         props: {
-        title: String,
-        image: String
+            title: String,
+            image: String,
+            author: String,
+            id: Number
         },
         data() {
             return {
@@ -29,7 +32,7 @@
 </script>
 
 <style scoped>
-    /*ARTISTS and ARTWORKS section*/
+    /*ARTWORKS section*/
     .artist-artwork {
         display: inline-flex;
         justify-content: space-around;
@@ -37,6 +40,10 @@
     }
     .artist-artwork .photos-titles{
        margin: 1em;
+    }
+    .artist-artwork .artwork-author {
+        font-style: italic;
+        margin-left: 8em;
     }
     .artist-artwork img {
         /*margin: 0.2em;*/

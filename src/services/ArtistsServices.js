@@ -13,4 +13,8 @@ export default {
     findAll() {
         return apiClient.get('/artist?_embed');
     },
+
+    find(id) {
+        return apiClient.get(`/artist/${id}?_embed`);
+    },
 }

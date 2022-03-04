@@ -1,6 +1,6 @@
 <template>
-    <section class="category-title" v-for='category in categories' :key="category.name">
-        <h2>{{category.name}}</h2>
+    <section class="category-title">
+        <h2>{{name}}</h2>
     </section>
     <div class="filters">
         <p><a href="#">Filtrer par</a></p>
@@ -26,9 +26,10 @@
 <style scoped>
     /* Section CATEGORY TITLE and FILTER*/
     .category-title {
-    /*background-image: url("photographer.49ba4ed7.jpg");*/
-        background-color: grey;
+        background-image: url("../assets/images/smoke.jpg");
+        /*background-color: grey;*/
         background-size: cover;
+        height: 20em;
     }
     .category-title h2 {
         text-align: center;
