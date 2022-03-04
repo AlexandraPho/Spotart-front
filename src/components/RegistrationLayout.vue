@@ -54,18 +54,6 @@
         <i class="fa fa-portrait"></i>
       </div>
 
-      <div class="nom">
-        <label for="nom">nom</label>
-        <input
-          v-model="lastname"
-          id="nom"
-          type="nom"
-          name="nom"
-          placeholder="Votre nom"
-        />
-        <i class="fa fa-portrait"></i>
-      </div>
-
       <label for="pseudo">Pseudo</label>
       <div class="pseudo">
         <input
