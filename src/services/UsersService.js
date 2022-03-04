@@ -21,13 +21,13 @@ export default {
             )
             .then(
                 (response) => {
-                    console.log(response);
-                    store.commit('setToken', response.data.data.token);
-                    store.commit('setUserID', response.data.data.id);
+                   console.log(response);
+                    /*store.commit('setToken', response.data.data.token);*/
+                    /*store.commit('setUserID', response.data.data.id);
                     this.getRole();
-                    //store.commit('setUserRole', response.data.data.id);
+                    store.commit('setUserRole', response.data.data.id);*/
     
-                    // On execute la callback avec un objet contenant le succes
+                    /* On execute la callback avec un objet contenant le succes*/
                     callback({
                         "type": "success",
                         "message": response.data.message
@@ -40,9 +40,9 @@ export default {
 
     getRole() {
         apiClient.get(`wp/v2/users/${store.state.userID}?context=edit`, {
-                headers: {
+               /* headers: {
                     'Authorization': 'Bearer ' + store.state.token
-                }
+                }*/
             })
             .then(
                 (response) => {

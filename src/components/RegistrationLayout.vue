@@ -68,9 +68,9 @@
 
       <div class="role">
         <select v-model="role">
-          <option value="">--Quel est votre status--</option>
-          <option value="abonné">Abonnés</option>
-          <option value="artiste">Artiste</option>
+          <label class="chose">--choisissez votre rôle-</label>
+          <option value="abonné/abonnée">Abonné/Abonnée</option>
+          <option value="artist">Artist</option>
         </select>
       </div>
     </form>
@@ -111,6 +111,8 @@ export default {
       password: null,
       password_check: null,
       pseudo: null,
+
+     
     };
   },
   methods: {
