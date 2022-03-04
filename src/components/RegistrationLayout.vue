@@ -43,9 +43,9 @@
       </div>
 
       <div class="prénom">
-        <label for="prenom">Prénom</label>
+        <label for="username">Username</label>
         <input
-          v-model="firstname"
+          v-model="username"
           id="prénom"
           type="prénom"
           name="prénom"
@@ -57,6 +57,7 @@
       <label for="pseudo">Pseudo</label>
       <div class="pseudo">
         <input
+          v-model="pseudo"
           id="pseudo"
           type="pseudo"
           name="pseudo"
@@ -65,11 +66,13 @@
         <i class="fa fa-smile"></i>
       </div>
 
-      <select v-model="role">
-        <option value="">--Quel est votre status--</option>
-        <option value="dog">Abonnés</option>
-        <option value="dog">Artiste</option>
-      </select>
+      <div class="role">
+        <select v-model="role">
+          <option value="">--Quel est votre status--</option>
+          <option value="abonné">Abonnés</option>
+          <option value="artiste">Artiste</option>
+        </select>
+      </div>
     </form>
   </div>
 
@@ -104,11 +107,10 @@ export default {
       errors: [],
       email: null,
       username: null,
-      
+      role: null,
       password: null,
       password_check: null,
       pseudo: null,
-      role: null,
     };
   },
   methods: {
@@ -118,13 +120,13 @@ export default {
         this.errors.push("Email must not be empty");
       }
       if (!this.username) {
-        this.errors.push("firstname must not be empty");
+        this.errors.push("username must not be empty");
       }
       if (!this.pseudo) {
         this.errors.push("pseudo must not be empty");
       }
       if (!this.role) {
-        this.errors.push("Role must not be empty");
+        this.errors.push("role must not be empty");
       }
       if (!this.password || !this.password_check) {
         this.errors.push("Password and Password_check must be filled");
@@ -135,8 +137,8 @@ export default {
       }
       UsersService.register(
         {
-          firstname: this.username,
-        
+          username: this.username,
+
           email: this.email,
           pseudo: this.pseudo,
           password: this.password,
