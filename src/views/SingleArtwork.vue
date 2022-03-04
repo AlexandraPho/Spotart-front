@@ -12,7 +12,7 @@ import FooterLayout from '@/components/FooterLayout.vue'
 import InformationsLayout from '@/components/InformationsLayout.vue'
 
 // we import the service so we can have the datas from the WP API
-import ArtworksService from '@/service/ArtworksService.js';
+import ArtworksService from '@/services/ArtworksService.js';
 
 export default {
     name: 'SingleArtwork',
