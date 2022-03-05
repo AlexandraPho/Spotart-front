@@ -69,32 +69,37 @@
       <div class="role">
         <select v-model="role">
           <label class="chose">--choisissez votre rôle-</label>
-          <option value="abonné/abonnée">Abonné/Abonnée</option>
+          <option value="abonné/abonnée">Abonné / Abonnée</option>
           <option value="artist">Artist</option>
         </select>
       </div>
     </form>
   </div>
 
-  <div class="second-container">
-    <h2>Ajouter une photo</h2>
-
-    <a href="">
-      <img src="https://picsum.photos/200/300 " alt="img" />
-    </a>
-
-    <label for="story"></label>
-
-    <textarea id="story" name="story" rows="5" cols="33">
-Décrivez-vous...
-Bonjour moi c'est John deboul , intermitant du spectacle , fan des red hot chili peppers , je fais des dessins quand je suis fonsdé 
-</textarea
-    >
-
-    <button v-on:click="sendForm" class="Créer un Compte" type="button">
-      Créer un compte
-    </button>
+  <div id="app">
+    <div v-if="!illustration">
+      <h2>Select an image</h2>
+      <input type="file" @change="onFileChange" />
+    </div>
+    <div v-else>
+      <img :src="illustration" />
+      <button @click="removeIllustration">Remove image</button>
+    </div>
   </div>
+
+  <fieldset>
+    <div class="field">
+      <textarea
+        v-model="content"
+        class="field_input"
+        placeholder="Description"
+      ></textarea>
+    </div>
+  </fieldset>
+
+  <button v-on:click="sendForm" class="Créer un Compte" type="button">
+    Créer un compte
+  </button>
 </template>
 
 
@@ -111,8 +116,8 @@ export default {
       password: null,
       password_check: null,
       pseudo: null,
-
-     
+      //illustration: null,
+      content: null,
     };
   },
   methods: {
@@ -130,6 +135,13 @@ export default {
       if (!this.role) {
         this.errors.push("role must not be empty");
       }
+      // if (!this.illustration) {
+      // this.errors.push("Illustration must not be empty");
+      // }
+      if (!this.content) {
+        this.errors.push("content must not be empty");
+      }
+
       if (!this.password || !this.password_check) {
         this.errors.push("Password and Password_check must be filled");
       } else {
@@ -145,12 +157,34 @@ export default {
           pseudo: this.pseudo,
           password: this.password,
           role: this.role,
+          //illustration: this.illustration,
+          
         },
         (error) => {
           this.errors.push(error);
+        },
+
+      
+      );
+
+      UsersService.create(
+        {
+         
+          content: this.content,
+         
+        },
+        () => {
+          // Affichage erreurs / succés
+          // Redirection vers la liste des recettes
+          this.$router.push("/");
         }
       );
-      // @TODO Executer une requete Asynchrone pour inscrire un nouvel utilisateur
+      
+
+
+
+
+
     },
   },
 };

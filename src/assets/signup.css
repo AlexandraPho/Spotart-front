@@ -8,7 +8,23 @@ body {
     
   
 }
+#app {
+  text-align: center;
+
   
+}
+img {
+  width: 30%;
+  margin: auto;
+  display: block;
+  margin-bottom: 10px;
+  background-color: #FFDE59;
+}
+
+
+
+
+
   input[type=text],
   textarea,
   input[type=email] {
