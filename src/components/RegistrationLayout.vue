@@ -67,9 +67,8 @@
       </div>
 
       <div class="role">
-          <label class="chose">Choisissez votre profile</label>
+        <label class="chose">Choisissez votre profile</label>
         <select v-model="role">
-        
           <option value="abonné/abonnée">Abonné / Abonnée</option>
           <option value="artist">Artist</option>
         </select>
@@ -77,22 +76,18 @@
     </form>
   </div>
 
-
-<div class="container2">
-  <div id="app">
-    <div v-if="!illustration">
-      <h2>Choisir une photo</h2>
-      <input type="file" @change="onFileChange" />
+  <div class="container2">
+    <div id="app">
+      <div v-if="!illustration">
+        <h2>Choisir une photo</h2>
+        <input type="file" @change="onFileChange" />
+      </div>
+      <div v-else>
+        <img :src="illustration" />
+        <button @click="removeIllustration">Remove image</button>
+      </div>
     </div>
-    <div v-else>
 
-      <img :src="illustration" />
-      <button @click="removeIllustration">Remove image</button>
-    </div>
-
-  </div>
-
- 
     <div class="field">
       <textarea
         v-model="content"
@@ -100,11 +95,10 @@
         placeholder="Description"
       ></textarea>
     </div>
-  
 
-  <button v-on:click="sendForm" class="Créer un Compte" type="button">
-    Créer un compte
-  </button>
+    <button v-on:click="sendForm" class="Créer un Compte" type="button">
+      Créer un compte
+    </button>
   </div>
 </template>
 
@@ -164,20 +158,15 @@ export default {
           password: this.password,
           role: this.role,
           //illustration: this.illustration,
-          
         },
         (error) => {
           this.errors.push(error);
-        },
-
-      
+        }
       );
 
       UsersService.create(
         {
-         
           content: this.content,
-         
         },
         () => {
           // Affichage erreurs / succés
@@ -185,19 +174,12 @@ export default {
           this.$router.push("/");
         }
       );
-      
-
-
-
-
-
     },
   },
 };
 </script>
 
-<style  src="../assets/signup.css"> 
-       
+<style  src="../assets/signup.css">
 </style>
 
  

@@ -21,13 +21,11 @@ img {
   background-color: #FFDE59;
 }
 button.Créer.un.Compte {
-  /* height: 30px; */
-  /* width: 150px; */
-  /* margin-top: 250px; */
+
   color: black;
   background-color: #FFDE59;
   position: relative;
-  right: 288px;
+  right: 290px;
   top: 200px;
  
 }
@@ -224,7 +222,7 @@ h1 {
     width: 50%;
     position: relative;
     left: 45%;
-    bottom: 350px;
+    bottom: 385px;
 }
 
 .field {
