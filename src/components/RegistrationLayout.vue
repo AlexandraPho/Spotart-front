@@ -67,8 +67,9 @@
       </div>
 
       <div class="role">
+          <label class="chose">Choisissez votre profile</label>
         <select v-model="role">
-          <label class="chose">--choisissez votre rôle-</label>
+        
           <option value="abonné/abonnée">Abonné / Abonnée</option>
           <option value="artist">Artist</option>
         </select>
@@ -76,18 +77,22 @@
     </form>
   </div>
 
+
+<div class="container2">
   <div id="app">
     <div v-if="!illustration">
-      <h2>Select an image</h2>
+      <h2>Choisir une photo</h2>
       <input type="file" @change="onFileChange" />
     </div>
     <div v-else>
+
       <img :src="illustration" />
       <button @click="removeIllustration">Remove image</button>
     </div>
+
   </div>
 
-  <fieldset>
+ 
     <div class="field">
       <textarea
         v-model="content"
@@ -95,11 +100,12 @@
         placeholder="Description"
       ></textarea>
     </div>
-  </fieldset>
+  
 
   <button v-on:click="sendForm" class="Créer un Compte" type="button">
     Créer un compte
   </button>
+  </div>
 </template>
 
 
@@ -190,7 +196,9 @@ export default {
 };
 </script>
 
-<style  src="../assets/signup.css">
+<style  src="../assets/signup.css"> 
+       
 </style>
 
+ 
  

@@ -61,23 +61,28 @@ button.Créer.un.Compte {
   right: 20px;
 }
 
-a.nav-con {
-  padding-top: 20px;
-  color: #ffde59;
-  margin-left: 100px;
+
+a.nav-con[data-v-10d79cc7] {
+    padding-top: 17px;
+    color: #ffde59;
+    margin-left: -64px;
 }
 
-button {
-  height: 30px;
-  width: 150px;
-  margin-top: 15px;
-  color: black;
-  background-color: #ffde59;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+button[data-v-10d79cc7] {
+    height: 30px;
+    width: 149px;
+    margin-top: -13px;
+    color: black;
+    background-color: #ffde59;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: relative;
+    right: 60px;
 }
+
+
 
 @media (max-width: 1468px) {
   h1.nav-title {

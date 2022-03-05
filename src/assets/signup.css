@@ -20,7 +20,17 @@ img {
   margin-bottom: 10px;
   background-color: #FFDE59;
 }
-
+button.Créer.un.Compte {
+  /* height: 30px; */
+  /* width: 150px; */
+  /* margin-top: 250px; */
+  color: black;
+  background-color: #FFDE59;
+  position: relative;
+  right: 288px;
+  top: 200px;
+ 
+}
 
 
 
@@ -77,17 +87,7 @@ img {
 }
   
   
-  
-button.Créer.un.Compte {
-    /* height: 30px; */
-    /* width: 150px; */
-    /* margin-top: 250px; */
-    color: black;
-    background-color: #FFDE59;
-    position: relative;
-    right: 400px;
-}
-  
+
   
   
   label,
@@ -113,11 +113,18 @@ button.Créer.un.Compte {
     border-bottom-right-radius: 60%;
 }
   
-  
+input[type="file"] {
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  width: 105px;
+  height: 107px;
+  background-color: #FFDE59;
+}
  
   
 
-  
   
 textarea#story {
     position: relative;
@@ -143,13 +150,12 @@ button {
 }
 
 h1 {
-    font-family: Cormorant Garamond;
-    text-align: center;
-    position: relative;
-    bottom: -39px;
-    right: 26px;
+  font-family: Cormorant Garamond;
+  text-align: center;
+  position: relative;
+  bottom: -36px;
+  left: 26px;
 }
-  
   h2 {
     text-align: center;
     font-family: Cormorant Garamond;
@@ -157,17 +163,17 @@ h1 {
 }
   
 .border-title {
-    border-bottom: 4px solid;
-    margin-right: 47%;
-    margin-left: 44%;
-    color: #FFDE59;
-    padding-bottom: 20px;
+  border-bottom: 4px solid;
+  margin-right: 44%;
+  margin-left: 47%;
+  color: #FFDE59;
+  padding-bottom: 20px;
 }
   form {
     position: relative;
     bottom: -24px;
     width: 75%;
-    right: -8%;
+    right: -15%;
 }
  
   
@@ -214,9 +220,18 @@ h1 {
   
  
   
-  
+  .container2 {
+    width: 50%;
+    position: relative;
+    left: 45%;
+    bottom: 350px;
+}
 
- 
+.field {
+  width: 50%;
+  position: relative;
+  left: 26%;
+}
   
  
   
@@ -375,13 +390,7 @@ h1 {
   
   @media (max-width:668px) {
   
-  
-    body{
-   
-    border: 5px solid #FFDE59;
-   
-    }
-   
+
 
   label {
     font-size: small;
@@ -399,10 +408,9 @@ h1 {
   }
   
   
-   
+ 
   
-  
-  
+
   
   
   
