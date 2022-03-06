@@ -83,7 +83,7 @@
         <input type="file" @change="onFileChange" />
       </div>
       <div v-else>
-        <img :src="illustration" />
+       <img :src="illustration" >
         <button @click="removeIllustration">Remove image</button>
       </div>
     </div>
