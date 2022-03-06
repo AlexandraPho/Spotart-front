@@ -57,8 +57,16 @@ text-decoration: blink;
     font-weight: 900;
 }
 button.Créer.un.Compte {
-  position: relative;
-  right: 20px;
+    color: black;
+    background-color: #FFDE59;
+    position: relative;
+    right: 37%;
+    height: 20px;
+    top: 191px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+     border-bottom-right-radius: 20px;
+      border-top-right-radius: 20px;
 }
 
 
@@ -68,19 +76,8 @@ a.nav-con[data-v-10d79cc7] {
     margin-left: -64px;
 }
 
-button[data-v-10d79cc7] {
-    height: 30px;
-    width: 149px;
-    margin-top: -13px;
-    color: black;
-    background-color: #ffde59;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    position: relative;
-    right: 60px;
-}
+
+
 
 
 
@@ -98,10 +95,18 @@ button[data-v-10d79cc7] {
     flex-direction: column;
   }
 
-  a.nav-con {
-    display: flex;
-    flex-direction: column;
-  }
+h1 {
+    font-family: Cormorant Garamond;
+    text-align: center;
+    position: relative;
+    bottom: -36px;
+    left: 6px;
+} 
+a.nav-con[data-v-10d79cc7][data-v-10d79cc7] {
+  padding-top: 17px;
+  color: #ffde59;
+  margin-left: 0px;
+}
 
   header {
     background-color: #000000;

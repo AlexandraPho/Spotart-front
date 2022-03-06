@@ -19,16 +19,6 @@ img {
   margin-bottom: 10px;
   background-color: #FFDE59;
 }
-button.Créer.un.Compte {
-
-  color: black;
-  background-color: #FFDE59;
-  position: relative;
-  right: 290px;
-  top: 200px;
- 
-}
-
 
 
 
@@ -131,20 +121,6 @@ textarea#story {
   
   
 
-button {
-    height: 30px;
-    width: 150px;
-    /* margin-top: 15px; */
-    color: black;
-    background-color: #FFDE59;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    position: relative;
-    top: 25px;
-    right: 67%;
-}
 
 h1 {
   font-family: Cormorant Garamond;
@@ -280,48 +256,70 @@ h1 {
     transform: rotate(20deg)
   }
   
- 
+  button.Créer.un.Compte {
+    color: black;
+    background-color: #FFDE59;
+    position: relative;
+    right: 286px;
+    height: 23px;
+    top: 150px;
+}
+button {
+  height: 25px;
+  width: 144px;
+  margin-top: 27px;
+  color: black;
+  background-color: #ffde59;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: relative;
+  right: 0px;
+  top: -17px;
+}
   
-  @media (max-width: 1318px ){
-  
-  
-    .second-container {
-  
-      width: 25%;
-     
-     
-    }
-    h2 {
-      margin-left: -35px;
+  @media (max-width: 1470px ){
+
+    .container {
+      width: 50%;
+      display: inline-grid;
   }
-    
-      img {
-        margin-left: -140px;
-    
-  
-  
-    }
-  
+  .container2 {
+    width: 50%;
+    position: relative;
+    /* left: 48%; */
+    top: 25px;
+    left: 26%;
+}
+
+h1 {
+  font-family: Cormorant Garamond;
+  text-align: center;
+  position: relative;
+  bottom: -36px;
+  left: 10px;
+}
+
+
+
+
+button.Créer.un.Compte {
+    color: black;
+    background-color: #FFDE59;
+    position: relative;
+    height: 20px;
+    top: -35px;
+    right: -3px;
+}
   }
+  
   
     @media (max-width: 706px){
   
-      .second-container {
-        width: 100%;
-       
-      }
-  
-  img{
-    
-    margin-left: 15px;
+   
   
   
-  }
-  
-  button.Créer.un.Compte {
-    position: relative;
-    right: 20px;
-  }
   
   
   
@@ -330,52 +328,16 @@ h1 {
     @media (max-width: 1220px)  {
   
   
-      body{
-  
-          
-          
-              border: none;
-              margin-left:15%;
-              
-          
-  
-      }
-    
-  
-     
-  
-  
-  button {
-  
-          display: flex;
-          flex-direction: column;
-  
-  }
-  
  
   
   
       
       
       
-    .container {
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      left: 0%;
-     }
-     
+   
       
   
-    
-     .second-container {
-  
-      display: flex;
-      flex-direction: column;
-     
-      position: relative;
-      left: 0%;
-    }
+ 
   
   
   
@@ -384,25 +346,6 @@ h1 {
   
   
   
-  
-  @media (max-width:668px) {
-  
-
-
-  label {
-    font-size: small;
-    position: relative;
-    top: 5px;
-    
-  }
-  img {
-    margin-left: -60px;
-  }
-  
-  
-  
-  
-  }
   
   
  
