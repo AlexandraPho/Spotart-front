@@ -1,0 +1,271 @@
+/* GENERAL */
+* {
+  font-family: Belleza;
+}
+.title-logo {
+  font-family: Cormorant Garamond;
+  font-size: xxx-large;
+  color: #ffffff;
+  padding: 0px;
+  margin: 0px;
+  text-transform: uppercase;
+}
+/* HEADER */
+header {
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  max-width: 100%;
+}
+header .title-logo {
+  padding-left: 40px;
+  flex-grow: 1;
+}
+header .header-links-list {
+  list-style: none;
+  display: inline-flex;
+  justify-content: center;
+  gap: 20px;
+  flex-grow: 2;
+  color: #ffffff;
+  font-size: xx-large;
+}
+header .header-links-list .header-anchor-element {
+  color: #ffffff;
+  font-size: xx-large;
+  text-decoration: none;
+}
+header div {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 40px;
+  gap: 20px;
+}
+header div .connexion-link {
+  font-size: xx-large;
+  color: #ffde59;
+}
+header div .publish-button {
+  background-color: #ffde59;
+  border-color: #ffde59;
+  font-size: x-large;
+  width: 250px;
+  height: 50px;
+  cursor: pointer;
+}
+/* MAIN */
+.content h2 {
+  text-align: center;
+  font-size: xx-large;
+  margin-bottom: 5px;
+}
+.content hr {
+  border: #ffde59 solid 1px;
+  width: 8%;
+}
+.content .picture-container {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vw;
+  max-width: 100%;
+  max-height: 200px;
+  padding: 20px 0 20px 0;
+}
+.content .picture-container .profile-picture {
+  background-image: url("eliotporter.04ec84c3.jpg");
+  background-repeat: no-repeat;
+  overflow: hidden;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  filter: drop-shadow(0px 0px 5px #000000);
+}
+.content .edition-section .edition-form {
+  padding: 0 300px 0 300px;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+.content .edition-section .edition-form fieldset {
+  border: #ffffff 0px;
+}
+.content .edition-section .edition-form label {
+  font-size: x-large;
+}
+.content .edition-section .edition-form input {
+  border-radius: 10px;
+  width: 300px;
+  height: 30px;
+  font-size: x-large;
+}
+.content .edition-section .edition-form .naming-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.content .edition-section .edition-form .naming-section #firstname {
+  grid-column: start/end;
+  grid-row: start/row1;
+}
+.content .edition-section .edition-form .naming-section #lastname {
+  grid-column: start/end;
+  grid-row: row1/row2;
+}
+.content .edition-section .edition-form .naming-section #pseudo {
+  grid-column: start/end;
+  grid-row: row2/end;
+}
+.content .edition-section .edition-form .security-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.content .edition-section .edition-form .security-section #email {
+  grid-column: column1/end;
+  grid-row: start/row1;
+}
+.content .edition-section .edition-form .security-section #password {
+  grid-column: column1/end;
+  grid-row: row1/row2;
+}
+.content .edition-section .edition-form .security-section #password-verification {
+  grid-column: column1/end;
+  grid-row: row2/end;
+}
+.content .edition-section .edition-button {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+.content .edition-section .edition-button button {
+  border-radius: 5px;
+  background-color: #ffde59;
+  border-color: #ffde59;
+  font-size: x-large;
+  width: 300px;
+  height: 50px;
+  cursor: pointer;
+}
+.content .my-artworks {
+  padding: 0 300px 0 300px;
+}
+.content .my-artworks div {
+  display: inline-flex;
+  height: 500px;
+  width: 1870px;
+  justify-content: center;
+  gap: 30px;
+}
+.content .my-artworks div .artwork-item1 {
+  box-sizing: border-box;
+  width: 20%;
+  background-image: url("eliot-porter-fractured-obsidian.954bf67d.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.content .my-artworks div .artwork-item2 {
+  box-sizing: border-box;
+  width: 20%;
+  background-image: url("eliot-porter-glen-canyon.5367f5b7.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.content .my-artworks div .artwork-item3 {
+  box-sizing: border-box;
+  width: 20%;
+  background-image: url("eliot-porter-in-wildness.fed3d683.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.content .my-artworks div .artwork-item4 {
+  box-sizing: border-box;
+  width: 20%;
+  background-image: url("eliot-porter-river-canyon-junction.5f6a9cd3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.content .my-artworks div .artwork-item5 {
+  box-sizing: border-box;
+  width: 20%;
+  background-image: url("eliot-porter-steam-vent.e1fb83cd.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.content .my-artworks div i {
+  color: #ffde59;
+  font-size: xxx-large;
+  cursor: pointer;
+}
+.content .my-artworks .lni-circle-plus {
+  font-size: xxx-large;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+.content .my-favourites {
+  text-align: center;
+  font-size: large;
+}
+/* FOOTER */
+footer {
+  background-color: #000000;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  max-width: 100%;
+}
+footer .footer-links-list {
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+footer .footer-links-list .footer-link-element .footer-anchor-element {
+  font-size: xx-large;
+  color: #ffde59;
+}
+footer .footer-middle-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+footer .footer-middle-section .icons-list {
+  display: flex;
+  gap: 30px;
+  font-size: xx-large;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+footer .footer-middle-section .icons-list i {
+  color: #ffde59;
+}
+footer .newsletter-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-color: #000000;
+  border-style: solid;
+  padding-right: 40px;
+}
+footer .newsletter-form label {
+  color: #ffffff;
+  font-size: x-large;
+  justify-content: center;
+}
+footer .newsletter-form input {
+  padding-left: 15px;
+  font-size: x-large;
+  width: 300px;
+  height: 35px;
+  border-radius: 10px;
+}
+/*# sourceMappingURL=account.b0a50820.css.map */
