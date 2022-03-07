@@ -36,23 +36,33 @@
     .artist-artwork {
         display: inline-flex;
         justify-content: space-around;
-        margin: 1.5em 2em 0.2em 2em;
+        margin: 1.5em 3em 0.2em 5em;
     }
     .artist-artwork .photos-titles{
        margin: 1em;
     }
     .artist-artwork .artwork-author {
         font-style: italic;
-        margin-left: 8em;
+        display: flex;
+        margin-top: 0.2em;
+        justify-content: center;
     }
+    
     .artist-artwork img {
         /*margin: 0.2em;*/
         width: 12em;
         height: 12em;
+        border-radius: 1em;
     }
+    .artist-artwork img:hover{
+        width:15em;
+        height:15em;
+        cursor: pointer;
+    }
+
     .artist-artwork .artwork-title {
-        justify-content: flex-end;
         display: flex;
-        margin: 0em 0.6em 0em 0em;
+        margin-top: 0.2em;
+        justify-content: center;
     }
 </style>

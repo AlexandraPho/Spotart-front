@@ -23,7 +23,7 @@
         background-image: url("../assets/images/smoke.jpg");
         /*background-color: grey;*/
         background-size: cover;
-        height: 20em;
+        height: 15em;
     }
     .category-title h2 {
         text-align: center;
@@ -35,7 +35,8 @@
         display: flex;
         justify-content: center;
         letter-spacing: 0.2em;
-        text-shadow: 5px 5px 15px black;
+        text-shadow: 5px 5px 15px grey;
+        padding-top: 0.8em;
     }
     .filters {
         display: flex;

@@ -38,4 +38,11 @@
         text-transform: uppercase;
     }
 
+    h1,
+    img,
+    li,
+    a {
+       cursor: pointer; 
+    }
+
 </style>
