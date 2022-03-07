@@ -23,10 +23,10 @@
                 </li>
             </ul>
         </div>
-        <div class="newsletter-form">
-            <label for="email">S'inscrire à la newsletter </label>
+        <fieldset class="newsletter-form">
+            <label for="email">S'inscrire à la newsletter :</label>
             <input type="email" placeholder="robert@gmail.com">
-        </div>
+        </fieldset>
     </footer>
 </template>
 
@@ -77,7 +77,8 @@
         align-items: center;
         justify-content: center;
         gap: 10px;
-     
+        border-color: #000000;
+        border-style: solid;
         padding-right: 40px;
     }
     footer .newsletter-form label {
@@ -93,63 +94,4 @@
         border-radius: 10px;
     }
 
-
-@media (max-width: 1468px) {
- 
-
-
-  footer {
-    background-color: #000000;
-    display: flex;
-    align-items: center;
-    width: 70vw;
-    max-width: 70%;
-    position: relative;
-    margin-left: 16%;
-    /* margin-right: 25%; */
-  }
-@media (max-width:845px )  {
-
-
-
-
-
-
-footer .newsletter-form input[data-v-12977655] {
-  
-    font-size: inherit;
-    width: 104px;
-    height: 35px;
-    border-radius: 10px;
-    position: relative;
-    right: 50px;
-}
- footer .newsletter-form label[data-v-12977655] {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  position: relative;
-    right: 30px;
-    font-size: 15px;
-   
-  
-  
-    
-}
-
-
-
-
-
-
-
-}
- 
-
-
-
-
-
-}
 </style>

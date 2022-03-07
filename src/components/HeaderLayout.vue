@@ -1,153 +1,76 @@
 <template>
-  <header>
-    <nav>
-      <a class="spotart" href="/" >SPOTART</a>
-      <a href class="nav-a">Sculture</a>
-
-      <a href class="nav-a">Peinture</a>
-
-      <a href class="nav-a">Photographie</a>
-
-      <a href class="nav-a">Dessin</a>
-
-      <a href class="nav-con">Connexion</a>
-      <button>Partager vos création</button>
-    </nav>
-  </header>
+    <header>
+        <h1 class="title-logo">Spot Art</h1>
+        <ul class="header-links-list">
+            <li class="header-link-element"><a class="header-anchor-element" href="#">Sculptures</a></li>
+            <li>|</li>
+            <li class="header-link-element"><a class="header-anchor-element" href="#">Peintures</a></li>
+            <li>|</li>
+            <li class="header-link-element"><a class="header-anchor-element" href="#">Photographies</a></li>
+            <li>|</li>
+            <li class="header-link-element"><a class="header-anchor-element" href="#">Dessins</a></li>
+        </ul>
+        <div>
+            <a class="connexion-link" href="#">Connexion</a>
+            <button class="publish-button">Partagez vos créations</button>
+        </div>
+    </header>
 </template>
 
 <script>
-export default {
-  name: "HeaderLayout",
-};
+
+    export default {
+        name: 'HeaderLayout',
+    }
+
 </script>
 
 <style scoped>
-nav {
-  display: flex;
-  /* flex-flow: row; */
-  justify-content: center;
-  justify-content: space-around;
-  background-color: black;
-  position: relative;
-  width: 100%;
-  height: 50px;
-  font-family: "Belleza";
-}
 
-h1.nav-title {
-  color: white;
-  font-family: Cormorant Garamond;
-  font-size: xx-large;
-  margin-top: 0px;
-}
+    header {
+        background-color: #000000;
+        display: flex;
+        align-items: center;
+        width: 100vw;
+        max-width: 100%;
+    }
+    header .title-logo {
+        padding-left: 40px;
+        flex-grow: 1;
+    }
+    header .header-links-list {
+        list-style: none;
+        display: inline-flex;
+        justify-content: center;
+        gap: 20px;
+        flex-grow: 2;
+        color: #ffffff;
+        font-size: xx-large;
+    }
+    header .header-links-list .header-anchor-element {
+        color: #ffffff;
+        font-size: xx-large;
+        text-decoration: none;
+    }
+    header div {
+        display: flex;
+        flex-grow: 1;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 40px;
+        gap: 20px;
+    }
+    header div .connexion-link {
+        font-size: xx-large;
+        color: #ffde59;
+    }
+    header div .publish-button {
+        background-color: #ffde59;
+        border-color: #ffde59;
+        font-size: x-large;
+        width: 250px;
+        height: 50px;
+        cursor: pointer;
+    }
 
-a.nav-a {
-  padding-top: 20px;
-  color: aliceblue;
-
-  display: inline-block;
-}
-a.spotart{
-
-  padding-top: 20px;
-  color: aliceblue;
-text-decoration: blink;
-    color: grey;
-    font-weight: 900;
-}
-button.Créer.un.Compte {
-    color: black;
-    background-color: #FFDE59;
-    position: relative;
-    right: 37%;
-    height: 20px;
-    top: 191px;
-    border-bottom-left-radius: 20px;
-    border-top-left-radius: 20px;
-     border-bottom-right-radius: 20px;
-      border-top-right-radius: 20px;
-}
-
-
-a.nav-con[data-v-10d79cc7] {
-    padding-top: 17px;
-    color: #ffde59;
-    margin-left: -64px;
-}
-
-
-
-
-
-
-@media (max-width: 1468px) {
-  h1.nav-title {
-    text-align: center;
-  }
-  h1.title {
-    text-align: center;
-    font-family: Cormorant Garamond;
-    font-size: 30px;
-  }
-  a.nav-a {
-    display: flex;
-    flex-direction: column;
-  }
-
-h1 {
-    font-family: Cormorant Garamond;
-    text-align: center;
-    position: relative;
-    bottom: -36px;
-    left: 6px;
-} 
-a.nav-con[data-v-10d79cc7][data-v-10d79cc7] {
-  padding-top: 17px;
-  color: #ffde59;
-  margin-left: 0px;
-}
-
-  header {
-    background-color: #000000;
-    display: flex;
-    align-items: center;
-    width: 70vw;
-    max-width: 70%;
-    position: relative;
-    margin-left: 16%;
-    /* margin-right: 25%; */
-  }
-
-  button {
-    display: flex;
-    flex-direction: column;
-  }
-
-  nav {
-    display: flex;
-    flex-direction: column;
-
-    height: 300px;
-  }
-
-@media (max-width: 502px) {
-
-
-  header {
-    background-color: #000000;
-    
-    
-  
-    
-  }
-
-
-
-
-
-}
-
-
-}
 </style>

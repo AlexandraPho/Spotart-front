@@ -4,7 +4,7 @@
   <p class="border-title"></p>
 
   <div class="container">
-    <h1>Formulaire de contact</h1>
+    <h1>Formulaire d'inscription</h1>
     <form action="/action_page.php">
       <div class="email">
         <label for="emailAddress">Email</label>
@@ -69,7 +69,7 @@
       <div class="role">
         <label class="chose">Choisissez votre profile</label>
         <select v-model="role">
-          <option value="abonné/abonnée">Abonné / Abonnée</option>
+          <option value="subscriber">Abonné / Abonnée</option>
           <option value="artist">Artist</option>
         </select>
       </div>
