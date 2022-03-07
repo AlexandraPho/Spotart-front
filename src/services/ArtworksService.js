@@ -27,7 +27,7 @@ export default {
 
     //Function permitting to find all artworks linked to a category
     findByCategory(id) {
-        return apiClient.get(`artwork?category=${id}`);
+        return apiClient.get(`artwork?category=${id}&_embed`); //Why &_embed? Find explainations
     }
 
 }  
