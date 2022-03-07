@@ -1,0 +1,123 @@
+.main-container {
+  padding: 0.5rem;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.main-container h1 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+.main-container h1::after {
+  border-top: 0.2rem solid #FFDE59;
+  display: block;
+  position: relative;
+  top: 0.5rem;
+  margin: 0 auto;
+  width: 10%;
+  content: "";
+}
+.main-container .field {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.main-container .field > * {
+  width: 90%;
+}
+.main-container .field__label {
+  text-align: left;
+}
+.main-container .field__input {
+  border: 1px solid #b8b6b6;
+  border-radius: 0.5rem;
+  background-color: #f0f4ee;
+  margin-bottom: 0.5rem;
+}
+.main-container .field__input:focus {
+  outline-color: #FFDE59;
+  outline-width: 1px;
+}
+.main-container .field--error .field__label {
+  color: #FF3333;
+}
+.main-container .field--error .field__input {
+  border-color: #FF3333;
+  color: #FF3333;
+}
+.main-container .field--error .field__input::placeholder {
+  color: #FF3333;
+}
+.main-container .field__error-list {
+  color: #FF3333;
+  list-style: none;
+  text-align: left;
+  padding-left: 0;
+}
+.main-container .textarea.field__input {
+  width: 100%;
+  height: 8rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #f0f4ee;
+  margin-bottom: 1rem;
+}
+.main-container .alert {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+.main-container .alert.error {
+  background-color: #FF3333;
+  color: white;
+}
+.main-container .alert.success {
+  background-color: #cad6c4;
+  color: white;
+}
+.main-container .div_button_submit {
+  display: flex;
+  justify-content: center;
+}
+.main-container .div_button_submit .button {
+  text-align: center;
+  border-radius: 10px;
+  background-color: #FFDE59;
+  margin: 1em;
+  padding: 0.5em;
+  display: inline-block;
+  border: 4px #cccccc;
+  width: 15%;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.main-container .div_button_submit button:hover {
+  background-color: #faecb3;
+}
+
+@media only screen and (min-width: 700px) {
+  .main-container {
+    padding: 0.5rem;
+    width: 100%;
+  }
+
+  .field > * {
+    width: 80%;
+  }
+
+  .account_section_creation {
+    display: flex;
+    margin: 1.5rem;
+    padding: 0.5rem;
+  }
+  .account_section_creation .right_section {
+    width: 50%;
+    margin-left: 5rem;
+    text-align: center;
+  }
+  .account_section_creation .left_section {
+    width: 50%;
+  }
+}
+/*# sourceMappingURL=signup.4ba323ea.css.map */
