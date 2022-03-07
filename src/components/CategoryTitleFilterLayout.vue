@@ -1,6 +1,6 @@
 <template>
     <section class="category-title">
-        <h2>{{name}}</h2>
+        <h2>{{ name }}</h2>
     </section>
     <div class="filters">
         <p><a href="#">Filtrer par</a></p>
@@ -12,14 +12,8 @@
     export default {
         name: 'CategoryTitleFilterLayout',
         props: {
-        name: String,
+            name: String,
         },
-        data() {
-            return {
-                categories: []
-            }
-        },
-
     }
 </script>
 
