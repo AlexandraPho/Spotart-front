@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Belleza&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+ <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min .css" >
+  
+
+    <link rel="stylesheet" href="./scss/signup.scss">
+
+    <title>SpotArt</title>
+</head>
+
+<body>
+    <header>
+
+        <nav>
+            <h1 class="nav-title">SPOT ART</h1>
+            <a href class="nav-a">Sculture</a>
+
+            <a href class="nav-a">Peinture</a>
+
+            <a href class="nav-a">Photographie</a>
+
+            <a href class="nav-a">Dessin</a>
+
+            <a href class="nav-con">Connexion</a>
+            <button>Partager vos création</button>
+        </nav>
+
+        <h1>Créer un compte</h1>
+        <p class="border-title"></p>
+    </header>
+
+    <div class="container">
+        <h1>Formulaire de contact</h1>
+        <form action="/action_page.php">
+            <div class="email">
+                <label for="emailAddress">Email</label>
+                <input type="emailAddress" id="email" name="email" placeholder="votre adresse electronique">
+                <i class="fas fa-at"></i>
+            </div>
+
+
+            <div class="password">
+                <label for="password">Password</label>
+                <input type="password" id="pass" name="password" placeholder="votre mot de passe">
+                <i class="fa fa-lock" aria-hidden="true"></i>
+            </div>
+            <div class="password">
+                <label for="confirmation">Confirmation</label>
+                <input id="confirmation" type="confirmation" name="confirmation" placeholder="Confirmation">
+                <i class="fa fa-lock" aria-hidden="true"></i>
+            </div>
+
+
+
+            <div class="prénom">
+                <label for="prenom">Prénom</label>
+                <input id="prénom" type="prénom" name="prénom" placeholder="Votre prénom">
+                <i class="fa fa-portrait"></i>
+            </div>
+
+
+
+            <div class="nom">
+                <label for="nom">nom</label>
+                <input id="nom" type="nom" name="nom" placeholder="Votre nom">
+                <i class="fa fa-portrait"></i>
+            </div>
+
+            <label for="pseudo">Pseudo</label>
+            <div class="pseudo">
+                <input id="pseudo" type="pseudo" name="pseudo" placeholder="Votre pseudo">
+                <i class="fa fa-smile"></i>
+            </div>
+
+
+            <select name="rôle" id="rôle">
+                <option value="">--Quel est votre status--</option>
+                <option value="dog">Abonnés</option>
+                <option value="dog">Artiste</option>
+            </select>
+
+
+        </form>
+    </div>
+
+
+
+
+
+
+    <div class="second-container">
+        <h2>Ajouter une photo</h2>
+
+        <a href="">
+            <img src="https://picsum.photos/200/300 " alt="img" />
+        </a>
+
+        <label for="story"></label>
+
+        <textarea id="story" name="story" rows="5" cols="33">
+Décrivez-vous...
+Bonjour moi c'est John deboul , intermitant du spectacle , fan des red hot chili peppers , je fais des dessins quand je suis fonsdé 
+</textarea>
+
+
+        <button class="Créer un Compte" type="button">
+            Créer un compte
+        </button>
+    </div>
+
+
+
+   
+
+    <footer>
+
+        <nav class="footer">
+            <div class="lien-footer">
+                <a href class="nav-a-footer">Contact</a>
+                <a href class="nav-a-footer">A propos</a>
+                <a href class="nav-a-footer">Plan du site</a>
+                <a href class="nav-a-footer">Mentions lègale</a>
+            </div>
+
+
+            <div class="logo-title">
+                <h1 class="footer">SPOT ART</h1>
+                <div class="réseaux">
+                    <a href class="facebook"><i class="fab fa-facebook" style="font-size:35px"></i></a>
+                    <a href class="instagram"><i class="fab fa-instagram" style="font-size: 35px"></i></a>
+                    <a href class="tweeter"><i class="fab fa-google" style="font-size: 35px"></i></a>
+                </div>
+            </div>
+            
+       
+            <div class="newsletter">
+                <label for="newsletter">S'inscrire à la newsletter:</label>
+                <input type="newsletter" id="newsletter" pattern=".+@globex\.com" size="20" required>
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+        </nav>
+
+
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>
