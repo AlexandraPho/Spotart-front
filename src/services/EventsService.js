@@ -6,11 +6,11 @@ const apiClient = axios.create({
         Accept: 'application/json',
         'content-Type': 'application/json',
     },
-    timeout: 5000
+    timeout: 10000
 });
 
 export default {
     findAll() {
-        return apiClient.get('/artwork?_embed');
+        return apiClient.get('/events?_embed');
     },
 }

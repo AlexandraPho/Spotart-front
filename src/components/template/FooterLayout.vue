@@ -1,25 +1,17 @@
 <template>
     <footer>
         <ul class="footer-links-list">
-            <li class="footer-link-element"><a class="footer-anchor-element" href="#">Contact</a></li>
-            <li class="footer-link-element"><a class="footer-anchor-element" href="#">A propos</a></li>
-            <li class="footer-link-element"><a class="footer-anchor-element" href="#">Plan du site</a></li>
-            <li class="footer-link-element"><a class="footer-anchor-element" href="#">Mentions légales</a></li>
+            <li class="footer-link-element" v-for="footerLink in footerLinks" :key="footerLink.name">
+                <router-link class="footer-anchor-element" :to="footerLink.link">{{ footerLink.name }}</router-link>
+            </li>
         </ul>
         <div class="footer-middle-section">
             <h1 class="title-logo">Spot Art</h1>
             <ul class="icons-list">
-                <li>
-                    <a class="icon-element" href="#" hrel="pinterest-icon"><i class="lni lni-pinterest"></i></a>
-                </li>
-                <li>
-                    <a class="icon-element" href="#" hrel="instagram-icon"><i class="lni lni-instagram"></i></a>
-                </li>
-                <li>
-                    <a class="icon-element" href="#" hrel="facebook-icon"><i class="lni lni-facebook"></i></a>
-                </li>
-                <li>
-                    <a class="icon-element" href="#" hrel="twitter-icon"><i class="lni lni-twitter"></i></a>
+                <li v-for="socialMediaLink in SocialMediaLinks" :key="socialMediaLink.name">
+                    <router-link class="icon-element" :to="socialMediaLink.link" hrel="pinterest-icon">
+                        <i class="'lni lni-' + {{ socialMediaLink.name }}"></i>
+                    </router-link>
                 </li>
             </ul>
         </div>
@@ -32,7 +24,48 @@
 
 <script>
     export default {
-        name: 'HeaderLayout',
+        name: 'FooterLayout',
+        data() {
+            return {
+                footerLinks: [
+                    {
+                        name: "Contact",
+                        link: "/contact"
+                    },
+                    {
+                        name: "A propos",
+                        link: "/about"
+                    },
+                    {
+                        name: "Plan du site",
+                        link: "/sitemap"
+                    },
+                    {
+                        name: "Mentions légales",
+                        link: "/legal-notice"
+                    }
+                ],
+                socialMediaLinks: [
+                    {
+                        name: "pinterest",
+                        link: "https://www.pinterest.fr/"
+                    },
+                    {
+                        name: "instagram",
+                        link: "https://www.instagram.com/?hl=fr"
+                    },
+                    {
+                        name: "facebook",
+                        link: "https://fr-fr.facebook.com/"
+                    },
+                    {
+                        name: "twitter",
+                        link: "https://twitter.com/?lang=fr"
+                    }
+
+                ]
+            }
+        }
     }
 </script>
 

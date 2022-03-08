@@ -2,17 +2,15 @@
     <header>
         <h1 class="title-logo">Spot Art</h1>
         <ul class="header-links-list">
-            <li class="header-link-element"><a class="header-anchor-element" href="#">Sculptures</a></li>
-            <li>|</li>
-            <li class="header-link-element"><a class="header-anchor-element" href="#">Peintures</a></li>
-            <li>|</li>
-            <li class="header-link-element"><a class="header-anchor-element" href="#">Photographies</a></li>
-            <li>|</li>
-            <li class="header-link-element"><a class="header-anchor-element" href="#">Dessins</a></li>
+            <li class="header-link-element" v-for="artFormsLink in artFormsLinks" :key="artFormsLink.name">
+                <router-link class="header-anchor-element" :to="artFormsLink.route">{{ artFormsLink.name }}</router-link>
+            </li>
         </ul>
         <div>
-            <a class="connexion-link" href="#">Connexion</a>
-            <button class="publish-button">Partagez vos créations</button>
+            <router-link class="connexion-link" :to="loginlink">Connexion</router-link>
+            <router-link :to="createArtworkLink">
+                <button class="publish-button">Partagez vos créations</button>
+            </router-link>
         </div>
     </header>
 </template>
@@ -21,6 +19,30 @@
 
     export default {
         name: 'HeaderLayout',
+        data() {
+            return {
+                artFormsLinks: [
+                    {
+                        name: "Sculptures",
+                        route: "/artforms/3"
+                    },
+                    {
+                        name: "Peintures",
+                        route: "/artforms/1"
+                    },
+                    {
+                        name: "Photographies",
+                        route: "/artforms/2"
+                    },
+                    {
+                        name: "Dessins",
+                        route: "/artforms/0"
+                    },
+                ],
+                loginlink : "/login",
+                createArtworkLink: "/artworks/create"
+            }
+        }
     }
 
 </script>
