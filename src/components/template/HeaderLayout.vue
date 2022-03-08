@@ -1,6 +1,6 @@
 <template>
     <header>
-        <h1 class="title-logo">Spot Art</h1>
+        <h1 class="title-logo" @click='goToHome()'>Spot Art</h1>
         <ul class="header-links-list">
             <li class="header-link-element" v-for="artFormsLink in artFormsLinks" :key="artFormsLink.name">
                 <router-link class="header-anchor-element" :to="artFormsLink.route">{{ artFormsLink.name }}</router-link>
@@ -24,23 +24,23 @@
                 artFormsLinks: [
                     {
                         name: "Sculptures",
-                        route: "/artforms/3"
+                        route: "/art-form/10"
                     },
                     {
                         name: "Peintures",
-                        route: "/artforms/1"
+                        route: "/art-form/8"
                     },
                     {
                         name: "Photographies",
-                        route: "/artforms/2"
+                        route: "/art-form/9"
                     },
                     {
                         name: "Dessins",
-                        route: "/artforms/0"
+                        route: "/art-form/7"
                     },
                 ],
                 loginlink : "/login",
-                createArtworkLink: "/artworks/create"
+                createArtworkLink: "/artwork/create"
             }
         }
     }
@@ -94,5 +94,4 @@
         height: 50px;
         cursor: pointer;
     }
-
 </style>

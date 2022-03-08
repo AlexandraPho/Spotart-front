@@ -188,5 +188,4 @@
         color: #ffde59;
         font-size: xxx-large;
     }
-
 </style>

@@ -126,5 +126,4 @@
         height: 35px;
         border-radius: 10px;
     }
-
 </style>

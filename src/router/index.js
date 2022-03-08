@@ -1,16 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/HomeApp.vue'
+import HomeApp from '../views/HomeApp.vue'
 
 const routes = [
     {
         path: '/',
         name: 'Home',
-        component: Home
-    },
-    {
-        path: '/artforms/:id',
-        name: 'Sculptures',
-        component: () => import('../views/artworks/ArtFormsApp.vue')
+        component: HomeApp
     },
     {
         path: '/login',
@@ -23,9 +18,24 @@ const routes = [
         component: () => import('../views/user/RegistrationApp.vue')
     },
     {
-        path: '/artworks/create',
+        path: '/artwork/:id',
+        name: 'SingleArtwork',
+        component: () => import('../views/artworks/SingleArtworkApp.vue')
+    },
+    {
+        path: '/artwork/create',
         name: 'CreateArtwork',
-        component: () => import('../views/artworks/CreateArtwork.vue')
+        component: () => import( '../views/artworks/CreateArtworkApp.vue')
+    },
+    {
+        path: '/artwork/update/:id',
+        name: 'UpdateArtwork',
+        component: () => import( '../views/artworks/UpdateArtworkApp.vue')
+    },
+    {
+        path: '/artist/:id',
+        name: 'ArtistProfile',
+        component: () => import('../views/user/ArtistProfileApp.vue')
     },
     {
         path: '/contact',
@@ -47,7 +57,11 @@ const routes = [
         name: 'LegalNotice',
         component: () => import('../views/extra/LegalNoticeApp.vue')
     },
-
+    {
+        path: '/art-form/:id',
+        name: 'ArtForms',
+        component: () => import('../views/artworks/ArtFormsApp.vue')
+    },
 ]
 const router = createRouter({
     history: createWebHistory(process.env.BASE_URL),
