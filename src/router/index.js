@@ -15,29 +15,16 @@ const routes = [
   component: SingleArtwork
 },
 {
-    path: '/publishartwork',
-    name: 'PublishArtwork',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "connection" */ '../views/user/PublishArtwork.vue')
+    path: '/artwork/create',
+    name: 'CreateArtwork',
+    component: () => import( '../views/user/CreateArtwork.vue')
 },
 {
-    path: '/editartwork',
-    name: 'EditArtwork',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "connection" */ '../views/user/EditArtwork.vue')
+    path: '/artwork/update/'/*[i:artwokID]*/,
+    name: 'UpdateArtwork',
+    component: () => import( '../views/user/UpdateArtwork.vue')
 },
-// {
-//     path: '/about',
-//     name: 'About',
-//     // route level code-splitting
-//     // this generates a separate chunk (about.[hash].js) for this route
-//     // which is lazy-loaded when the route is visited.
-//     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-// }
+
 ]
 const router = createRouter({
     history: createWebHistory(process.env.BASE_URL),
