@@ -17,8 +17,8 @@
     import CategorySwitchPage from '@/components/CategorySwitchPage.vue';
     import FooterLayout from '@/components/FooterLayout.vue';
 
-    import ArtworksServices from '@/services/ArtworksServices.js';
-    import CategoriesServices from '@/services/CategoriesServices.js';
+    import ArtworksService from '@/services/ArtworksService.js';
+    import CategoriesService from '@/services/CategoriesService.js';
 
     export default {
         name: 'CategoryArtwork',
@@ -56,7 +56,7 @@
         },
         mounted() {
             console.log(this.$route.params.id);
-            ArtworksServices.findByCategory(this.$route.params.id).then(
+            ArtworksService.findByCategory(this.$route.params.id).then(
              
                 (response)=> {
                    console.log(response.data);
@@ -68,7 +68,7 @@
             );
 
             console.log(this.$route.params.id);
-            CategoriesServices.findAll(this.$route.params.id).then(
+            CategoriesService.findAll(this.$route.params.id).then(
              
                 (response)=> {
                    console.log(response.data);

@@ -17,20 +17,20 @@ const routes = [{
     component: SingleArtwork
   },
   {
-    path: '/publishartwork',
-    name: 'PublishArtwork',
+    path: '/artwork/create',
+    name: 'CreateArtwork',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import( /* webpackChunkName: "connection" */ '../views/user/PublishArtwork.vue')
+    component: () => import( /* webpackChunkName: "connection" */ '../views/user/CreateArtwork.vue')
   },
   {
-    path: '/editartwork',
-    name: 'EditArtwork',
+    path: '/artwork/update',
+    name: 'UpdateArtwork',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import( /* webpackChunkName: "connection" */ '../views/user/EditArtwork.vue')
+    component: () => import( /* webpackChunkName: "connection" */ '../views/user/UpdateArtwork.vue')
   },
   {
     path: '/artist/:id',
