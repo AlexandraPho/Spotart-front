@@ -1,22 +1,33 @@
-import { createStore } from 'vuex'
-
+import {
+  createStore
+} from 'vuex'
 export default createStore({
   state: {
-    token: '',
-    userId: ''
+    token: null,
+    userID: null,
+    userRole: null
+  },
+  getters: {
+    checkUserRole: (state) => (roles) => {
+      console.log(state.userRole, roles)
+      return roles.includes(state.userRole);
+    }
+
   },
   mutations: {
-/*       // 'state' is filled automatically when the mutation is called
-      setToken(state, newToken) {
-          // We could also add processes and validations before updating the data
-          state.token = newToken;
-      },
-      setUserID(state, newUserID) {
-          state.userID = newUserID;
-      } */
+    setToken(state, newToken) {
+      // On pourrait ajouter des traitements et des
+      // validations avant de mettre a jour la donnée
+      state.token = newToken;
+    },
+    setUserID(state, newUserID) {
+      state.userID = newUserID;
+    },
+    setUserRole(state, newUserRole) {
+      state.userRole = newUserRole;
+    }
   },
-  actions: {
-  },
-  modules: {
-  }
+  actions: {},
+  modules: {}
 })
+
