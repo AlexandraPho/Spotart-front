@@ -19,7 +19,7 @@
 
 import ArtistDetailLayout from "@/components/ArtistDetailLayout.vue";
 
-import ArtistsService from "@/services/ArtistsServices.js";
+import ArtistsService from "@/services/ArtistsService.js";
 import HeaderLayout from '@/components/HeaderLayout.vue';
 import FooterLayout from '@/components/FooterLayout.vue';
 
