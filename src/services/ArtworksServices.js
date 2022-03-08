@@ -11,10 +11,15 @@ const apiClient = axios.create({
 
 export default {
     findAll() {
-        return apiClient.get('/artist?_embed');
+        return apiClient.get('/artwork?_embed');
     },
 
     find(id) {
-        return apiClient.get(`/artist/${id}?_embed`);
+        return apiClient.get(`/artwork/${id}?_embed`);
     },
+
+    //Function permitting to find all artworks linked to a category
+    findByCategory(id) {
+        return apiClient.get(`artwork?category=${id}&_embed`);
+    }
 }

@@ -1,14 +1,14 @@
 <template>
     <header>
-        <h1 class="title-logo">Spot Art</h1>
+        <h1 class="title-logo" @click='goToHome()'>Spot Art</h1>
         <ul class="header-links-list">
-            <li class="header-link-element"><a class="header-anchor-element" href="#">Sculptures</a></li>
+            <li class="header-link-element"><a class="header-anchor-element" @click='goToSculpturPage()'>Sculptures</a></li>
             <li>|</li>
-            <li class="header-link-element"><a class="header-anchor-element" href="#">Peintures</a></li>
+            <li class="header-link-element"><a class="header-anchor-element" @click='goToPaintPage()'>Peintures</a></li>
             <li>|</li>
-            <li class="header-link-element"><a class="header-anchor-element" href="#">Photographies</a></li>
+            <li class="header-link-element"><a class="header-anchor-element" @click='goToPhotographyPage()'>Photographies</a></li>
             <li>|</li>
-            <li class="header-link-element"><a class="header-anchor-element" href="#">Dessins</a></li>
+            <li class="header-link-element"><a class="header-anchor-element" @click='goToDrawingPage()'>Dessins</a></li>
         </ul>
         <div>
             <a class="connexion-link" href="#">Connexion</a>
@@ -21,6 +21,31 @@
 
     export default {
         name: 'HeaderLayout',
+        data() {
+            return {
+                sculpturs: [],
+                paints: [],
+                photography: [],
+                drawing: [],
+            }
+        },
+        methods:{
+            goToHome() {
+                this.$router.push('/'); 
+            },
+            goToSculpturPage(){
+                this.$router.push('/category/3'); 
+            },
+            goToPaintPage(){
+                this.$router.push('/category/1'); 
+            },
+            goToPhotographyPage(){
+                this.$router.push('/category/6'); 
+            },
+            goToDrawingPage(){
+                this.$router.push('/category/5'); 
+            },
+        }
     }
 
 </script>

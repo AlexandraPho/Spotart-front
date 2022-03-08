@@ -25,16 +25,25 @@ export default {
         src: local("Merienda"),   url(./fonts/Merienda/Merienda-Regular.ttf) format("truetype");}
     */
 
-/* GENERAL */
-* {
-  font-family: Belleza;
-}
-.title-logo {
-  font-family: Cormorant Garamond;
-  font-size: xxx-large;
-  color: #ffffff;
-  padding: 0px;
-  margin: 0px;
-  text-transform: uppercase;
-}
+
+  /* GENERAL */
+    * {
+        font-family: Belleza;
+    }
+    .title-logo {
+        font-family: Cormorant Garamond;
+        font-size: xxx-large;
+        color: #ffffff;
+        padding: 0px;
+        margin: 0px;
+        text-transform: uppercase;
+    }
+
+    h1,
+    img,
+    li,
+    a {
+       cursor: pointer; 
+    }
+
 </style>
