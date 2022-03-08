@@ -20,14 +20,14 @@
 </template>
 
 <script>
-    import ArtistsServices from '@/services/ArtistsServices.js';
+    import ArtistsService from '@/services/ArtistsService.js';
 
     export default {
         name: 'HomeArtistListLayout',
 
         mounted() {
         // Attention, on ne traite pas pour l'instant les cas d'erreurs
-        ArtistsServices.findAll().then(
+        ArtistsService.findAll().then(
             // Executer le code qui permet de recuperer le résultat de ma requete
             // Permet de garder le contexte et de recuperer response
             (response) => {

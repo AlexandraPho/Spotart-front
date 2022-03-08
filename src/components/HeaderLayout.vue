@@ -29,23 +29,6 @@
                 drawing: [],
             }
         },
-        methods:{
-            goToHome() {
-                this.$router.push('/'); 
-            },
-            goToSculpturPage(){
-                this.$router.push('/category/3'); 
-            },
-            goToPaintPage(){
-                this.$router.push('/category/1'); 
-            },
-            goToPhotographyPage(){
-                this.$router.push('/category/6'); 
-            },
-            goToDrawingPage(){
-                this.$router.push('/category/5'); 
-            },
-        }
     }
 
 </script>

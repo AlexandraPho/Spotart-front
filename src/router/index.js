@@ -10,12 +10,13 @@ const routes = [{
     path: '/',
     name: 'Home',
     component: Home
-},
-{
-  path: '/artwork/:id',
-  name: 'SingleArtwork',
-  component: SingleArtwork
-},
+
+  },
+  {
+    path: '/artwork/:id',
+    name: 'SingleArtwork',
+    component: SingleArtwork
+  },
 {
     path: '/artwork/create',
     name: 'CreateArtwork',
@@ -30,7 +31,6 @@ const routes = [{
 {
     path: '/artist/:id',
     name: 'Artist',
-
     component: () => import( /*   webpackChunkName: "connection" */ '../views/ArtistProfile.vue')
   },
   {

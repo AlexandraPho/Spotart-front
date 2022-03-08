@@ -1,23 +1,20 @@
 import axios from 'axios';
-// import of AXIOS to be able to contact our WP API
 
-
-// PREPARATION OF OUR REQUEST with all information we need to connect to the API
 const apiClient = axios.create({
-    baseURL: 'http://spotart.local/wp-json/wp/v2', // URL de base que vont avoir toutes nos requetes (communes)
-    headers: { //What we accept to receive from the API
+    baseURL: 'http://spotart.local/wp-json/wp/v2',
+    headers:  {
         Accept: 'application/json',
-        'Content-Type': 'application/json',
-    }, 
-    timeout: 10000 // After 10s we cut the connexion
+        'content-Type': 'application/json',
+    },
+    timeout: 5000
 });
 
-
-// Every thing we put in the "export default" will be available in the other components and fileswith an import
-
 export default {
+    findAll() {
+        return apiClient.get('/category?_embed');
+    },
 
-   findAllcategories() { 
-       return apiClient.get('/category?_embed');
-   }
-} 
+    find(id) {
+        return apiClient.get(`/category/${id}?_embed`);
+    },
+}
