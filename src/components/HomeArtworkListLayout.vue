@@ -12,13 +12,13 @@
 </template>
 
 <script>
-    import ArtworksServices from '@/services/ArtworksServices.js';
+    import ArtworksService from '@/services/ArtworksService.js';
 
     export default {
         name: 'HomeArtworkListLayout',
         mounted() {
             // Attention, on ne traite pas pour l'instant les cas d'erreurs
-            ArtworksServices.findAll().then(
+            ArtworksService.findAll().then(
                 // Executer le code qui permet de recuperer le résultat de ma requete
                 // Permet de garder le contexte et de recuperer response
                 (response) => {
