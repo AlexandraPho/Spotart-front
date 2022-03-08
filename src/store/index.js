@@ -1,13 +1,11 @@
 import {
   createStore
 } from 'vuex'
-
 export default createStore({
   state: {
     token: null,
     userID: null,
     userRole: null
-
   },
   getters: {
     checkUserRole: (state) => (roles) => {
@@ -28,8 +26,8 @@ export default createStore({
     setUserRole(state, newUserRole) {
       state.userRole = newUserRole;
     }
-
   },
   actions: {},
   modules: {}
 })
+
