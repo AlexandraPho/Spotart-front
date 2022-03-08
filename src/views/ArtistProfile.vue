@@ -1,11 +1,13 @@
 <template>
   <div>
+    <header-layout/>
     <ArtistDetailLayout
       v-if="artist"
       v-bind:title="artist.title.rendered"
       v-bind:content="artist.content.rendered"
      v-bind:image="artist._embedded ? artist._embedded['wp:featuredmedia'][0].source_url : 'http://spotart.local/app/uploads/2022/02/exo5.png'"
     />
+    <footer-layout/>
   </div>
 </template>
 
@@ -17,7 +19,9 @@
 
 import ArtistDetailLayout from "@/components/ArtistDetailLayout.vue";
 
-import ArtistsService from "@/services/ArtistsService.js";
+import ArtistsService from "@/services/ArtistsServices.js";
+import HeaderLayout from '@/components/HeaderLayout.vue';
+import FooterLayout from '@/components/FooterLayout.vue';
 
 // export default permet de definir une carte d'identité
 // de mon home.vue
@@ -46,6 +50,8 @@ export default {
   },
   components: {
     ArtistDetailLayout,
+    HeaderLayout,
+    FooterLayout,
   },
 };
 </script>

@@ -10,32 +10,27 @@ const routes = [{
     path: '/',
     name: 'Home',
     component: Home
+
   },
   {
     path: '/artwork/:id',
     name: 'SingleArtwork',
     component: SingleArtwork
   },
-  {
+{
     path: '/artwork/create',
     name: 'CreateArtwork',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import( /* webpackChunkName: "connection" */ '../views/user/CreateArtwork.vue')
-  },
-  {
-    path: '/artwork/update',
+    component: () => import( '../views/user/CreateArtwork.vue')
+},
+{
+    path: '/artwork/update/'/*[i:artwokID]*/,
     name: 'UpdateArtwork',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import( /* webpackChunkName: "connection" */ '../views/user/UpdateArtwork.vue')
-  },
-  {
+    component: () => import( '../views/user/UpdateArtwork.vue')
+},
+
+{
     path: '/artist/:id',
     name: 'Artist',
-
     component: () => import( /*   webpackChunkName: "connection" */ '../views/ArtistProfile.vue')
   },
   {
@@ -54,6 +49,7 @@ const routes = [{
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "category" */ '../views/Category.vue')
 },
+
 ]
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),

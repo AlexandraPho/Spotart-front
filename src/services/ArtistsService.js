@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const apiClient = axios.create({
     baseURL: 'http://spotart.local/wp-json/wp/v2',
-    headers:  {
+    headers: {
         Accept: 'application/json',
         'content-Type': 'application/json',
     },
@@ -15,6 +15,7 @@ export default {
     },
 
     find(id) {
-        return apiClient.get(`/artist/${id}?_embed`);
-    },
+        return   apiClient.get(`/artist/${id}?_embed`);
+        },
+
 }

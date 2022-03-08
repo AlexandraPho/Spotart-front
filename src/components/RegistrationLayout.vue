@@ -117,7 +117,7 @@ export default {
       password_check: null,
       pseudo: null,
       //illustration: null,
-      content: null,
+     
     };
   },
   methods: {
@@ -138,10 +138,6 @@ export default {
       // if (!this.illustration) {
       // this.errors.push("Illustration must not be empty");
       // }
-      if (!this.content) {
-        this.errors.push("content must not be empty");
-      }
-
       if (!this.password || !this.password_check) {
         this.errors.push("Password and Password_check must be filled");
       } else {
@@ -162,6 +158,8 @@ export default {
         (error) => {
           this.errors.push(error);
         }
+
+        
       );
 
       UsersService.create(

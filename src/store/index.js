@@ -12,6 +12,7 @@ export default createStore({
       console.log(state.userRole, roles)
       return roles.includes(state.userRole);
     }
+
   },
   mutations: {
     setToken(state, newToken) {
