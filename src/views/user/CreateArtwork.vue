@@ -1,7 +1,7 @@
 <template>
   <div>
     <HeaderLayout/>
-    <PublishArtworkLayout/>
+    <CreateArtworkLayout/>
     <FooterLayout/>
   </div>
 
@@ -10,13 +10,13 @@
 <script>
 //On importe le composant PublishArtworkLayout
 //pour pouvoir l'utiliser dans PublishArtwork
-import PublishArtworkLayout from '@/components/PublishArtworkLayout.vue';
+import CreateArtworkLayout from '@/components/CreateArtworkLayout.vue';
 import HeaderLayout from '@/components/HeaderLayout.vue';
 import FooterLayout from '@/components/FooterLayout.vue';
 export default {
-  name: 'PublishArtwork',
+  name: 'CreateArtwork',
   components: { 
-    PublishArtworkLayout,
+    CreateArtworkLayout,
     HeaderLayout,
     FooterLayout
   },

@@ -1,7 +1,7 @@
 <template>
   <div>
     <HeaderLayout/>
-    <EditArtworkLayout/>
+    <UpdateArtworkLayout/>
     <FooterLayout/>
   </div>
 
@@ -10,13 +10,13 @@
 <script>
 //On importe le composant EditArtworkLayout
 //pour pouvoir l'utiliser dans EditArtwork
-import EditArtworkLayout from '@/components/EditArtworkLayout.vue'
+import UpdateArtworkLayout from '@/components/UpdateArtworkLayout.vue'
 import HeaderLayout from '@/components/HeaderLayout.vue'
 import FooterLayout from '@/components/FooterLayout.vue'
 export default {
-  name: 'EditArtwork',
+  name: 'UpdateArtwork',
   components: { 
-    EditArtworkLayout,
+    UpdateArtworkLayout,
     HeaderLayout,
     FooterLayout
   },
