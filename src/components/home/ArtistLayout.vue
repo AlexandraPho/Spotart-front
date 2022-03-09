@@ -1,6 +1,6 @@
 <template>
     <article>
-        <router-link :to="{title: 'Artist', params: {id: id}}">
+        <router-link :to="{name: 'ArtistProfile', params: { id: id }}">
             <img :src="imgSrc" :alt="imgAlt">
             <h3 :html="title"></h3>
         </router-link>
@@ -16,5 +16,10 @@
             title: String,
             id: Number
         },
+        /* methods:{
+            goToSingleArtist(id){
+                this.$router.push('/artists/' + id);
+            }
+        } */
     }
 </script>

@@ -18,22 +18,22 @@ const routes = [
         component: () => import('../views/user/RegistrationApp.vue')
     },
     {
-        path: '/artwork/:id',
+        path: '/artworks/:id',
         name: 'SingleArtwork',
         component: () => import('../views/artworks/SingleArtworkApp.vue')
     },
     {
-        path: '/artwork/create',
+        path: '/artworks/create',
         name: 'CreateArtwork',
         component: () => import( '../views/artworks/CreateArtworkApp.vue')
     },
     {
-        path: '/artwork/update/:id',
+        path: '/artworks/update/:id',
         name: 'UpdateArtwork',
         component: () => import( '../views/artworks/UpdateArtworkApp.vue')
     },
     {
-        path: '/artist/:id',
+        path: '/artists/:id',
         name: 'ArtistProfile',
         component: () => import('../views/user/ArtistProfileApp.vue')
     },

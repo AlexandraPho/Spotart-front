@@ -1,30 +1,45 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 0px;
-    border-right: 20px solid rgb(112, 108, 108);
-    border-left: 20px solid rgb(112, 108, 108);
-    border-top: 20px solid rgb(112, 108, 108);
-    border-bottom: 20px solid rgb(112, 108, 108);
-    
-}
-#app {
-  text-align: center;
-
-  
-}
-img {
-  width: 30%;
-  margin: auto;
-  display: block;
-  margin-bottom: 10px;
-  background-color: #FFDE59;
+hr {
+    border: #ffde59 solid 1px;
+    width: 8%;
 }
 
+.title {
+    margin: 20px 0 0 0;
+}
 
+.email {
+    width: 90%;
+}
 
-  input[type=text],
-  textarea,
-  input[type=email] {
+.password {
+    width: 90%;
+}
+
+.pseudo {
+    width: 90%;
+}
+
+.role {
+    width: 90%;
+}
+
+.field {
+    width: 90%;
+}
+
+input {
+    font-size: large;
+}
+
+/* img {
+    width: 30%;
+    margin: auto;
+    display: block;
+    margin-bottom: 10px;
+    background-color: #FFDE59;
+} */
+
+input[type=text], textarea, input[type=email] {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -35,99 +50,83 @@ img {
     margin-right: 0px;
     margin-left: 0px;
     resize: vertical;
-  }
-  
-  label {
+}
+
+label {
     margin-right: 0px;
     margin-left: 0px;
     width: 100%;
-  }
-  
-  input[type=submit] {
+}
+
+input[type=submit] {
     background-color: #1255a2;
     color: white;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  }
-  
-  input[type=submit]:hover {
-    background-color: #1872D9;
-  }
-  
-  .container {
-    
-        width: 50%;
+}
 
-  
-  
-  }
-  
- .second-container {
+input[type=submit]:hover {
+    background-color: #1872D9;
+}
+
+.container-form1 {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
     width: 50%;
-    /* float: right; */
+}
+  
+.second-container {
+    width: 50%;
+/*     float: right;
     position: relative;
     float: 15%;
-    left: 47%;
+    left: 47%; */
     bottom: 465px;
 }
   
-  
-
-  
-  
-  label,
-  textarea {
-    font-size: .8rem;
-    letter-spacing: 1px;
-  }
-  
-  textarea {
+/* textarea {
     padding: 10px;
     max-width: 100%;
     line-height: 1.5;
     border-radius: 5px;
     border: 1px solid #ccc;
     box-shadow: 1px 1px 1px #999;
-  }
+} */
   
   
-  img {
+/* img {
     border-bottom-left-radius: 60%;
     border-top-left-radius: 60%;
     border-top-right-radius: 60%;
     border-bottom-right-radius: 60%;
-}
+} */
   
 input[type="file"] {
-  border-bottom-left-radius: 50%;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  border-bottom-right-radius: 50%;
-  width: 105px;
-  height: 107px;
-  background-color: #FFDE59;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    width: 105px;
+    height: 107px;
+    background-color: #FFDE59;
 }
- 
-  
 
-  
 textarea#story {
-    position: relative;
+    /* position: relative; */
     left: 14px;
-
 }
-  
-  
-
 
 h1 {
-  font-family: Cormorant Garamond;
-  text-align: center;
-  position: relative;
-  bottom: -36px;
-  left: 26px;
+    font-family: Cormorant Garamond;
+    text-align: center;
+/*     position: relative;
+    bottom: -36px;
+    left: 26px; */
 }
   h2 {
     text-align: center;
@@ -136,225 +135,208 @@ h1 {
 }
   
 .border-title {
-  border-bottom: 4px solid;
-  margin-right: 44%;
-  margin-left: 47%;
-  color: #FFDE59;
-  padding-bottom: 20px;
+    border-bottom: 4px solid;
+    margin-right: 44%;
+    margin-left: 47%;
+    color: #FFDE59;
+    padding-bottom: 20px;
 }
-  form {
+
+/* form {
     position: relative;
     bottom: -24px;
     width: 75%;
     right: -15%;
+} */
+
+input#email {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    margin-right: 0px;
+    margin-left: 0px;
+    resize: vertical;
 }
- 
-  
-  
-  input#email {
-    width: 90%;
-  }
-  
-  input#pass {
-    width: 90%;
-  
-  }
-  
-  input#confirmation {
-  
-    width: 90%;
-  }
-  
-  
-  input#prénom {
-  
-    width: 90%;
-  }
-  
-  
-  input#nom {
-    width: 90%;
-  }
-  
-  input#pseudo {
-  
-    width: 90%;
-  }
-  
-  select#rôle {
-  
-    width: 92%;
-  
-  
-  
+
+input#password {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    margin-right: 0px;
+    margin-left: 0px;
+    resize: vertical;
+}
+
+input#password-confirmation {  
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    margin-right: 0px;
+    margin-left: 0px;
+    resize: vertical;
+}
+
+input#username {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    margin-right: 0px;
+    margin-left: 0px;
+    resize: vertical;
+}
+
+select#role {
+    width: 100%;
     padding-bottom: 4px;
     margin-top: 30px;
-  }
-  
- 
-  
-  .container2 {
-    width: 50%;
-    position: relative;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    margin-right: 0px;
+    margin-left: 0px;
+    resize: vertical;
+}
+
+.container2 {
+    width: 100%;
+    display: flex
+/*     position: relative;
     left: 45%;
-    bottom: 385px;
+    bottom: 385px; */
 }
 
-.field {
-  width: 50%;
-  position: relative;
-  left: 26%;
+.container2 .field {
+    width: 90%;
+    
+/*     position: relative;
+    left: 26%; */
 }
-  
- 
-  
 
-  
-  label {
+label {
+    width: 90%;
     display: block;
     font: 1rem 'Fira Sans', sans-serif;
-  }
+}
   
-  input,
-  label {
+input, label {
     margin: .4rem 0;
-  }
-  
+}
 
-  
+i.fas.fa-at {
+    font-size: xx-large;
+    /* border: 1px solid black; */
+    /* background-color:#FFDE59; */
+}
 
-  
+i.fa.fa-lock {
+    font-size: xx-large;
+/*     border: solid 1px black;
+    background-color:#FFDE59; */
+}
+i.fa.fa-lock {
+    font-size: xx-large;
+/*     background-color:#FFDE59;
+    border: solid 1px black; */
+}/*  */
+i.fa.fa-portrait{
+    font-size: xx-large;
+/*     border: solid 1px black;
+    background-color:#FFDE59; */
+}
 
-  i.fas.fa-at {
-    width: 8;
-    border: 1px solid black;
-    background-color:#FFDE59;
-  }
-  
-  i.fa.fa-lock {
-    border: solid 1px black;
-    background-color:#FFDE59;
-  }
-  i.fa.fa-lock {
-    background-color:#FFDE59;
-    border: solid 1px black;
-  
-  }
-  i.fa.fa-portrait{
-    border: solid 1px black;
-    background-color:#FFDE59;
-  }
-  
-  i.fa.fa-portrait{
-    background-color:#FFDE59;
-    border: solid 1px black;
-  }
-  
-  i.fa.fa-smile{
-    background-color:#FFDE59;
-    border: solid 1px black;
+i.fa.fa-portrait{
+    font-size: xx-large;
+/*     background-color:#FFDE59;
+    border: solid 1px black; */
+}
+
+i.fa.fa-smile{
+    font-size: xx-large;
+/*     background-color:#FFDE59;
+    border: solid 1px black; */
     transform: rotate(20deg)
-  }
-  
-  button.Créer.un.Compte {
-    color: black;
-    background-color: #FFDE59;
-    position: relative;
+}
+ 
+.send-button {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+button.create-account {
+    background-color: #ffde59;
+    border-color: #ffde59;
+    font-size: x-large;
+    width: 250px;
+    height: 50px;
+    cursor: pointer;
+    
+/*     position: relative;
     right: 286px;
     height: 23px;
-    top: 150px;
+    top: 150px; */
 }
-button {
-  height: 25px;
-  width: 144px;
-  margin-top: 27px;
-  color: black;
-  background-color: #ffde59;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  position: relative;
-  right: 0px;
-  top: -17px;
-}
+
+/* button {
+    position: relative;
+    right: 0px;
+    top: -17px;
+} */
   
-  @media (max-width: 1470px ){
-
-   
-
+@media (max-width: 1470px )
+{
     .container {
-      width: 50%;
-      display: inline-grid;
-  }
-  .container2 {
-    width: 50%;
-    position: relative;
-    /* left: 48%; */
-    top: 25px;
-    left: 26%;
+        width: 50%;
+        display: inline-grid;
+    }
+    .container2 {
+        width: 50%;
+/*         position: relative;
+        left: 48%;
+        top: 25px;
+        left: 26%; */
+    }
+
+    h1 {
+        font-family: Cormorant Garamond;
+        text-align: center;
+    /*     position: relative;
+        bottom: -36px;
+        left: 10px; */
+    }
+
+    button.create-account {
+        color: black;
+        background-color: #FFDE59;
+        /* position: relative; */
+        height: 20px;
+        /* top: -35px;
+        right: -3px; */
+    }
 }
+/* @media (max-width: 706px) {
 
-h1 {
-  font-family: Cormorant Garamond;
-  text-align: center;
-  position: relative;
-  bottom: -36px;
-  left: 10px;
-}
+} */
 
+/* @media (max-width: 1220px)  {
 
-
-
-button.Créer.un.Compte {
-    color: black;
-    background-color: #FFDE59;
-    position: relative;
-    height: 20px;
-    top: -35px;
-    right: -3px;
-}
-  }
-  
-  
-    @media (max-width: 706px){
-  
-   
-  
-  
-  
-  
-  
-  
-}
-    @media (max-width: 1220px)  {
-  
-  
- 
-  
-  
-      
-      
-      
-   
-      
-  
- 
-  
-  
-  
-  
-}
-  
-  
-  
-  
-  
- 
-  
-
-  
-  
-  
-  
-  
+} */

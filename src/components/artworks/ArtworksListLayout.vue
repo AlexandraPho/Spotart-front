@@ -1,7 +1,7 @@
 <template>
     <div class="artist-artwork">
         <div class="photos-titles">
-            <img v-bind:src="image" v-bind:alt="title" @click='goToSingleArtwork()'>
+            <img v-bind:src="image" v-bind:alt="title">
             <p class="artwork-title">{{ title }}</p>
             <p class="artwork-author">{{ author }}</p>
         </div>
@@ -17,16 +17,6 @@
             author: String,
             id: Number
         },
-        data() {
-            return {
-                artworks: []
-            }
-        },
-        methods:{
-            goToSingleArtwork(){
-                this.$router.push('/artwork/:id'); 
-            }
-        }
     }
     
 </script>

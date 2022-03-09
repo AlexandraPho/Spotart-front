@@ -1,6 +1,6 @@
 <template>
     <div class="background">
-        <router-link :to="{title: 'Event', params: {id: id}}">
+        <router-link :to="{title: 'SingleEvent', params: { id: id }}">
             <img :src="imgSrc" :alt="imgAlt">
         </router-link>
     </div>

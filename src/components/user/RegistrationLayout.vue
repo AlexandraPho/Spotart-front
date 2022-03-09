@@ -1,172 +1,123 @@
 <template>
-  <h1 class="compte">Créer un compte</h1>
-  <p v-for="error in errors" :key="error">{{ error }}</p>
-  <p class="border-title"></p>
+    <h1 class="title">Créer un compte</h1>
+    <hr>
+    <p v-for="error in errors" :key="error">{{ error }}</p>
 
-  <div class="container">
-    <h1>Formulaire d'inscription</h1>
-    <form action="/action_page.php">
-      <div class="email">
-        <label for="emailAddress">Email</label>
+    <div class="container-form1">
+        <div class="container">
+            <form>
+                <div class="email">
+                    <label for="email">Adresse email</label>
+                    <input v-model="email" type="email" id="email" name="email" placeholder="robert@gmail.com" />
+                    <i class="fas fa-at"></i>
+                </div>
 
-        <input
-          v-model="email"
-          type="emailAddress"
-          id="email"
-          name="email"
-          placeholder="votre adresse electronique"
-        />
-        <i class="fas fa-at"></i>
-      </div>
+                <div class="password">
+                    <label for="password">Mot de passe</label>
+                    <input v-model="password" type="password" id="password" name="password" placeholder="Mot de passe" />
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                </div>
 
-      <div class="password">
-        <label for="password">Password</label>
-        <input
-          v-model="password"
-          type="password"
-          id="pass"
-          name="password"
-          placeholder="votre mot de passe"
-        />
-        <i class="fa fa-lock" aria-hidden="true"></i>
-      </div>
-      <div class="password">
-        <label for="confirmation">Confirmation</label>
-        <input
-          v-model="password_check"
-          id="confirmation"
-          type="confirmation"
-          name="confirmation"
-          placeholder="Confirmation"
-        />
-        <i class="fa fa-lock" aria-hidden="true"></i>
-      </div>
+                <div class="password">
+                    <label for="password-confirmation">Confirmation du mot de passe</label>
+                    <input v-model="password_check" id="password-confirmation" type="password" name="password-confirmation" placeholder="Confirmer votre mot de passe" />
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                </div>
 
-      <div class="prénom">
-        <label for="username">Username</label>
-        <input
-          v-model="username"
-          id="prénom"
-          type="prénom"
-          name="prénom"
-          placeholder="Votre prénom"
-        />
-        <i class="fa fa-portrait"></i>
-      </div>
-
-      <label for="pseudo">Pseudo</label>
-      <div class="pseudo">
-        <input
-          v-model="pseudo"
-          id="pseudo"
-          type="pseudo"
-          name="pseudo"
-          placeholder="Votre pseudo"
-        />
-        <i class="fa fa-smile"></i>
-      </div>
-
-      <div class="role">
-        <label class="chose">Choisissez votre profile</label>
-        <select v-model="role">
-          <option value="subscriber">Abonné / Abonnée</option>
-          <option value="artist">Artist</option>
-        </select>
-      </div>
-    </form>
-  </div>
-
-  <div class="container2">
-    <div id="app">
-      <div v-if="!illustration">
-        <h2>Choisir une photo</h2>
-        <input type="file" @change="onFileChange" />
-      </div>
-      <div v-else>
-       <img :src="illustration" >
-        <button @click="removeIllustration">Remove image</button>
-      </div>
+                <div class="pseudo">
+                    <label for="username">Pseudonyme</label>
+                    <input v-model="username" id="username" type="username" name="username" placeholder="Pseudonyme" />
+                    <i class="fa fa-portrait"></i>
+                </div>
+                <div class="container2">
+        <!--                 <div id="app">
+                        <div v-if="!illustration">
+                            <h2>Choisir une photo</h2>
+                            <input type="file" @change="onFileChange" />
+                        </div>
+                        <div v-else>
+                            <img :src="illustration">
+                            <button @click="removeIllustration">Remove image</button>
+                        </div>
+                    </div> -->
+                    <div class="field">
+                        <label for="description">Description (optionnel)</label>
+                        <textarea v-model="description" class="field_input" placeholder="Biographie"></textarea>
+                    </div>
+                </div>
+                <div class="role">
+                    <label class="chose">Choisissez votre type de profil</label>
+                    <select v-model="role">
+                        <option value="subscriber">Abonné / Abonnée</option>
+                        <option value="artist">Artist</option>
+                    </select>
+                </div>
+                <div class="send-button">
+                    <button v-on:click="sendForm" class="create-account" type="button">Créer un compte</button>
+                </div>
+                <br><br>
+            </form>
+        </div>
     </div>
-
-    <div class="field">
-      <textarea
-        v-model="content"
-        class="field_input"
-        placeholder="Description"
-      ></textarea>
-    </div>
-
-    <button v-on:click="sendForm" class="Créer un Compte" type="button">
-      Créer un compte
-    </button>
-  </div>
 </template>
 
 
 <script>
-import UsersService from "@/services/UsersService.js";
-export default {
-  name: "RegistrationLayout",
-  data() {
-    return {
-      errors: [],
-      email: null,
-      username: null,
-      role: null,
-      password: null,
-      password_check: null,
-      pseudo: null,     
-    };
-  },
-  methods: {
-    sendForm() {
-      this.errors = [];
-      if (!this.email) {
-        this.errors.push("Email must not be empty");
-      }
-      if (!this.username) {
-        this.errors.push("username must not be empty");
-      }
-      if (!this.pseudo) {
-        this.errors.push("pseudo must not be empty");
-      }
-      if (!this.role) {
-        this.errors.push("role must not be empty");
-      }
-      if (!this.password || !this.password_check) {
-        this.errors.push("Password and Password_check must be filled");
-      } else {
-        if (this.password !== this.password_check) {
-          this.errors.push("Password and Password_check must be the same");
-        }
-      }
-      UsersService.register(
-        {
-          username: this.username,
+    import UsersService from "@/services/UsersService.js";
 
-          email: this.email,
-          pseudo: this.pseudo,
-          password: this.password,
-          role: this.role,
+    export default {
+        name: "RegistrationLayout",
+        data() {
+            return {
+                success: null,
+                errors: [],
+                email: null,
+                password: null,
+                password_check: null,
+                username: null,
+                role: null,  
+                description: null  
+            }
         },
-        (error) => {
-          this.errors.push(error);
-        }
+        methods: {
+            sendForm() {
+                this.errors = [];
+                if (!this.email) {
+                    this.errors.push("Le champ d'adresse email doit être remplis");
+                }
+                if (!this.password || !this.password_check) {
+                    this.errors.push("Le(s) champ(s) mot de passe et/ou sa confirmation doivent être remplis");
+                }
+                if (this.password !== this.password_check) {
+                    this.errors.push("Les champs mot de passe et sa confirmation, ne sont pas identique");
+                }
+                if (!this.username) {
+                    this.errors.push("Le champ de pseudonyme doit être remplis");
+                }
+                if (!this.role && this.role == "") {
+                    this.errors.push("Un role doit être choisis");
+                }
+                if (!this.description) {
+                    this.errors.push("Le champ de description doit être remplis");
+                }
+                UsersService.register({
+                    email: this.email,
+                    password: this.password,
+                    username: this.username,
+                    role: this.role,
+                    description: this.description,
+                }, (data) => {
+                    this.errors.push(data);
 
-        
-      );
-
-      UsersService.create(
-        {
-          content: this.content,
-        },
-        () => {
-          this.$router.push("/");
+                    if(data.type === "success") {
+                        this.success = data.message;
+                    } else {
+                        this.errors.push(data.message);
+                    }
+                })
+            }
         }
-      );
-    },
-  },
-};
+    }
 </script>
 
 <style  src="@/assets/css/signup.css">

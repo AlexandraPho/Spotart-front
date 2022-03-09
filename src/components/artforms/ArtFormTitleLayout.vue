@@ -1,6 +1,6 @@
 <template>
     <section class="category-title">
-        <h2 v-html="name"></h2>
+        <h2>{{ name }}</h2>
     </section>
 </template>
 

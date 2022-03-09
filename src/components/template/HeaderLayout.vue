@@ -3,8 +3,8 @@
         <h1 class="title-logo">
             <router-link :to="homeUrl">Spot Art</router-link></h1>
         <ul class="header-links-list">
-            <li class="header-link-element" v-for="artform in artforms" :key="artform.name">
-                <router-link class="header-anchor-element" :to="artform.id">{{ artform.name }}s</router-link>
+            <li class="header-link-element" v-for="artformlink in artformlinks" :key="artformlink.name">
+                <router-link class="header-anchor-element" :to="artformlink.url">{{ artformlink.name }}</router-link>
             </li>
         </ul>
         <div>
@@ -26,7 +26,25 @@
                 loginlink : "/login",
                 createArtworkLink: "/artwork/create",
                 artforms: null,
-                homeUrl: "/"
+                homeUrl: "/",
+                artformlinks: [
+                    {
+                        name: "Sculptures",
+                        url: "/art-form/2"
+                    },
+                    {
+                        name: "Peintures",
+                        url: "/art-form/3"
+                    },
+                    {
+                        name: "Dessins",
+                        url: "/art-form/4"
+                    },
+                    {
+                        name: "Photographies",
+                        url: "/art-form/5"
+                    },
+                ]
             }
         },
         mounted() {
@@ -36,9 +54,8 @@
                     this.artforms = response.data;
                 }
             );    
-        }
+        },
     }
-
 </script>
 
 <style scoped>
@@ -55,6 +72,7 @@
         flex-grow: 1;
         text-decoration: none;
         color: #ffffff;
+        font-family: Cormorant Garamond;
     }
     header .title-logo router-link {
         text-decoration: none;

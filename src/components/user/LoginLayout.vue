@@ -15,6 +15,8 @@
         </div>
         <button v-on:click="sendForm">Se connecter</button>
         <br><br>
+        <router-link :to="urlregistration">Créer un compte</router-link>
+        <br><br>
     </div>
 </template>
 
@@ -23,12 +25,13 @@
 
     export default {
         name: "LoginLayout",
-                data() {
+        data() {
             return {
                 success: null,
                 errors: [],
                 username: null,
                 password: null,
+                urlregistration: "/registration"
             }
         },
         methods: {
@@ -57,7 +60,6 @@
                             // Add the error msg to our tpl
                             this.errors.push(data.message);
                         }
-
                     })
                 }
             }

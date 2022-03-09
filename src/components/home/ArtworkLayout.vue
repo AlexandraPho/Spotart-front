@@ -1,6 +1,6 @@
 <template>
     <article>
-        <router-link :to="{title: 'Artwork', params: {id: id}}">
+        <router-link :to="{name: 'SingleArtwork', params: { id: id }}">
             <img :src="imgSrc" :alt="imgAlt">
             <h3 :html="title"></h3>
         </router-link>
