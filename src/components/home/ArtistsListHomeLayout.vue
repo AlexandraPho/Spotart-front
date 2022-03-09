@@ -23,7 +23,7 @@
         mounted() {
             ArtistsService.findAll().then(
                 (response) => {
-                    console.log(response.data);
+                    console.log('Artists', response.data);
                     this.artists = response.data;
                 }
             );

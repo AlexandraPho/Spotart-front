@@ -14,6 +14,6 @@ export default {
         return apiClient.get('/art-form?_embed');
     },
     find(id) {
-        return apiClient.get(`/art-form/${id}?_embed`);
+        return apiClient.get(`/art-form?${id}?_embed`);
     },
 }

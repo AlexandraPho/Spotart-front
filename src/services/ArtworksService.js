@@ -14,8 +14,8 @@ export default {
     find(id) {
         return apiClient.get(`/artworks/${id}?_embed`);
     }, 
-    findByCategory(id) {
-        return apiClient.get(`artworks?artforms=${id}&_embed`);
+    findByCategory(link) {
+        return apiClient.get(`artworks?art-form=${link}&_embed`);
     }, 
     findAll() {
         return apiClient.get('/artworks?_embed');

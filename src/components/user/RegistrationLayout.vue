@@ -115,9 +115,7 @@ export default {
       role: null,
       password: null,
       password_check: null,
-      pseudo: null,
-      //illustration: null,
-     
+      pseudo: null,     
     };
   },
   methods: {
@@ -135,9 +133,6 @@ export default {
       if (!this.role) {
         this.errors.push("role must not be empty");
       }
-      // if (!this.illustration) {
-      // this.errors.push("Illustration must not be empty");
-      // }
       if (!this.password || !this.password_check) {
         this.errors.push("Password and Password_check must be filled");
       } else {
@@ -153,7 +148,6 @@ export default {
           pseudo: this.pseudo,
           password: this.password,
           role: this.role,
-          //illustration: this.illustration,
         },
         (error) => {
           this.errors.push(error);
@@ -167,8 +161,6 @@ export default {
           content: this.content,
         },
         () => {
-          // Affichage erreurs / succés
-          // Redirection vers la liste des recettes
           this.$router.push("/");
         }
       );

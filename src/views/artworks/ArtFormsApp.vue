@@ -1,8 +1,8 @@
 <template>
     <div>
         <HeaderLayout/>
-
-        <ArtFormTitleLayout v-if="urlId == artFormsName[this.$route.params.id].id" :name="artFormsName[this.$route.params.id].name"/>
+        
+        <!-- <ArtFormTitleLayout v-if="urlId == artform.link" :name="artform.name" /> -->
         <ArtworksListLayout v-bind:id="artwork.id" v-bind:image="artwork._embedded['wp:featuredmedia'][0] ? artwork._embedded['wp:featuredmedia'][0].source_url : ''" v-bind:title="artwork.title.rendered" v-bind:author="artwork._embedded['author'][0].name" v-for="artwork in artworks" v-bind:key="artwork.title"/>
 
         <FooterLayout/>
@@ -12,7 +12,7 @@
 <script>
     import HeaderLayout from '@/components/template/HeaderLayout.vue';
     import FooterLayout from '@/components/template/FooterLayout.vue';
-    import ArtFormTitleLayout from '@/components/artforms/ArtFormTitleLayout.vue';
+    /* import ArtFormTitleLayout from '@/components/artforms/ArtFormTitleLayout.vue'; */
     import ArtworksListLayout from '@/components/artworks/ArtworksListLayout.vue';
 
     import ArtworksService from '@/services/ArtworksService.js';
@@ -22,32 +22,14 @@
         name: 'ArtFormsApp',
         components: {
             HeaderLayout,
-            ArtFormTitleLayout,
+            /* ArtFormTitleLayout, */
             ArtworksListLayout,
             FooterLayout
         },
         data() {
             return {
                 artworks: null,
-                categories : null,
-                artFormsName: [
-                    {
-                        id: 7,
-                        name: "Dessins"
-                    },
-                    {
-                        id: 8,
-                        name: "Peintures"
-                    },
-                    {
-                        id: 9,
-                        name: "Photographies"
-                    },
-                    {
-                        id: 10,
-                        name: "Sculptures"
-                    }
-                ],
+                artforms : null,
                 urlId: this.$route.params.id,
             }
         },
@@ -66,7 +48,7 @@
             ArtFormsService.findAll(this.$route.params.id).then(
                 (response)=> {
                     console.log(response.data);
-                    this.categories = response.data;
+                    this.artforms = response.data;
                 }
             );    
         }

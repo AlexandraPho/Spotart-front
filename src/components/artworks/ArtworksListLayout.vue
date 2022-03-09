@@ -2,8 +2,8 @@
     <div class="artist-artwork">
         <div class="photos-titles">
             <img v-bind:src="image" v-bind:alt="title" @click='goToSingleArtwork()'>
-            <p class="artwork-title">{{title}}</p>
-            <p class="artwork-author">{{author}}</p>
+            <p class="artwork-title">{{ title }}</p>
+            <p class="artwork-author">{{ author }}</p>
         </div>
     </div>
 </template>

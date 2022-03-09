@@ -48,7 +48,7 @@
                         username: this.username,
                         password: this.password
                     }, (data) => {
-                        console.log(data);
+                        console.log('Users', data);
                         // Je verifie le type de réponse et j'affiche
                         // le message en consequence
                         if(data.type === "success") {

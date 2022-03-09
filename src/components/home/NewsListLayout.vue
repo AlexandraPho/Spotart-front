@@ -1,7 +1,5 @@
 <template>
     <section class="next-events">
-        <h2>Les prochains &Eacute;vénements</h2>
-        <hr>
         <div class="events-carousel">
             <NewsLayout v-for="news in newsList" :key="news.title" :id="news.id" :imgSrc="news._embedded['wp:featuredmedia'][0].source_url" :imgAlt="news._embedded['wp:featuredmedia'][0].alt_text" :title="news.title.rendered" />
             <div class="arrows-events">
@@ -29,7 +27,7 @@
         mounted() {
             NewsService.findAll().then(
                 (response) => {
-                    console.log(response.data);
+                    console.log('News', response.data);
                     this.events = response.data;
                 }
             );

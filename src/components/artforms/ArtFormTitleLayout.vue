@@ -1,6 +1,6 @@
 <template>
     <section class="category-title">
-        <h2>{{ name }}</h2>
+        <h2 v-html="name"></h2>
     </section>
 </template>
 
@@ -17,7 +17,6 @@
 
     .category-title {
         background-image: url("@/assets/images/smoke.jpg");
-        /*background-color: grey;*/
         background-size: cover;
         height: 15em;
     }

@@ -29,7 +29,7 @@
         mounted() {
             EventsService.findAll().then(
                 (response) => {
-                    console.log(response.data);
+                    console.log('Events', response.data);
                     this.events = response.data;
                 }
             );

@@ -1,9 +1,10 @@
 <template>
     <header>
-        <h1 class="title-logo" @click='goToHome()'>Spot Art</h1>
+        <h1 class="title-logo">
+            <router-link :to="homeUrl">Spot Art</router-link></h1>
         <ul class="header-links-list">
-            <li class="header-link-element" v-for="artFormsLink in artFormsLinks" :key="artFormsLink.name">
-                <router-link class="header-anchor-element" :to="artFormsLink.route">{{ artFormsLink.name }}</router-link>
+            <li class="header-link-element" v-for="artform in artforms" :key="artform.name">
+                <router-link class="header-anchor-element" :to="artform.id">{{ artform.name }}s</router-link>
             </li>
         </ul>
         <div>
@@ -16,32 +17,25 @@
 </template>
 
 <script>
+    import ArtFormsService from '@/services/ArtFormsService'
 
     export default {
         name: 'HeaderLayout',
         data() {
             return {
-                artFormsLinks: [
-                    {
-                        name: "Sculptures",
-                        route: "/art-form/10"
-                    },
-                    {
-                        name: "Peintures",
-                        route: "/art-form/8"
-                    },
-                    {
-                        name: "Photographies",
-                        route: "/art-form/9"
-                    },
-                    {
-                        name: "Dessins",
-                        route: "/art-form/7"
-                    },
-                ],
                 loginlink : "/login",
-                createArtworkLink: "/artwork/create"
+                createArtworkLink: "/artwork/create",
+                artforms: null,
+                homeUrl: "/"
             }
+        },
+        mounted() {
+            ArtFormsService.findAll(this.$route.params.id).then(
+                (response)=> {
+                    console.log('Artforms', response.data);
+                    this.artforms = response.data;
+                }
+            );    
         }
     }
 
@@ -56,9 +50,15 @@
         width: 100vw;
         max-width: 100%;
     }
-    header .title-logo {
+    header .title-logo a {
         padding-left: 40px;
         flex-grow: 1;
+        text-decoration: none;
+        color: #ffffff;
+    }
+    header .title-logo router-link {
+        text-decoration: none;
+        color: #ffffff;
     }
     header .header-links-list {
         list-style: none;
