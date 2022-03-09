@@ -20,7 +20,6 @@
             <ul>
                 <li>Artiste: {{ author }}</li>
                 <li>Date: {{ getDate(date) }} </li>
-                <li>Dimension: 1023.6 x 892.7 cm</li>
             </ul>
         <section class="categories">
             <ul>
@@ -30,7 +29,9 @@
         <section class="description">
             <p v-html="content"></p>
         </section>
+        <router-link class="favorite styled" to="/registration">Ajouter en favoris</router-link>
         <div class="button_fav"><button class="favorite styled" type="button">Ajouter en favoris</button></div>
+        <!--changer la redirection vers login et non registration -->
     </section>
     </article>
 </template>
@@ -67,7 +68,6 @@ export default {
 }
 </script>
 
-<style>
-
+<style src="@/assets/CSS/artwork.css">
 </style>
 

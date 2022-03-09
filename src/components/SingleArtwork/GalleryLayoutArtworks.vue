@@ -1,7 +1,7 @@
 <template>
 
 <router-link class="gallery_single_image" :to="{name: 'SingleArtwork', params: {id: id}}">
-    <img  v-bind:src="image" v-bind:alt="title" width="300"/>
+    <img  v-bind:src="image" width="300"/>
 </router-link>                   
 
 </template>
@@ -11,7 +11,6 @@ export default {
     name: "GalleryLayoutArtworks",
     
     props: {
-        title: String,
         image: String,
         id: Number
     }
