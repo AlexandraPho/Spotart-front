@@ -1,6 +1,9 @@
 import {
   createStore
 } from 'vuex'
+import createPersistedState from "vuex-persistedstate";
+
+
 export default createStore({
   state: {
     token: null,
@@ -24,8 +27,9 @@ export default createStore({
     setUserRole(state, newUserRole) {
       state.userRole = newUserRole;
     }
+
   },
   actions: {},
-  modules: {}
+  modules: {},
+  plugins: [createPersistedState()]
 })
-

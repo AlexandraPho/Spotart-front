@@ -12,75 +12,66 @@ const apiClient = axios.create({
 
 
 export default {
+
     register(data, callback) {
         apiClient.post('/wp/v2/users/register', data)
-        .catch(
-            //recupérer des erreurs
-            (error) => {
-                callback(error.response.data.code);
-                //console.log(error.response.data.message);
-            }
-        )
-        .then(
-            (response) => {
-            console.log(response);
-            }
-        );
-    },
-    connect(data, callback) {
-        return apiClient.post('/jwt-auth/v1/token', data)
-        .catch(
-            //recupérer des erreurs
-            (error) => {
-                callback({
-                    "type" : "error",
-                    "message" :  error.response.data.code
-                   
-                //console.log(error.response.data.message);
-                });
-            }
-        )
-        .then(
-            (response) => {
-                console.log('response');
-                //on passe par le stockage de vuex et non plus par la sessionStorage
-                store.commit('setToken',response.data.data.token);
-                store.commit('setUserID', response.data.data.id);
+            .catch(
+                (error) => {
+                    callback(error.response.data.message);
+                }
+            )
+            .then(
+                (response) => {
+                    console.log(response);
+                    /*store.commit('setToken', response.data.data.token);*/
+                    /*store.commit('setUserID', response.data.data.id);
+                    this.getRole();
+                    store.commit('setUserRole', response.data.data.id);*/
 
-                //sessionStorage.setItem('token', response.data.data.token);
-                //sessionStorage.setItem('userID', response.data.data.id)
-                callback({
-                    "type": "success",
-                    "message": response.data.message
-                });
-                // On va inserer le token dans le session storage
-
-            }
-        );
+                    /* On execute la callback avec un objet contenant le succes*/
+                    callback({
+                        "type": "success",
+                        "message": response.data.message
+                    });
+                }
+            );
     },
     getRole() {
         apiClient.get(`wp/v2/users/${store.state.userID}?context=edit`, {
-            headers: {
-                'Authorization': 'Bearer ' + store.state.token
-            }
-        })
-        .then(
-            (response) => {
-                store.commit('setUserRole', response.data.roles[0]);
+                /* headers: {
+                     'Authorization': 'Bearer ' + store.state.token
+                 }*/
+            })
+            .then(
+                (response) => {
+                    store.commit('setUserRole', response.data.roles[0]);
+                }
+            )
+    },
+
+    getUserbyId(id) {
+        return apiClient.get(`wp/v2/user/${id}`)
+    },
+
+    connect(data, callback) {
+        return apiClient.post('/jwt-auth/v1/token', data)
+        .catch( 
+            (error) => {
+                callback( { 
+                "type": "error",
+                "message" : error.response.data.message});
+                console.log(error.response.data.message);
             }
         )
-    },
-    create(data, callback) {
-        apiClient.post('/users', data, {
-           /* headers: {
-                'Authorization': 'Bearer ' + store.state.token
-            }*/
-        })
         .then(
             (response) => {
                 console.log(response);
-                callback();
+                store.commit('setToken', response.data.data.token);
+                store.commit('setUserID', response.data.data.id )
+                callback({ 
+                    "type": "success",
+                    "message" : response.data.data.message});
             }
-        )
-    },
+        );
+    }
 }
