@@ -6,7 +6,7 @@
         <fieldset class="right_section">
             <div class="field">
                 <label class="field__label">Adresse électronique :</label>
-                <input class="field__input" type="text" >
+                <input class="field__input" type="text" v-bind:placeholder="email">
             </div>
             <div class="field">
                 <label class="field__label">Mot de passe :</label>
@@ -14,11 +14,11 @@
             </div>
             <div class="field">
                 <label class="field__label">Prénom :</label>
-                <input class="field__input" type="text" placeholder="John">
+                <input class="field__input" type="text" v-bind:placeholder="name">
             </div>
             <div class="field">
                 <label class="field__label">Nom :</label>
-                <input class="field__input" type="text" placeholder="Doe">
+                <input class="field__input" type="text" v-bind:placeholder="lastname">
             </div>
             <div class="field">
                 <label class="field__label">Pseudo :</label>
@@ -44,11 +44,11 @@
 export default {
     name: 'InformationsUserLayout',
     props: {
-
+    name: String,
     nickname: String,
-    description: String
-
-
+    description: String,
+    email: String,
+    lastname: String
     }
 }
 

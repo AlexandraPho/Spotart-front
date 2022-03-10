@@ -1,7 +1,7 @@
 <template>
       <section class="related_work">
         <header>
-            <h1>Oeuvres similaires sur la catégorie {{ category }}</h1>
+            <h1>Dernières oeuvres de la catégorie {{ category }}</h1>
         </header>
         <div class="gallery">
     <GalleryLayoutArtworks v-bind:image="artwork._embedded['wp:featuredmedia'][0].source_url" v-bind:id="artwork.id" v-bind:title="artwork.slug" v-for="artwork in artworks" v-bind:key="artwork.image"/>

@@ -57,20 +57,12 @@ const routes = [{
 
     component: () => import(  '../views/ConnectionUser.vue')
   },
+  {
+    path: '/user/:id',
+    name: 'UserAccount',
 
-{
-
-path: '/user/:id',
-name: 'UserAccount',
-
-component: () => import( /* webpackChunkName: "connection" */ '../views/UserProfile.vue')
-}
-
-
-
-
-
-
+    component: () => import( /* webpackChunkName: "connection" */ '../views/UserProfile.vue')
+  }
 
 ]
 const router = createRouter({

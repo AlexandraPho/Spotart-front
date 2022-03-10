@@ -29,19 +29,19 @@
         <section class="description">
             <p v-html="content"></p>
         </section>
-        <router-link class="favorite styled" to="/registration">Ajouter en favoris</router-link>
-        <div class="button_fav"><button class="favorite styled" type="button">Ajouter en favoris</button></div>
-        <!--changer la redirection vers login et non registration -->
+        <div class="button_fav" v-on:click="addToFav"><button class="favorite styled" type="button">Ajouter en favoris</button></div>
     </section>
     </article>
 </template>
 
 <script>
 import moment from 'moment';
+import FavouritesService from '@/services/FavouritesService.js';
 
 export default {
     name: 'InformationsLayout',
     props: {
+        id: Number,
         title: String,
         author: String,
         category: String,
@@ -63,9 +63,30 @@ export default {
         });
         moment.locale('fr');
         return moment(date, 'YYYY-MM-DD').format('LL');
-        }
+        },
+    addToFav() {
+      // we are calling the service so we can add one artwork in the favourite of our user
+      // the method we will use to add this relation is called createNewRelation and is waiting for two arg the datas (userID and postID) and a callback
+      
+      // if the user is connected => we launch the service to insert the relation
+        
+    if(this.$store.state.token){
+
+        FavouritesService.createNewRelation(
+        { user_id : this.$store.state.userID, post_id : this.id}, 
+        () => {
+        this.$router.push({ name: "UserAccount", params: { id : this.$store.state.userID }})
+        console.log('INSERTION FINIE');
+      }); // if the user is not connected, we will redirect him to the connection page
+      } else {
+        this.$router.push({ name: "Connection"})
+      }
+      
     }
+
+  }
 }
+
 </script>
 
 <style src="@/assets/CSS/artwork.css">

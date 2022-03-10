@@ -50,7 +50,7 @@ export default {
     },
 
     getUserbyId(id) {
-        return apiClient.get(`wp/v2/users/${id}?_embed`)
+        return apiClient.get(`wp/v2/user/${id}`)
     },
 
     connect(data, callback) {

@@ -1,7 +1,7 @@
 <template>
   <div>
 <HeaderLayout />
-<InformationsUserLayout v-if="user" v-bind:description="user.description" v-bind:nickname="user.name"/>
+<InformationsUserLayout v-if="user" v-bind:email="user.email" v-bind:nickname="user.nickname" v-bind:name="user.name" v-bind:lastname="user.last_name" v-bind:description="user.description"/>
 <FavouriteTitle />
 <FooterLayout />
   </div>

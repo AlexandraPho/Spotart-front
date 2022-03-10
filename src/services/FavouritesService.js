@@ -22,9 +22,7 @@ export default {
                 callback(error.response.data.message);
             }
         )
-        .then(
-            (response) => {
-                console.log(response);
+        .then((response) => { console.log(response);
                 /*store.commit('setToken', response.data.data.token);*/
                 /*store.commit('setUserID', response.data.data.id);
                 this.getRole();

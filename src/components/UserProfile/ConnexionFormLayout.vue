@@ -1,4 +1,4 @@
-gi<template>
+<template>
     <main class="main-container">
         <h1>Connexion</h1>
         <p v-if="success">{{ success }}</p>
@@ -46,10 +46,10 @@ export default {
                     username: this.username,
                     password: this.password
                 }, (data) => {
-                    console.log(data);
                     // we are verifying the response type and we are displaying the message depending of the context
                     if(data.type === "success") {
-                        this.success = "connexion ok";
+                    alert('Bonjour ' + this.username + ' !');
+                    this.$router.push({ name: "UserAccount", params: { id : this.$store.state.userID }})
                     } else {
                         this.errors.push(data.message);
                     }
