@@ -15,7 +15,6 @@
             title: String,
             image: String,
             author: String,
-            id: Number
         },
     }
     

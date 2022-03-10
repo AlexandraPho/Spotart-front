@@ -1,15 +1,15 @@
 <template>
     <header>
         <h1 class="title-logo">
-            <router-link :to="homeUrl">Spot Art</router-link></h1>
+            <router-link :to="{name: 'Home'}">Spot Art</router-link></h1>
         <ul class="header-links-list">
-            <li class="header-link-element" v-for="artformlink in artformlinks" :key="artformlink.name">
-                <router-link class="header-anchor-element" :to="artformlink.url">{{ artformlink.name }}</router-link>
+            <li class="header-link-element" v-for="artform in artforms" :key="artform.name">
+                <router-link class="header-anchor-element" :to="{name: 'ArtForms', params: {id: artform.id}}">{{ artform.name }}s</router-link>
             </li>
         </ul>
         <div>
-            <router-link class="connexion-link" :to="loginlink">Connexion</router-link>
-            <router-link :to="createArtworkLink">
+            <router-link class="connexion-link" :to="{name: 'Login'}">Connexion</router-link>
+            <router-link :to="{name: 'CreateArtwork'}">
                 <button class="publish-button">Partagez vos créations</button>
             </router-link>
         </div>
@@ -23,32 +23,12 @@
         name: 'HeaderLayout',
         data() {
             return {
-                loginlink : "/login",
-                createArtworkLink: "/artwork/create",
                 artforms: null,
                 homeUrl: "/",
-                artformlinks: [
-                    {
-                        name: "Sculptures",
-                        url: "/art-form/2"
-                    },
-                    {
-                        name: "Peintures",
-                        url: "/art-form/3"
-                    },
-                    {
-                        name: "Dessins",
-                        url: "/art-form/4"
-                    },
-                    {
-                        name: "Photographies",
-                        url: "/art-form/5"
-                    },
-                ]
             }
         },
         mounted() {
-            ArtFormsService.findAll(this.$route.params.id).then(
+            ArtFormsService.findAll().then(
                 (response)=> {
                     console.log('Artforms', response.data);
                     this.artforms = response.data;

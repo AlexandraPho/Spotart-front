@@ -27,7 +27,7 @@
         mounted() {
             NewsService.findAll().then(
                 (response) => {
-                    console.log('News', response.data);
+                    console.log('News', response.data.slice(0, 4));
                     this.events = response.data;
                 }
             );
