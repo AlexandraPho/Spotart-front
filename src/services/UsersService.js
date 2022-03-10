@@ -1,13 +1,13 @@
 import axios from 'axios';
-import store from '../store/index.js';
+import store from '../store';
 
 const apiClient = axios.create({
     baseURL: 'http://spotart.local/wp-json',
-    headers: {
+    headers:  {
         Accept: 'application/json',
-        'Content-Type': 'application/json'
+        'content-Type': 'application/json'
     },
-    timeout: 10000,
+    timeout: 5000
 });
 
 

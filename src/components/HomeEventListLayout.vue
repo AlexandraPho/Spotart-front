@@ -14,13 +14,13 @@
 </template>
 
 <script>
-    import EventsServices from '@/services/EventsServices.js';
+    import EventsService from '@/services/EventsService.js';
 
     export default {
         name: 'HomeEventListLayout',
         mounted() {
             // Attention, on ne traite pas pour l'instant les cas d'erreurs
-            EventsServices.findAll().then(
+            EventsService.findAll().then(
                 // Executer le code qui permet de recuperer le résultat de ma requete
                 // Permet de garder le contexte et de recuperer response
                 (response) => {

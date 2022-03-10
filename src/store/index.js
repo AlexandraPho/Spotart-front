@@ -9,7 +9,6 @@ export default createStore({
     token: null,
     userID: null,
     userRole: null
-
   },
   getters: {
     checkUserRole: (state) => (roles) => {
@@ -20,8 +19,6 @@ export default createStore({
   },
   mutations: {
     setToken(state, newToken) {
-      // On pourrait ajouter des traitements et des
-      // validations avant de mettre a jour la donnée
       state.token = newToken;
     },
     setUserID(state, newUserID) {

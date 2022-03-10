@@ -1,14 +1,14 @@
 <template>
     <header>
-        <h1 class="title-logo">Spot Art</h1>
+        <h1 class="title-logo" @click='goToHome()'>Spot Art</h1>
         <ul class="header-links-list">
-            <li class="header-link-element"><a class="header-anchor-element" href="#">Sculptures</a></li>
+            <li class="header-link-element"><a class="header-anchor-element" @click='goToSculpturPage()'>Sculptures</a></li>
             <li>|</li>
-            <li class="header-link-element"><a class="header-anchor-element" href="#">Peintures</a></li>
+            <li class="header-link-element"><a class="header-anchor-element" @click='goToPaintPage()'>Peintures</a></li>
             <li>|</li>
-            <li class="header-link-element"><a class="header-anchor-element" href="#">Photographies</a></li>
+            <li class="header-link-element"><a class="header-anchor-element" @click='goToPhotographyPage()'>Photographies</a></li>
             <li>|</li>
-            <li class="header-link-element"><a class="header-anchor-element" href="#">Dessins</a></li>
+            <li class="header-link-element"><a class="header-anchor-element" @click='goToDrawingPage()'>Dessins</a></li>
         </ul>
         <div>  <router-link class="connexion-link"  v-if="this.$store.state.token == null" to="/connection">{{ this.$store.state.token == null ? 'Connexion' : 'mon compte'  }}</router-link>
         
@@ -22,6 +22,14 @@
 
     export default {
         name: 'HeaderLayout',
+        data() {
+            return {
+                sculpturs: [],
+                paints: [],
+                photography: [],
+                drawing: [],
+            }
+        },
     }
 
 </script>
