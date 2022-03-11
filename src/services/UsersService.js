@@ -1,15 +1,14 @@
 import axios from 'axios';
-import store from '../store';
+import store from '../store/index.js';
 
 const apiClient = axios.create({
     baseURL: 'http://spotart.local/wp-json',
-    headers:  {
+    headers: {
         Accept: 'application/json',
-        'content-Type': 'application/json'
+        'Content-Type': 'application/json'
     },
-    timeout: 5000
+    timeout: 10000,
 });
-
 
 export default {
 
@@ -55,12 +54,12 @@ export default {
 
     connect(data, callback) {
         return apiClient.post('/jwt-auth/v1/token', data)
-        .catch( 
+        .catch(
             (error) => {
-                callback( { 
-                "type": "error",
-                "message" : error.response.data.message});
-                console.log(error.response.data.message);
+                callback({
+                    "type": "error",
+                    "message": error.response.data.code
+                });
             }
         )
         .then(

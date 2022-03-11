@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import HeaderLayout from '@/components/HeaderLayout.vue';
-import FooterLayout from '@/components/FooterLayout.vue';
+import HeaderLayout from '@/components/template/HeaderLayout.vue';
+import FooterLayout from '@/components/template/FooterLayout.vue';
 import InformationsUserLayout from '@/components/UserProfile/InformationsUserLayout.vue'
 import FavouriteTitle from '@/components/UserProfile/FavouriteTitle.vue'
 // we import the service so we can have the datas from the WP API
@@ -40,5 +40,5 @@ export default {
 </script>
 
 
-<style src="@/assets/CSS/signup.css">
+<style src="@/assets/css/signup.css">
 </style>

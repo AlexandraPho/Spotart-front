@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import HeaderLayout from '@/components/HeaderLayout.vue'
-import FooterLayout from '@/components/FooterLayout.vue'
+import HeaderLayout from '@/components/template/HeaderLayout.vue'
+import FooterLayout from '@/components/template/FooterLayout.vue'
 //import ConnexionFormLayout from '@/components/UserProfile/ConnexionFormLayout.vue'
 import InformationsLayout from '@/components/SingleArtwork/InformationsLayout.vue'
 import GalleryLayoutTitle from '@/components/SingleArtwork/GalleryLayoutTitle.vue'
@@ -42,6 +42,6 @@ export default {
 }
 </script>
 
-<style src="@/assets/CSS/artwork.css">
+<style src="@/assets/css/artwork.css">
 </style>
 

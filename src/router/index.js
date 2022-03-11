@@ -1,72 +1,76 @@
-import {
-  createRouter,
-  createWebHistory
-} from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
+import HomeApp from '../views/HomeApp.vue'
 
-import Home from '../views/Home.vue'
-
-  const routes = [{
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/artwork/:id',
-    name: 'SingleArtwork',
-    component: () => import( /* webpackChunkName: "connection" */ '../views/SingleArtwork.vue')
-  },
-  /*
-  {
-    path: '/publishartwork',
-    name: 'PublishArtwork',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import('../views/user/PublishArtwork.vue')
-  },
-  */
-  {
-    path: '/artwork/create',
-    name: 'CreateArtwork',
-    component: () => import('../views/user/CreateArtwork.vue')
-  },
-  {
-    path: '/artwork/update/'/*[i:artwokID]*/,
-    name: 'UpdateArtwork',
-    component: () => import('../views/user/UpdateArtwork.vue')
-  },
-  {
-    path: '/artist/:id',
-    name: 'Artist',
-    component: () => import('../views/ArtistProfile.vue')
-  },
-  {
-    path: '/category/:id',
-    name: 'Category',
-    component: () => import(/* webpackChunkName: "category" */ '../views/Category.vue')
-  },
-  {
-    path: '/registration',
-    name: 'Registration',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import( /* webpackChunkName: "connection" */ '../views/Registration.vue')
-  },
-  {
-    path: '/connection',
-    name: 'Connection',
-    component: () => import(  '../views/ConnectionUser.vue')
-  },
-  {
-    path: '/user/:id',
-    name: 'UserAccount',
-    component: () => import( /* webpackChunkName: "connection" */ '../views/UserProfile.vue')
-  }
+const routes = [
+    {
+        path: '/',
+        name: 'Home',
+        component: HomeApp
+    },
+    {
+        path: '/login',
+        name: 'Login',
+        component: () => import('../views/user/LoginApp.vue')
+    },
+    {
+        path: '/registration',
+        name: 'Registration',
+        component: () => import('../views/user/RegistrationApp.vue')
+    },
+    {
+      path: '/artwork/:id',
+      name: 'SingleArtwork',
+      component: () => import('../views/SingleArtwork.vue')
+    },
+    {
+        path: '/artworks/create',
+        name: 'CreateArtwork',
+        component: () => import( '../views/artworks/CreateArtworkApp.vue')
+    },
+    {
+        path: '/artworks/update/:id',
+        name: 'UpdateArtwork',
+        component: () => import( '../views/artworks/UpdateArtworkApp.vue')
+    },
+    {
+        path: '/artists/:id',
+        name: 'ArtistProfile',
+        component: () => import('../views/user/ArtistProfileApp.vue')
+    },
+    {
+        path: '/contact',
+        name: 'Contact',
+        component: () => import('../views/extra/ContactApp.vue')
+    },
+    {
+        path: '/about',
+        name: 'About',
+        component: () => import('../views/extra/AboutApp.vue')
+    },
+    {
+        path: '/sitemap',
+        name: 'SiteMap',
+        component: () => import('../views/extra/SiteMapApp.vue')
+    },
+    {
+        path: '/legal-notice',
+        name: 'LegalNotice',
+        component: () => import('../views/extra/LegalNoticeApp.vue')
+    },
+    {
+        path: '/art-form/:id',
+        name: 'ArtForms',
+        component: () => import('../views/artworks/ArtFormsApp.vue')
+    },
+    {
+      path: '/user/:id',
+      name: 'UserAccount',
+      component: () => import('../views/UserProfile.vue')
+    }
 ]
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
-  routes
+    history: createWebHistory(process.env.BASE_URL),
+    routes
 })
 
 export default router

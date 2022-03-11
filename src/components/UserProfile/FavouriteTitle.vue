@@ -37,5 +37,5 @@ export default {
 </script>
 
 
-<style src="@/assets/CSS/artwork.css">
+<style src="@/assets/css/artwork.css">
 </style>
