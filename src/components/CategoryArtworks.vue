@@ -40,6 +40,7 @@
     }
     .artist-artwork .photos-titles{
        margin: 1em;
+       
     }
     .artist-artwork .artwork-author {
         font-style: italic;
@@ -52,11 +53,20 @@
         /*margin: 0.2em;*/
         width: 12em;
         height: 12em;
-        border-radius: 1em;
+        /*border-radius: 1em;*/
+        box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
     }
     .artist-artwork img:hover{
         width:15em;
         height:15em;
+        border : 2px solid #000000;
+        box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
+        transform:scale(1.2);
         cursor: pointer;
     }
 

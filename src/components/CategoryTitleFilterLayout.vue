@@ -21,7 +21,6 @@
     /* Section CATEGORY TITLE and FILTER*/
     .category-title {
         background-image: url("../assets/images/smoke.jpg");
-        /*background-color: grey;*/
         background-size: cover;
         height: 15em;
     }
@@ -42,8 +41,8 @@
         display: flex;
         justify-content: space-between;
         padding: 0.3em 1.9em 0.8em 1.9em;
-        border-bottom-style: solid;
-        border-bottom-color: #FFDE59;
+        /*border-bottom-style: solid;*/
+        /*border-bottom-color: #FFDE59;*/
         font-size: 1.3em;
     }
     .filters p {
@@ -57,5 +56,9 @@
     }
     .filters a:visited {
         color: black;
+    }
+    hr {
+        border: #ffde59 solid 2px;
+        width: 20%;
     }
 </style>
