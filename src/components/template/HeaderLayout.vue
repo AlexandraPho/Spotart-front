@@ -12,6 +12,10 @@
             <router-link :to="{name: 'CreateArtwork'}">
                 <button class="publish-button">Partagez vos créations</button>
             </router-link>
+
+        <!-- <div>  <router-link class="connexion-link"  v-if="this.$store.state.token == null" to="/connection">{{ this.$store.state.token == null ? 'Connexion' : 'mon compte'  }}</router-link> -->
+        
+            <button class="publish-button">Partagez vos créations</button>
         </div>
     </header>
 </template>

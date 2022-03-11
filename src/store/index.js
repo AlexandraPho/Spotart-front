@@ -1,4 +1,6 @@
-import { createStore } from 'vuex'
+import { createStore } from 'vuex';
+import createPersistedState from "vuex-persistedstate";
+
 
 export default createStore({
     state: {
@@ -11,7 +13,6 @@ export default createStore({
           console.log(state.userRole, roles)
           return roles.includes(state.userRole);
         }
-
     },
     mutations: {
         setToken(state, newToken) {
@@ -25,5 +26,6 @@ export default createStore({
         }
     },
     actions: {},
-    modules: {}
+    modules: {},
+    plugins: [createPersistedState()]
 })

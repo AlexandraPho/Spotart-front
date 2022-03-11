@@ -18,9 +18,9 @@ const routes = [
         component: () => import('../views/user/RegistrationApp.vue')
     },
     {
-        path: '/artworks/:id',
-        name: 'SingleArtwork',
-        component: () => import('../views/artworks/SingleArtworkApp.vue')
+      path: '/artwork/:id',
+      name: 'SingleArtwork',
+      component: () => import('../views/SingleArtwork.vue')
     },
     {
         path: '/artworks/create',
@@ -62,6 +62,11 @@ const routes = [
         name: 'ArtForms',
         component: () => import('../views/artworks/ArtFormsApp.vue')
     },
+    {
+      path: '/user/:id',
+      name: 'UserAccount',
+      component: () => import('../views/UserProfile.vue')
+    }
 ]
 const router = createRouter({
     history: createWebHistory(process.env.BASE_URL),
