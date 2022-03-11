@@ -1,24 +1,25 @@
 <template>
-        <article class="artwork">
+    <article class="artwork">
         <div class="media-image">
             <img class="main-picture" v-bind:src="image" v-bind:alt="title">
-<!-- 
-            <div class="gallery">
-                <img class="gallery-picture" v-bind:src="image" v-bind:alt="title">>
-                <img class="gallery-picture" v-bind:src="image" v-bind:alt="title">>
-                <img class="gallery-picture" v-bind:src="image" v-bind:alt="title">>
+
+
+            <!-- <div class="gallery">
+                <img class="gallery-picture" v-bind:src="image" v-bind:alt="title">
+                <img class="gallery-picture" v-bind:src="image" v-bind:alt="title">
+                <img class="gallery-picture" v-bind:src="image" v-bind:alt="title">
             </div>
             <nav>
                 <div><a class="prev" href="#"></a></div>
                 <div><a class="next" href="#"></a></div>
               </nav> -->
+
         </div>
         <section class="informations">
             <h1 v-html="title"></h1>
             <ul>
                 <li>Artiste: {{ author }}</li>
                 <li>Date: {{ getDate(date) }} </li>
-                <!-- <li>Dimension: 1023.6 x 892.7 cm</li> -->
             </ul>
         <section class="categories">
             <ul>
@@ -38,7 +39,7 @@ import moment from 'moment';
 import FavouritesService from '@/services/FavouritesService.js';
 
 export default {
-    name: 'ArtworkDetailLayout',
+    name: 'InformationsLayout',
     props: {
         id: Number,
         title: String,
@@ -48,7 +49,7 @@ export default {
         image: String,
         date: String
     },
-        methods: {
+    methods: {
     getDate : function (date) {
         moment.locale('fr', {
         months : 'janvier_février_mars_avril_mai_juin_juillet_août_septembre_octobre_novembre_décembre'.split('_'),
@@ -78,15 +79,15 @@ export default {
         console.log('INSERTION FINIE');
       }); // if the user is not connected, we will redirect him to the connection page
       } else {
-        this.$router.push({ name: "Login"})
+        this.$router.push({ name: "Connection"})
       }
       
     }
 
   }
 }
-
 </script>
 
-<style src="@/assets/css/artwork.css">
+<style>
+
 </style>
