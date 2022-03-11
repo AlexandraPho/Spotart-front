@@ -23,7 +23,7 @@ const routes = [{
     component: () => import( '../views/user/CreateArtwork.vue')
 },
 {
-    path: '/artwork/update/'/*[i:artwokID]*/,
+    path: '/artwork/update/:id',
     name: 'UpdateArtwork',
     component: () => import( '../views/user/UpdateArtwork.vue')
 },
@@ -32,7 +32,7 @@ const routes = [{
     path: '/artist/:id',
     name: 'Artist',
     component: () => import( /*   webpackChunkName: "connection" */ '../views/ArtistProfile.vue')
-  },
+},
   {
     path: '/registration',
     name: 'Registration',

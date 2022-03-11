@@ -3,8 +3,8 @@ import {
 } from 'vuex'
 export default createStore({
   state: {
-    token: null,
-    userID: null,
+    token: '',
+    userID: '',
     userRole: null
   },
   getters: {
@@ -27,5 +27,9 @@ export default createStore({
   },
   actions: {},
   modules: {}
+  
 })
+
+
+      
 
