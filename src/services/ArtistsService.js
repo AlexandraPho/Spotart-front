@@ -11,9 +11,9 @@ const apiClient = axios.create({
 
 export default {
     findAll() {
-        return apiClient.get('/artists?_embed');
+        return apiClient.get('/artist?_embed');
     },
     find(id) {
-        return apiClient.get(`/artists/${id}?_embed`);
+        return apiClient.get(`/artist/${id}?_embed`);
     },
 }

@@ -18,11 +18,11 @@
 
     <div class="art_form">
         <label class="art_form_title">Forme d'art :</label>
-        <select v-model="artform" class="art_form_category">
-            <option value="sculpture">Sculpture</option>
-            <option value="peinture">Peinture</option>
-            <option value="photographie">Photographie</option>
-            <option value="dessin">Dessin</option>
+        <select v-model="artforms" class="art_form_category">
+            <option value="sculp">Sculpture</option>
+            <option value="paint">Peinture</option>
+            <option value="photo">Photographie</option>
+            <option value="draw">Dessin</option>
         </select>
     </div>
     <br>
@@ -64,7 +64,7 @@
                 success: null,
                 errors: [],
                 title: null,
-                artform: null,
+                artforms: null,
                 content: null,
                 status: "publish",
                 author: this.$store.state.userID,
@@ -76,7 +76,7 @@
                 if(!this.title) {
                     this.errors.push("Title must not be empty");
                 }
-                if(!this.artform) {
+                if(!this.artforms) {
                     this.errors.push("Category must not be empty");
                 }
                 if(!this.content) {
@@ -84,7 +84,7 @@
                 }
                 ArtworksService.CreatePost({
                     title: this.title,
-                    artform: this.artform,
+                    artforms: this.artforms,
                     content: this.content,
                     status: this.status,
                 }, (data) => {

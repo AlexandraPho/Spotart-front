@@ -12,16 +12,16 @@ const apiClient = axios.create({
 
 export default {
     find(id) {
-        return apiClient.get(`/artworks/${id}?_embed`);
+        return apiClient.get(`/artwork/${id}?_embed`);
     }, 
-    findByCategory(link) {
-        return apiClient.get(`artworks?art-form=${link}&_embed`);
-    }, 
+    findByCategory(id) {
+        return apiClient.get(`artwork?artforms=${id}&_embed`);
+    },
     findAll() {
-        return apiClient.get('/artworks?_embed');
+        return apiClient.get('/artwork?_embed');
     },
     CreatePost(data, callback) {
-        apiClient.post(`/artworks`, data, {
+        apiClient.post(`/artwork`, data, {
         headers: {
             'Authorization': 'Bearer ' + store.state.token
         }
