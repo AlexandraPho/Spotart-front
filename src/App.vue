@@ -34,8 +34,16 @@
     h1,
     img,
     li,
-    a {
+    a,
+    button {
        cursor: pointer; 
+    }
+    body {
+        background:
+        linear-gradient(white, transparent),
+        linear-gradient(to top left, white, transparent),
+        linear-gradient(to top right, #ffde59, transparent);
+        background-blend-mode: screen;
     }
 
 </style>

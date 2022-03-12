@@ -34,13 +34,29 @@
 
     /* -------------GENERAL------------- */
 
+    img {
+        width: 15em;
+        margin: 2em 4em;
+        box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
+    }
+    
+    img:hover{
+        width:20em;
+        box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+    }
     h2 {
-        text-align: center;
-        margin-bottom: 5px;
+        display: flex;
+        justify-content: center;
+        font-size: 2em;
     }
     hr {
         border: #ffde59 solid 1px;
-        width: 8%;
+        width: 30em;
     }
 
     /* -------------CAROUSEL------------- */
@@ -73,45 +89,18 @@
     .latest-artworks {
         padding: 0 120px 0 120px;
     }
-    .latest-artworks .artworks {
-        margin: 20px 0 30px 0;
-        display: grid;
-        grid-template-columns: [start] 1fr [first-column] 1fr [second-column] 1fr [third-column] 1fr [end];
-        grid-template-rows: 1fr;
+    .latest-artworks .artworks-list {
+        display: flex;
+        flex-wrap: wrap;
         align-items: center;
+        justify-content: center;
     }
-    .latest-artworks .artworks .first-artwork {
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        width: 400px;
-        height: 400px;
-    }
-    .latest-artworks .artworks .second-artwork {
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        width: 400px;
-        height: 400px;
-    }
-    .latest-artworks .artworks .third-artwork {
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        width: 400px;
-        height: 400px;
-    }
-    .latest-artworks .artworks .fourth-artwork {
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-        width: 400px;
-        height: 400px;
-    }
-
-        .latest-artworks .artworks h3 {
+    .latest-artworks .artwork-info h3 {
         text-align: center;
         font-size: x-large;
+    }
+    .latest-artworks .artwork-info p {
+        text-align:center;
     }
 
     /* -------------ARTISTS------------- */

@@ -1,7 +1,8 @@
 <template>
     <header>
         <h1 class="title-logo">
-            <router-link :to="{name: 'Home'}">Spot Art</router-link></h1>
+            <router-link :to="{name: 'Home'}">Spot Art</router-link>
+        </h1>
         <ul class="header-links-list">
             <li class="header-link-element" v-for="artform in artforms" :key="artform.name">
                 <router-link class="header-anchor-element" :to="{name: 'ArtForms', params: {id: artform.id}}">{{ artform.name }}s</router-link>
@@ -46,28 +47,48 @@
         background-color: #000000;
         display: flex;
         align-items: center;
-        width: 100vw;
-        max-width: 100%;
+        /*width: 100vw;
+        max-width: 100%;*/
     }
     header .title-logo a {
-        padding-left: 40px;
+        padding-left: 1em;
         flex-grow: 1;
         text-decoration: none;
-        color: #ffffff;
         font-family: Cormorant Garamond;
+        background: linear-gradient(to right, #ffde59 10%, white 50%,#ffde59  60%);
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        color: #fff;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip 8s linear infinite;
+        display: inline-block;
     }
-    header .title-logo router-link {
+    @keyframes textclip {
+        to {
+            background-position: 200% center;
+        }
+    }
+    header .title-logo a:hover,
+    header .header-links-list .header-anchor-element:hover{
+        color: #ffde59;
+        
+    }
+    /*header .title-logo router-link {
         text-decoration: none;
         color: #ffffff;
-    }
+    }*/
     header .header-links-list {
         list-style: none;
         display: inline-flex;
         justify-content: center;
-        gap: 20px;
+        gap: 0.5em;
         flex-grow: 2;
         color: #ffffff;
-        font-size: xx-large;
+        font-size: 2em;
+        margin-left: 6em;
     }
     header .header-links-list .header-anchor-element {
         color: #ffffff;
@@ -79,19 +100,27 @@
         flex-grow: 1;
         justify-content: flex-end;
         align-items: center;
-        padding-right: 40px;
-        gap: 20px;
+        padding-right: 1em;
+        gap: 0.5em;
     }
     header div .connexion-link {
-        font-size: xx-large;
+        font-size: 1.5em;
         color: #ffde59;
+        text-decoration: none;
     }
     header div .publish-button {
+        background-color: black;
+        color:#ffde59; 
+        border: 2px solid #ffde59; 
+        font-size: 1.5em;
+        width: 10em;
+        height: 1.7em;
+        margin-left: 1em;
+        border-radius: 0.2em;
+    }
+    header div .publish-button:hover {
         background-color: #ffde59;
-        border-color: #ffde59;
-        font-size: x-large;
-        width: 250px;
-        height: 50px;
-        cursor: pointer;
+        color:black;
+        transition-duration: 0.8s;
     }
 </style>

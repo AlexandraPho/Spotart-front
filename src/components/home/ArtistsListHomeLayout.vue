@@ -1,6 +1,6 @@
 <template>
     <section class="artists-zoom">
-        <h2>Zoom sur nos Artistes</h2>
+        <h2 class="title-section">Zoom sur nos Artistes</h2>
         <hr>
         <ArtistLayout v-for="artist in artists" :key="artist.title" :id="artist.id" :imgSrc="artist._embedded['wp:featuredmedia'][0].source_url" :imgAlt="artist._embedded['wp:featuredmedia'][0].alt_text" :title="artist.title.rendered" />
     </section>
@@ -30,3 +30,7 @@
         },
     }
 </script>
+
+<style scoped>
+    
+</style>

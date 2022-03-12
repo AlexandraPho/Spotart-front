@@ -64,3 +64,43 @@
         }
     }
 </script>
+
+<style>
+/*------ArtworksListLayout-------*/
+    .artist-artwork {
+        display: inline-flex;
+        justify-content: space-around;
+        margin: 1.5em 3em 0.2em 5em;
+    }
+    .artist-artwork .photos-titles{
+       margin: 1em;
+       
+    }
+    .artist-artwork .artwork-author {
+        font-style: italic;
+        display: flex;
+        margin-top: 0.2em;
+        justify-content: center;
+    }
+    
+    .artist-artwork img {
+        width: 15em;
+        margin: 2em 4em;
+        box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
+    }
+    .artist-artwork img:hover{
+        width:20em;
+        box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+
+    .artist-artwork .artwork-title {
+        display: flex;
+        margin-top: 0.2em;
+        justify-content: center;
+    }
+</style>

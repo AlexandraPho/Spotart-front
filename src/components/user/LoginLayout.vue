@@ -1,22 +1,24 @@
 <template>
-    <div>
-        <h1>Connexion</h1>
-        <p v-if="success">{{ success }}</p>
-        <p v-for="error in errors" :key="error">{{ error }}</p>
-        <div>
+    <div class="connexion-container">
+        <div class="title">
+            <h1>Connexion</h1>
+            <p v-if="success">{{ success }}</p>
+            <p v-for="error in errors" :key="error">{{ error }}</p>
+        </div>
+        <div class="username-section">
             <label for="username">Pseudo :</label>
             <input type="text" id="username" name="username" placeholder="Pseudo" v-model="username">
-            <p>Adresse electronique oublié?</p>
+            <!--<p>Adresse electronique oublié?</p>-->
         </div>
-        <div>
+        <div class="password-section">
             <label for="password">Mot de passe :</label>
             <input type="password" id="password" name="password" placeholder="Mot de passe" v-model="password">
-            <p>Mot de passe oublié?</p>
+            <!--<p>Mot de passe oublié?</p>-->
         </div>
         <button v-on:click="sendForm">Se connecter</button>
-        <br><br>
-        <router-link :to="{name: 'Registration'}">Créer un compte</router-link>
-        <br><br>
+        <div class="create-account">
+            <router-link :to="{name: 'Registration'}">Créer un compte</router-link>
+        </div>
     </div>
 
     <!-- 

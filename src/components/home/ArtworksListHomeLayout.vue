@@ -1,8 +1,10 @@
 <template>
     <section class="latest-artworks">
-        <h2>Les dernières Oeuvres</h2>
+        <h2 class="title-section">Les dernières Oeuvres</h2>
         <hr>
-        <ArtworkLayout v-for="artwork in artworks" :key="artwork.title" :id="artwork.id" :imgSrc="artwork._embedded['wp:featuredmedia'][0].source_url" :imgAlt="artwork._embedded['wp:featuredmedia'][0].alt_text" :title="artwork.title.rendered" />
+        <div class="artworks-list">
+            <ArtworkLayout v-for="artwork in artworks" :key="artwork.title" :id="artwork.id" :imgSrc="artwork._embedded['wp:featuredmedia'][0].source_url" :imgAlt="artwork._embedded['wp:featuredmedia'][0].alt_text" :title="artwork.title.rendered" />
+        </div>
     </section>
 </template>
 

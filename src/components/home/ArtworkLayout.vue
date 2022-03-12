@@ -1,5 +1,5 @@
 <template>
-    <article>
+    <article class="artwork-info">
         <router-link :to="{name: 'SingleArtwork', params: { id: id }}">
             <img :src="imgSrc" :alt="imgAlt">
             <h3 :html="title"></h3>

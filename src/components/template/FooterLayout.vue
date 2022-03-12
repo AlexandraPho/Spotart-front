@@ -6,7 +6,9 @@
             </li>
         </ul>
         <div class="footer-middle-section">
-            <h1 class="title-logo">Spot Art</h1>
+            <h1 class="title-logo">
+                <router-link :to="{name: 'Home'}">Spot Art</router-link>
+            </h1>
             <ul class="icons-list">
                 <li v-for="socialMediaLink in SocialMediaLinks" :key="socialMediaLink.name">
                     <router-link class="icon-element" :to="socialMediaLink.link" hrel="pinterest-icon">
@@ -78,14 +80,42 @@
         width: 100vw;
         max-width: 100%;
     }
+    footer .title-logo a {
+        padding-left: 1em;
+        flex-grow: 1;
+        text-decoration: none;
+        color: #ffffff;
+        font-family: Cormorant Garamond;
+        background: linear-gradient(to right, #ffde59 10%, white 50%,#ffde59  60%);
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        color: #fff;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip 8s linear infinite;
+        display: inline-block;
+    }
+    footer .title-logo a:hover,
+    footer .header-links-list .header-anchor-element:hover{
+        color: #ffde59;
+    }
+    footer .title-logo router-link {
+        text-decoration: none;
+        color: #ffffff;
+    }
     footer .footer-links-list {
-        padding-left: 40px;
         display: flex;
         flex-direction: column;
         gap: 10px;
     }
     footer .footer-links-list .footer-link-element .footer-anchor-element {
-        font-size: xx-large;
+        font-size: 1.5em;
+        color: white;
+        text-decoration: none;
+    }
+    footer .footer-links-list .footer-link-element .footer-anchor-element:hover {
         color: #ffde59;
     }
     footer .footer-middle-section {
@@ -121,9 +151,9 @@
     }
     footer .newsletter-form input {
         padding-left: 15px;
-        font-size: x-large;
-        width: 300px;
-        height: 35px;
-        border-radius: 10px;
+        font-size:1.5em;
+        width: 10em;
+        height: 1.2em;
+        border-radius: 0.2em;
     }
 </style>

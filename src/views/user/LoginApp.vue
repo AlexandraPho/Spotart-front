@@ -37,3 +37,22 @@ export default {
 } */
 
 </script>
+
+<style>
+  .connexion-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .connexion-container .title{
+    justify-content: center;
+    display: flex;
+  }
+  .connexion-container .username-section,
+  .password-section {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 20em;
+    height: 5em;
+  }
+</style>
