@@ -2,6 +2,8 @@
     <div class="connexion-container">
         <div class="title">
             <h1>Connexion</h1>
+        </div>
+        <div class="succes-error-msg">
             <p v-if="success">{{ success }}</p>
             <p v-for="error in errors" :key="error">{{ error }}</p>
         </div>
