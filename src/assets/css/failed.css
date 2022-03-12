@@ -1,0 +1,38 @@
+section.picture{
+   
+
+    background-repeat: no-repeat;
+}
+
+
+img{
+
+
+    
+    width: 60em;
+    height: 33em;
+    position: relative;
+    top: 15em;
+    
+
+}
+
+img.buble {
+    position: relative;
+    top: -14em;
+    left: 61em;
+    width: 288px;
+
+    transform: rotate(65deg);
+}
+
+
+
+section.text {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}

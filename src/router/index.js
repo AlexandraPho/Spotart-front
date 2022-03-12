@@ -67,7 +67,14 @@ const routes = [
       path: '/user/:id',
       name: 'UserAccount',
       component: () => import('../views/UserProfile.vue')
-    }
+    },
+    {
+        path: '/failed',
+        name: 'Failed',
+        component: () => import('../views/user/FailedApp.vue')
+    },
+
+
 ]
 const router = createRouter({
     history: createWebHistory(process.env.BASE_URL),
