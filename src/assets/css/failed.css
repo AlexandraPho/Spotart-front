@@ -18,21 +18,50 @@ img{
 }
 
 img.buble {
+    
     position: relative;
-    top: -14em;
-    left: 61em;
-    width: 288px;
+    right: -58em;
+    top: -57em;
+    width: 550px;
+    transform: rotate( 
+        15deg
+    );
+}
+a {
+    position: relative;
+    bottom: 813px;
+    left: 15em;
+    color: black;
+    font-size: larger;
+    text-decoration: dashed;
+    border: solid;
+    font-weight: 900;
+}  
 
-    transform: rotate(65deg);
+img.smoke {
+    position: relative;
+    top: -49em;
+    width: 350px;
+    right: -131px;
 }
 
-
-
 section.text {
+    width: 301px;
+    position: relative;
+    left: 69%;
+    bottom: 55em;
+    font-size: 25px;
+    font-family: cursive;
+    font-weight: 900;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-
+}
+p.text {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3em;
+    position: relative;
+    top: 110px;
+    font-weight: 800;
+    text-shadow: 4px 4px 4px pink;
+  
 }
