@@ -12,7 +12,8 @@
             <ul class="icons-list">
                 <li v-for="socialMediaLink in SocialMediaLinks" :key="socialMediaLink.name">
                     <router-link class="icon-element" :to="socialMediaLink.link" hrel="pinterest-icon">
-                        <i class="'lni lni-' + {{ socialMediaLink.name }}"></i>
+                        <!--<i class="'lni lni-' + {{ socialMediaLink.name }}"></i>-->
+                        <!--<font-awesome-icon icon="fa-brands fa-facebook" />-->
                     </router-link>
                 </li>
             </ul>

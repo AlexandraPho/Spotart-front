@@ -1,7 +1,19 @@
 <template>
   <HeaderLayout />
-  <InformationsLayout  v-if="artwork" v-bind:id="artwork.id" v-bind:category="artwork._embedded['wp:term'][0][0].name" v-bind:author="artwork._embedded['author'][0].name" v-bind:image="artwork._embedded['wp:featuredmedia'][0].source_url" v-bind:title="artwork.title.rendered" v-bind:content="artwork.content.rendered" v-bind:date="artwork.date" v-bind:key="artwork.title" />
-  <GalleryLayoutTitle  v-if="artwork" v-bind:categoryId="artwork._embedded['wp:term'][0][0].id" v-bind:category="artwork._embedded['wp:term'][0][0].name" />
+  <InformationsLayout 
+  v-if="artwork" 
+  v-bind:id="artwork.id" 
+  v-bind:category="artwork._embedded['wp:term'][0][0].name" 
+  v-bind:author="artwork._embedded['author'][0].name" 
+  v-bind:image="artwork._embedded['wp:featuredmedia'][0].source_url" 
+  v-bind:title="artwork.title.rendered" 
+  v-bind:content="artwork.content.rendered" 
+  v-bind:date="artwork.date" 
+  v-bind:key="artwork.title" />
+  <GalleryLayoutTitle  
+  v-if="artwork" 
+  v-bind:categoryId="artwork._embedded['wp:term'][0][0].id" 
+  v-bind:category="artwork._embedded['wp:term'][0][0].name" />
   <FooterLayout />
 </template>
 

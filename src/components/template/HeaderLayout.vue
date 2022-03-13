@@ -55,7 +55,7 @@
         flex-grow: 1;
         text-decoration: none;
         font-family: Cormorant Garamond;
-        background: linear-gradient(to right, #ffde59 10%, white 50%,#ffde59  60%);
+        background: linear-gradient(to right, #ffde59 10%, white 60%,#ffde59  40%);
         background-size: auto auto;
         background-clip: border-box;
         background-size: 200% auto;
@@ -63,7 +63,7 @@
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        animation: textclip 8s linear infinite;
+        animation: textclip 6s linear infinite;
         display: inline-block;
     }
     @keyframes textclip {
@@ -116,7 +116,7 @@
         width: 10em;
         height: 1.7em;
         margin-left: 1em;
-        border-radius: 0.2em;
+        border-radius: 0.3em;
     }
     header div .publish-button:hover {
         background-color: #ffde59;

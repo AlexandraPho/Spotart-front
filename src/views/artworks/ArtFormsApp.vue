@@ -4,7 +4,12 @@
         
         <ArtFormTitleLayout v-if="artform" :name="artform.name + 's'" />
 
-        <ArtworksListLayout v-bind:id="artwork.id" v-bind:image="artwork._embedded['wp:featuredmedia'][0] ? artwork._embedded['wp:featuredmedia'][0].source_url : ''" v-bind:title="artwork.title.rendered" v-bind:author="artwork._embedded['author'][0].name" v-for="artwork in artworks" v-bind:key="artwork.title"/>
+        <ArtworksListLayout 
+        v-bind:id="artwork.id"
+        v-bind:image="artwork._embedded['wp:featuredmedia'][0] ? artwork._embedded['wp:featuredmedia'][0].source_url : ''" 
+        v-bind:title="artwork.title.rendered" 
+        v-bind:author="artwork._embedded['author'][0].name" 
+        v-for="artwork in artworks" v-bind:key="artwork.title"/>
 
         <FooterLayout/>
     </div>
