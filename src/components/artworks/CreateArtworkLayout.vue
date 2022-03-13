@@ -1,4 +1,5 @@
 <template>
+ 
   <main>
     <h1 class="publish_artwork">Publiez votre oeuvre</h1>
     <p v-if="success">{{ success }}</p>
@@ -87,6 +88,7 @@
                     artforms: this.artforms,
                     content: this.content,
                     status: this.status,
+                    author: this.author
                 }, (data) => {
                     this.errors.push(data);
 
