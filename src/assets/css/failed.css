@@ -10,7 +10,7 @@ img{
 
     
     width: 60em;
-    height: 33em;
+    height: 31em;
     position: relative;
     top: 15em;
     
@@ -29,7 +29,7 @@ img.buble {
 }
 a {
     position: relative;
-    bottom: 813px;
+    bottom: 749px;
     left: 15em;
     color: black;
     font-size: larger;
@@ -40,7 +40,7 @@ a {
 
 img.smoke {
     position: relative;
-    top: -49em;
+    top: -45em;
     width: 350px;
     right: -131px;
 }
@@ -63,5 +63,5 @@ p.text {
     top: 110px;
     font-weight: 800;
     text-shadow: 4px 4px 4px pink;
-  
-}
+   
+} 
