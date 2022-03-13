@@ -21,3 +21,30 @@
     }
 </script>
 
+<style>
+    .publish-artwork {
+        
+    }
+    .publish_title {
+        display: flex;
+        justify-content: center;
+    }
+    .publish-artwork .artwork-title,
+    .succes-error-msg,
+    .art-form,
+    .description-artwork,
+    .button-publish {
+        display: flex;
+        /* justify-content: center; */
+        flex-direction: column;
+        width: 20em;
+        align-items: center;
+        margin: auto;
+        height: 3em;
+        margin-bottom: 1em;
+    }
+    .publish-artwork input {
+        height: 2em;
+        width: 20em;
+    }
+</style>

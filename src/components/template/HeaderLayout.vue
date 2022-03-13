@@ -9,7 +9,7 @@
             </li>
         </ul>
         <div>
-            <router-link class="connexion-link" :to="{name: 'Login'}">Connexion</router-link>
+            <router-link class="connexion-link" :to="{name: 'Login'}"><i class="fa-solid fa-user"></i></router-link>
             <router-link :to="{name: 'CreateArtwork'}">
                 <button class="publish-button">Partagez vos créations</button>
             </router-link>
@@ -55,7 +55,7 @@
         flex-grow: 1;
         text-decoration: none;
         font-family: Cormorant Garamond;
-        background: linear-gradient(to right, #ffde59 10%, white 60%,#ffde59  40%);
+        background: linear-gradient(to right, grey 10%, white 60%,#ffde59  40%);
         background-size: auto auto;
         background-clip: border-box;
         background-size: 200% auto;
@@ -63,7 +63,7 @@
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        animation: textclip 6s linear infinite;
+        animation: textclip 8s linear infinite;
         display: inline-block;
     }
     @keyframes textclip {
@@ -71,7 +71,6 @@
             background-position: 200% center;
         }
     }
-    header .title-logo a:hover,
     header .header-links-list .header-anchor-element:hover{
         color: #ffde59;
         
@@ -104,7 +103,7 @@
         gap: 0.5em;
     }
     header div .connexion-link {
-        font-size: 1.5em;
+        font-size: 2em;
         color: #ffde59;
         text-decoration: none;
     }
@@ -115,7 +114,7 @@
         font-size: 1.5em;
         width: 10em;
         height: 1.7em;
-        margin-left: 1em;
+        margin: 0em 1.5em;
         border-radius: 0.3em;
     }
     header div .publish-button:hover {
