@@ -12,7 +12,7 @@ img{
     width: 60em;
     height: 31em;
     position: relative;
-    top: 15em;
+    top: 23em;
     
 
 }
@@ -21,18 +21,19 @@ img.buble {
     
     position: relative;
     right: -58em;
-    top: -57em;
+    top: -47em;
     width: 550px;
     transform: rotate( 
-        15deg
-    );
+15deg
+ );
 }
 a {
     position: relative;
-    bottom: 749px;
+    bottom: 621px;
     left: 15em;
     color: black;
     font-size: larger;
+    -webkit-text-decoration: dashed;
     text-decoration: dashed;
     border: solid;
     font-weight: 900;
@@ -40,7 +41,7 @@ a {
 
 img.smoke {
     position: relative;
-    top: -45em;
+    top: -37em;
     width: 350px;
     right: -131px;
 }
@@ -48,8 +49,8 @@ img.smoke {
 section.text {
     width: 301px;
     position: relative;
-    left: 69%;
-    bottom: 55em;
+    left: 71%;
+    bottom: 48em;
     font-size: 25px;
     font-family: cursive;
     font-weight: 900;
