@@ -23,7 +23,7 @@ export default {
     CreatePost(data, callback) {
         apiClient.post(`/artwork`, data, {
         headers: {
-            'Authorization': 'Bearer ' + store.state.token
+            'Authorization': 'Bearer ' + store.state.token 
         }
     })  
     .then(
