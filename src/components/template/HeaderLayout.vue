@@ -8,13 +8,11 @@
             </li>
         </ul>
         <div>
-           
-            <router-link class="link" v-if="!this.$store.state.token" to='/registration'>Inscription</router-link>
-            <router-link class="link2" v-if="!this.$store.state.token" to='/login'>Connexion</router-link>
- 
-            <button @click="create" v-if="this.$store.state.token">Partager</button>
-            <button @click="update" v-if="this.$store.state.token">Modifier</button>
-            <button @click="disconnect" v-if="this.$store.state.token">Deconnexion</button>
+            <router-link class="connexion-link" :to="{name: 'Login'}">Connexion</router-link>
+            <router-link :to="{name: 'CreateArtwork'}">
+                <button class="publish-button">Partagez vos créations</button>
+            </router-link>
+
         <!-- <div>  <router-link class="connexion-link"  v-if="this.$store.state.token == null" to="/connection">{{ this.$store.state.token == null ? 'Connexion' : 'mon compte'  }}</router-link> -->
         </div>
     </header>
@@ -39,37 +37,8 @@
                 }
             );    
         },
-        methods: {
-        disconnect() {
-          
-            console.log('disconnect')
-            this.$store.commit('setToken', null);
-            this.$store.commit('setUserID', null);
-            this.$router.push('/')
-        },
-
-        create(){
-            console.log('create')
-            this.$store.commit('setToken', null);
-            this.$store.commit('setUserID', null);
-            this.$store.commit('setUserRole', null);
-            this.$router.push('/artworks/create')
-
-        },
-
-        update(){
-            console.log('update')
-            this.$store.commit('setToken', null);
-            this.$store.commit('setUserID', null);
-            this.$store.commit('setUserRole', null);
-            this.$router.push('/artworks/update/:id')
-        }
-   
-       
-    },
     }
-
-    </Script>
+</script>
 
 <style scoped>
 
@@ -117,41 +86,12 @@
         font-size: xx-large;
         color: #ffde59;
     }
-  a.link {
-       background-color: #ffde59;
-    border-color: #ffde59;
-    font-size: x-large;
-    width: 100px;
-    height: 34px;
-    cursor: pointer;
-    text-decoration: none;
-    color: black;
+    header div .publish-button {
+        background-color: #ffde59;
+        border-color: #ffde59;
+        font-size: x-large;
+        width: 250px;
+        height: 50px;
+        cursor: pointer;
     }
-a.link2{
-  background-color: #ffde59;
-    border-color: #ffde59;
-    font-size: x-large;
-    width: 100px;
-    height: 34px;
-    cursor: pointer;
-    text-decoration: none;
-    color: black;
-
-}
- button{
-
- background-color: #ffde59;
-    border-color: #ffde59;
-    font-size: x-large;
-    width: 145px;
-    height: 34px;
-    cursor: pointer;
-    text-decoration: none;
-    color: black;
-
-
-
- }
-
-
 </style>
