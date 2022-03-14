@@ -16,7 +16,7 @@
     />
   </section>
 
-  <a href="./">Retour à l'Acceuil</a>
+  <a class="back" href="./">Retour à l'Acceuil</a>
   <section class="buble">
     <img
       class="buble"

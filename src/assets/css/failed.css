@@ -28,7 +28,7 @@ img.buble {
 15deg
  );
 }
-a {
+a.back {
     position: relative;
     bottom: 621px;
     left: 15em;
@@ -43,7 +43,7 @@ a {
 img.smoke {
     position: relative;
     top: -37em;
-    width: 340px;
+    width: 361px;
     right: -131px;
     height: 250px;
 }
@@ -70,3 +70,4 @@ p.text {
     right: 56px;
    
 } 
+
