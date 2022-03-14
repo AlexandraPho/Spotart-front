@@ -17,7 +17,7 @@
             <input type="password" id="password" name="password" placeholder="Mot de passe" v-model="password">
             <!--<p>Mot de passe oublié?</p>-->
         </div>
-        <button v-on:click="sendForm">Se connecter</button>
+        <button v-on:click="sendForm" v-if="!this.$store.state.token">Se connecter</button>
         <div class="create-account">
             <router-link :to="{name: 'Registration'}">Créer un compte</router-link>
         </div>
@@ -79,13 +79,16 @@
                         // le message en consequence
                         if(data.type === "success") {
                             this.success = data.message;
+                            this.$store.commit("setToken", null);
+                            this.$store.commit("setUserID", null);
+                            this.$router.push("/");
                         } else {
                             // Add the error msg to our tpl
                             this.errors.push(data.message);
                         }
                     })
                 }
-            }
+            },
         }
     }
 

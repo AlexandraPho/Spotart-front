@@ -63,7 +63,7 @@
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        animation: textclip 8s linear infinite;
+        animation: textclip 15s linear infinite;
         display: inline-block;
     }
     @keyframes textclip {

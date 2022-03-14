@@ -35,6 +35,7 @@ export default {
                 }
             );
     },
+    
     getRole() {
         apiClient.get(`wp/v2/users/${store.state.userID}?context=edit`, {
                 /* headers: {

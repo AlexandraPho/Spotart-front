@@ -25,7 +25,7 @@
         mounted() {
             ArtworksService.findAll().then(
                 (response) => {
-                    console.log('Artworks', response.data.slice(0, 4));
+                    console.log('Artworks', response.data);
                     this.artworks = response.data;
                 }
             );

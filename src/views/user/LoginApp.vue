@@ -59,7 +59,7 @@ export default {
     align-self: center;
     width: 15em;
     height: 3em;
-    margin-bottom: 1em;
+    margin-bottom: 1.9em;
   }
   .connexion-container .username-section label,
   .password-section label {

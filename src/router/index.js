@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeApp from '../views/HomeApp.vue'
 
+
 const routes = [
     {
         path: '/',
@@ -68,6 +69,7 @@ const routes = [
       component: () => import('../views/UserProfile.vue')
     }
 ]
+
 const router = createRouter({
     history: createWebHistory(process.env.BASE_URL),
     routes

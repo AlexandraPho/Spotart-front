@@ -2,6 +2,7 @@
     <div>
         <HeaderLayout/>
         <CreateArtworkLayout/>
+        <UploadMediaLayout/>
         <FooterLayout/>
     </div>
 </template>
@@ -10,21 +11,20 @@
     import CreateArtworkLayout from '@/components/artworks/CreateArtworkLayout.vue';
     import HeaderLayout from '@/components/template/HeaderLayout.vue';
     import FooterLayout from '@/components/template/FooterLayout.vue';
+    import UploadMediaLayout from "@/components/Upload/UploadMediaLayout.vue";
 
     export default {
         name: 'CreateArtworkApp',
         components: { 
             CreateArtworkLayout,
             HeaderLayout,
-            FooterLayout
+            FooterLayout,
+            UploadMediaLayout
         },
     }
 </script>
 
 <style>
-    .publish-artwork {
-        
-    }
     .publish_title {
         display: flex;
         justify-content: center;

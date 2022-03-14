@@ -75,7 +75,7 @@
     .artist-artwork {
         display: inline-flex;
         justify-content: space-around;
-        margin: 1.5em 3em 0.2em 5em;
+        margin: 1.5em 3em 0.2em 9em;
     }
     .artist-artwork .photos-titles{
        margin: 1em;

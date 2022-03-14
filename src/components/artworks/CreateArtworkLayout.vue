@@ -73,11 +73,13 @@
                 if(!this.content) {
                     this.errors.push("Content must not be empty");
                 }
+                //if image upload
                 ArtworksService.CreatePost({
                     title: this.title,
                     artforms: this.artforms,
                     content: this.content,
                     status: this.status,
+                    featured_media: this.formData
                 }, (data) => {
                     this.errors.push(data);
 
