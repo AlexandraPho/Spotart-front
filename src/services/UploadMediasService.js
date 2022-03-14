@@ -15,7 +15,7 @@ class UploadFilesService {
   upload(file,onUploadProgress) {
     let formData = new FormData();
     formData.append("file", file);
-    return apiClient.post(`/media`, formData, {
+    return apiClient.post(`/upload`, formData, {
       headers: {
         'Authorization': 'Bearer ' + store.state.token,
         "Content-Type": "multipart/form-data"

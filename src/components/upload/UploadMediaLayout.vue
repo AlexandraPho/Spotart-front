@@ -23,7 +23,7 @@
         <!-- bouton de téléchargement du ficher -->
         <button 
         class="btn btn-success btn-sm float-right" 
-        :disabled="!currentImage" 
+        :disabled="currentImage" 
         @click="upload" > Upload 
         </button>
 

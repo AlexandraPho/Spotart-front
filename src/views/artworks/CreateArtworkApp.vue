@@ -11,7 +11,7 @@
     import CreateArtworkLayout from '@/components/artworks/CreateArtworkLayout.vue';
     import HeaderLayout from '@/components/template/HeaderLayout.vue';
     import FooterLayout from '@/components/template/FooterLayout.vue';
-    import UploadMediaLayout from "@/components/Upload/UploadMediaLayout.vue";
+    import UploadMediaLayout from "@/components/upload/UploadMediaLayout.vue";
 
     export default {
         name: 'CreateArtworkApp',
