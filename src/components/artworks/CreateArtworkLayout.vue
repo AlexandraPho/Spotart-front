@@ -1,4 +1,5 @@
 <template>
+ 
   <main>
     <p v-if="success">{{ success }}</p>
     <p v-for="error in errors" :key="error">{{ error }}</p>
@@ -84,5 +85,8 @@
 </script>
 
 <style src= "@/assets/css/publish_or_edit_your_artwork.css">
+
+
+
 
 </style>
