@@ -34,3 +34,19 @@
         },
     }
 </script>
+
+<style scoped>
+
+    .news-img
+    {
+        height: 40vh;
+    }
+    
+    .news-img
+    {
+        object-fit: cover;
+        width: 100%;
+        /* background: linear-gradient(to right, transparent 0%, black 100%); */
+    }
+
+</style>

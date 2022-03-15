@@ -6,17 +6,22 @@
             </li>
         </ul>
         <div class="footer-middle-section">
+<<<<<<< HEAD
             <h1 class="title-logo">
                 <router-link :to="{name: 'Home'}">Spot Art</router-link>
             </h1>
             <ul class="icons-list">
+=======
+            <h1 class="title-logo">Spot Art</h1>
+            <!-- <ul class="icons-list">
+>>>>>>> 8f576174ce0bfa009a10204fa05a7c1ccc198453
                 <li v-for="socialMediaLink in SocialMediaLinks" :key="socialMediaLink.name">
                     <router-link class="icon-element" :to="socialMediaLink.link" hrel="pinterest-icon">
                         <!--<i class="'lni lni-' + {{ socialMediaLink.name }}"></i>-->
                         <!--<font-awesome-icon icon="fa-brands fa-facebook" />-->
                     </router-link>
                 </li>
-            </ul>
+            </ul> -->
         </div>
         <fieldset class="newsletter-form">
             <label for="email">S'inscrire à la newsletter :</label>
@@ -25,7 +30,7 @@
     </footer>
 </template>
 
-<script>
+<script scoped>
     export default {
         name: 'FooterLayout',
         data() {
@@ -74,6 +79,7 @@
 
 <style scoped>
 
+<<<<<<< HEAD
     footer {
         background-color: #000000;
         display: flex;
@@ -157,4 +163,71 @@
         height: 1.2em;
         border-radius: 0.2em;
     }
+=======
+    footer
+{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-links-list
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style: none;
+    gap: 20px;
+    padding: 15px 0 15px 50px;
+    margin: 0;
+    flex-grow: 2.5;
+}
+
+.footer-anchor-element
+{
+    text-decoration: none;
+    color: white;
+    font-size: xx-large;
+}
+
+.footer-anchor-element:hover
+{
+    color: #ffde59;
+}
+
+.footer-middle-section
+{
+    display: flex;
+    color: white;
+    font-size: xx-large;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 4;
+}
+
+.newsletter-form
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 15px;
+    border: none;
+    color: #ffde59;
+    font-size: xx-large;
+    padding-right: 50px;
+    flex-grow: 2;
+}
+
+.newsletter-form input
+{
+    width: 10vw;
+    height: 4vh;
+    font-size: x-large;
+    border-radius: 10px;
+    padding-left: 5px;
+}
+
+>>>>>>> 8f576174ce0bfa009a10204fa05a7c1ccc198453
 </style>

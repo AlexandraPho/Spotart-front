@@ -19,24 +19,33 @@
     @import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Belleza&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
   /* GENERAL */
+
+    body
+    {
+        padding: 0;
+        margin: 0;
+    }
+
     * {
         font-family: Belleza;
     }
-    .title-logo {
-        font-family: Cormorant Garamond;
-        font-size: xxx-large;
-        color: #ffffff;
-        padding: 0px;
-        margin: 0px;
-        text-transform: uppercase;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    hr {
+        border: #ffde59 solid 1px;
+        width: 8%;
     }
 
-    h1,
+/*     h1,
     img,
     li,
     a,
     button {
        cursor: pointer; 
+<<<<<<< HEAD
     }
     body {
         background:
@@ -45,5 +54,8 @@
         linear-gradient(to top right, #ffde59, transparent);
         background-blend-mode: screen;
     }
+=======
+    } */
+>>>>>>> 8f576174ce0bfa009a10204fa05a7c1ccc198453
 
 </style>

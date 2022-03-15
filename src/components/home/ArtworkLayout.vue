@@ -2,8 +2,8 @@
     <article class="artwork-info">
         <router-link :to="{name: 'SingleArtwork', params: { id: id }}">
             <img :src="imgSrc" :alt="imgAlt">
-            <h3 :html="title"></h3>
         </router-link>
+        <h3 v-html="title"></h3>
     </article>
 </template>
 

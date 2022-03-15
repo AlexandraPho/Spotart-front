@@ -32,8 +32,9 @@
 
 <style>
 
-    /* -------------GENERAL------------- */
+/* -------------NEWS------------- */
 
+<<<<<<< HEAD
     img {
         width: 15em;
         margin: 2em 4em;
@@ -58,34 +59,28 @@
         border: #ffde59 solid 1px;
         width: 30em;
     }
+=======
+/* .news-img
+{
+    height: 40vh;
+}
+>>>>>>> 8f576174ce0bfa009a10204fa05a7c1ccc198453
 
-    /* -------------CAROUSEL------------- */
+.news-img
+{
+    object-fit: cover;
+    width: 100%;
+    // background: linear-gradient(to right, transparent 0%, black 100%);
+} */
 
-    .carousel {
-        width: 100vw;
-        max-width: 100%;
-        background-color: cadetblue;
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        height: 500px;
-        box-shadow: 0px 2px #000000;
-    }
-    .carousel .arrows {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
-    }
-    .carousel i {
-        font-size: xxx-large;
-        color: #ffde59;
-        padding: 0 40px 0 40px;
-        cursor: pointer;
-        text-shadow: 2px 2px #000000;
-    }
+/* -------------ARTISTS------------- */
 
-    /* -------------ARTWORKS------------- */
+.artists-zoom
+{
+    padding: 0 100px 0 100px;
+}
 
+<<<<<<< HEAD
     .latest-artworks {
         padding: 0 120px 0 120px;
     }
@@ -102,79 +97,45 @@
     .latest-artworks .artwork-info p {
         text-align:center;
     }
+=======
+.artists
+{
+    display: flex;
+    justify-content: center;
+    gap: 7vw;
+    height: 30vh;
+}
 
-    /* -------------ARTISTS------------- */
+.artists img
+{
+    width: 12vw;
+    height: 75%;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 0.50rem black);
+}
+>>>>>>> 8f576174ce0bfa009a10204fa05a7c1ccc198453
 
-    .artists-zoom {
-        padding: 0 120px 0 120px;
-    }
-    .artists-zoom .artists {
-        margin: 20px 0 30px 0;
-        display: grid;
-        grid-template-columns: [start] 1fr [first-column] 1fr [second-column] 1fr [third-column] 1fr [end];
-        grid-template-rows: 1fr;
-    }
-    .artists-zoom .artists .first-artist {
-        background-color: blue;
-        background-repeat: no-repeat;
-        background-size: 100% 75%;
-        background-position: center;
-        height: 400px;
-        width: 400px;
-        max-width: 100vw;
-    }
-    .artists-zoom .artists .second-artist {
-        background-color: blueviolet;
-        background-repeat: no-repeat;
-        background-size: 100% 75%;
-        background-position: center;
-        height: 400px;
-        width: 400px;
-        max-width: 100vw;
-    }
-    .artists-zoom .artists .third-artist {
-        background-color: pink;
-        background-repeat: no-repeat;
-        background-size: 100% 75%;
-        background-position: center;
-        height: 400px;
-        width: 400px;
-        max-width: 100vw;
-    }
-    .artists-zoom .artists .fourth-artist {
-        background-repeat: no-repeat;
-        background-color: yellowgreen;
-        background-size: 100% 75%;
-        background-position: center;
-        height: 400px;
-        width: 400px;
-        max-width: 100vw;
-    }
-    .artists-zoom .artists h3 {
-        text-align: center;
-        font-size: x-large;
-    }
-    
-    /* -------------EVENTS------------- */
+.artists h3
+{
+    margin-top: 5px;
+    text-align: center;
+    font-size: x-large;
+}
 
-    .next-events {
-        padding: 0 120px 10px 120px;
-    }
-    .next-events .background {
-        display: flex;
-        margin-top: 20px;
-        height: 400px;
-        background-repeat: no-repeat;
-        background-size: 100% 400px;
-    }
-    .next-events .background .arrows-events {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-        padding: 0 40px 0 40px;
-        color: #ffde59;
-        font-size: xxx-large;
-    }
+/* -------------EVENTS------------- */
+
+.events-carousel
+{
+    display: flex;
+    justify-content: center;
+}
+
+.events-img
+{
+    height: 50vh;
+    width: 100vh;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 0.50rem black);
+}
+
 </style>
