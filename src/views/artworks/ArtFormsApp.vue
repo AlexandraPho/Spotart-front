@@ -37,7 +37,7 @@
             ArtworksService.findByCategory(this.$route.params.id).then(
                 (response)=> {
                    console.log('Artworks', response.data);
-                   this.artworks = response.data;
+                   this.artworks = response.data.slice(0, 8);
                 }
             );
             ArtFormsService.find(this.$route.params.id).then(
