@@ -18,7 +18,7 @@
     .category-title {
         background-image: url("@/assets/images/smoke.jpg");
         background-size: cover;
-        height: 10em;
+        /*height: 10em;*/
     }
     .category-title h2 {
         text-align: center;

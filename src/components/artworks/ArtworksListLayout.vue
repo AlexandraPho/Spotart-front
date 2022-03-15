@@ -115,7 +115,7 @@
         }
          .artist-artwork img {
             width: 25vw;
-            height: 70%;
+            height: 25vw;
             border-radius: 0.5vw;
             filter: drop-shadow(0 0 0.50rem black);
         }
@@ -127,10 +127,10 @@
             transition: .5s ease;
             width: 20vw;
             opacity: 0;
-            top: 25%;
-            left: 13%;
+            top: 18%;
+            left: 12%;
             z-index: 1;
-            font-size: 2vw;
+            font-size: 3vw;
             font-weight: bold;
             padding: 1vw;
             text-align: center;
