@@ -41,7 +41,7 @@ import ArtFormsService from "@/services/ArtFormsService";
 
 export default {
   name: "HeaderLayout",
-  data() {
+   data() {
     return {
       artforms: null,
       homeUrl: "/",
@@ -60,11 +60,9 @@ export default {
       this.$store.commit("setUserID", null);
       this.$router.push("/");
     },
-
-    
   },
 };
-</Script>
+</script>
 
 <style scoped>
 header {
