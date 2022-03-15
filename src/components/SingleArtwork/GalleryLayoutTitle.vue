@@ -38,7 +38,7 @@ export default {
          // We are using the find functions with the category id from the SingleArtwork view 
          (response) => {
              console.log(response.data);
-             this.artworks = response.data;
+             this.artworks = response.data.slice(0,4);
          });             
     },
     beforeRouteUpdate(to) {
@@ -75,6 +75,12 @@ export default {
         margin: 1rem;
         display: flex;
         justify-content: space-evenly; 
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery {
+       display: block;
     }
 }
 </style>

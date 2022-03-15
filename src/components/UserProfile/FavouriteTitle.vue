@@ -57,4 +57,19 @@ export default {
         h1 {
             font-size: 1.5rem;
         }
+
+@media (min-width: 768px) {
+    .gallery {
+        margin: 1rem;
+        flex-wrap: wrap;
+        justify-content: space-evenly; 
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery {
+       display: block;
+    }
+}
+
 </style>

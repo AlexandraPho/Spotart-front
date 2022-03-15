@@ -24,17 +24,10 @@ export default {
     transition: 0.8s; 
     }   
         
-@media (min-width: 768px) {
-
-
-}
 @media (max-width: 768px) {
         .gallery_single_artwork{
-            margin: 1rem;
+            margin: 2rem;
         }
 
-        .gallery {
-            display:inline-block;   
-        }
 }
 </style>
