@@ -8,7 +8,6 @@
 <script>
 import HeaderLayout from '@/components/template/HeaderLayout.vue'
 import FooterLayout from '@/components/template/FooterLayout.vue'
-//import ConnexionFormLayout from '@/components/UserProfile/ConnexionFormLayout.vue'
 import InformationsLayout from '@/components/SingleArtwork/InformationsLayout.vue'
 import GalleryLayoutTitle from '@/components/SingleArtwork/GalleryLayoutTitle.vue'
 // we import the service so we can have the datas from the WP API

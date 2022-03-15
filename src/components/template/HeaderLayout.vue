@@ -32,8 +32,8 @@
         mounted() {
             ArtFormsService.findAll().then(
                 (response)=> {
-                    console.log('Artforms', response.data);
                     this.artforms = response.data;
+                    //console.log('Artforms', response.data);
                 }
             );    
         },

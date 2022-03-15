@@ -58,7 +58,7 @@ const routes = [
         component: () => import('../views/extra/LegalNoticeApp.vue')
     },
     {
-        path: '/art-form/:id',
+        path: '/artform/:id',
         name: 'ArtForms',
         component: () => import('../views/artworks/ArtFormsApp.vue')
     },
