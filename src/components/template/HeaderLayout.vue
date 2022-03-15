@@ -15,33 +15,48 @@
 
         <!-- <div>  <router-link class="connexion-link"  v-if="this.$store.state.token == null" to="/connection">{{ this.$store.state.token == null ? 'Connexion' : 'mon compte'  }}</router-link> -->
         </div>
-    </header>
+
+    // <div>
+      // <router-link class="link" v-if="!this.$store.state.token" to="/registration">Inscription</router-link>
+      // <router-link class="login" v-if="!this.$store.state.token" to="/login">Connexion</router-link>
+      // <router-link class="create" v-if="this.$store.state.token && this.$store.getters.checkUserRole(['artist'])" to='/artworks/create'>Publiez vos oeuvres</router-link>
+      // <router-link class="update" v-if="this.$store.state.token && this.$store.getters.checkUserRole(['artist'])" to='/artworks/update/:id'>Modifiez votre oeuvre</router-link>
+      // <button @click="disconnect" v-if="this.$store.state.token">Deconnexion</button>
+      <!-- <div>  <router-link class="connexion-link"  v-if="this.$store.state.token == null" to="/connection">{{ this.$store.state.token == null ? 'Connexion' : 'mon compte'  }}</router-link> -->
+    // </div>
+  </header>
+
 </template>
 
 <script>
-    import ArtFormsService from '@/services/ArtFormsService'
+import ArtFormsService from "@/services/ArtFormsService";
 
-    export default {
-        name: 'HeaderLayout',
-        data() {
-            return {
-                artforms: null,
-                homeUrl: "/",
-            }
-        },
-        mounted() {
-            ArtFormsService.findAll().then(
-                (response)=> {
-                    console.log('Artforms', response.data);
-                    this.artforms = response.data;
-                }
-            );    
-        },
-    }
+export default {
+  name: "HeaderLayout",
+   data() {
+    return {
+      artforms: null,
+      homeUrl: "/",
+    };
+  },
+  mounted() {
+    ArtFormsService.findAll().then((response) => {
+      console.log("Artforms", response.data);
+      this.artforms = response.data;
+    });
+  },
+  methods: {
+    disconnect() {
+      console.log("disconnect");
+      this.$store.commit("setToken", null);
+      this.$store.commit("setUserID", null);
+      this.$router.push("/");
+    },
+  },
+};
 </script>
 
 <style scoped>
-
     header
     {
         background-color: black;
@@ -141,5 +156,4 @@
         color: black;
         cursor: pointer;
     }
-
 </style>

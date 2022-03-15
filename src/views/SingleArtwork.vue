@@ -6,6 +6,7 @@
 </template>
 
 <script>
+
     import HeaderLayout from '@/components/template/HeaderLayout.vue'
     import FooterLayout from '@/components/template/FooterLayout.vue'
     //import ConnexionFormLayout from '@/components/UserProfile/ConnexionFormLayout.vue'

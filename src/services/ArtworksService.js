@@ -15,7 +15,7 @@ export default {
         return apiClient.get(`/artwork/${id}?_embed`);
     }, 
     findByCategory(id) {
-        return apiClient.get(`artwork?artforms=${id}&_embed`);
+        return apiClient.get(`artwork?artform=${id}&_embed`);
     },
     findAll() {
         return apiClient.get('/artwork?_embed');
@@ -23,7 +23,7 @@ export default {
     CreatePost(data, callback) {
         apiClient.post(`/artwork`, data, {
         headers: {
-            'Authorization': 'Bearer ' + store.state.token
+            'Authorization': 'Bearer ' + store.state.token 
         }
     })  
     .then(

@@ -1,16 +1,14 @@
 <template>
+ 
   <main>
-    <h1 class="publish_artwork">Publiez votre oeuvre</h1>
     <p v-if="success">{{ success }}</p>
     <p v-for="error in errors" :key="error">{{ error }}</p>
-      
     <div class="artwork">
         <label class="artwork_title">Titre de l'oeuvre :</label>
     <input v-model="title" type="text" class="artwork_champ">
-
     </div>
     <br>
-
+    
     <!-- <div class="artwork_pic">
       <label class="artwork_pic_title">Ajouter une photo</label><br>
       <input type="file" class="artwork_pic_file"><br>
@@ -49,13 +47,12 @@
    
   </div> -->
 
-    <div class="description_artwok">
+    <div class="description_artwork">
         <label class="description_artwork_title"> Description de l'oeuvre</label>
         <input v-model="content" type="textarea" class="description_artwork_cadr"><br>
     </div> 
-  
-    <div >
-        <button v-on:click="CreatePost" class="save" > Publier </button>
+    <div>
+        <button v-on:click="CreatePost"> Publier </button>
     </div>
   
     </main>
@@ -67,18 +64,22 @@
 
     export default {
         name: 'CreateArtworkLayout',
+        props: {
+            mediaId: Number,
+        },
         data() {
             return {
                 success: null,
                 errors: [],
                 title: null,
-                artforms: null,
+                artform: [],
                 content: null,
                 status: "publish",
-                author: this.$store.state.userID,
+                author: this.$store.state.userID
             }
         },
         methods: {
+
             CreatePost() {
                 this.errors = [];
                 if(!this.title) {
@@ -90,11 +91,16 @@
                 if(!this.content) {
                     this.errors.push("Content must not be empty");
                 }
+                if(!this.mediaId) {
+                    this.errors.push("Merci d'ajouter une image");
+                }
                 ArtworksService.CreatePost({
                     title: this.title,
-                    artforms: this.artforms,
+                    artform: [this.artform],
                     content: this.content,
                     status: this.status,
+                    featured_media: this.mediaId,
+                    author: this.author
                 }, (data) => {
                     this.errors.push(data);
 
@@ -115,4 +121,8 @@
             );
         }
     }
+
 </script>
+
+<style src= "@/assets/css/publish_or_edit_your_artwork.css">
+</style>
