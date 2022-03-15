@@ -52,7 +52,7 @@
         <input v-model="content" type="textarea" class="description_artwork_cadr"><br>
     </div> 
     <div>
-        <button v-on:click="CreatePost"> Publier </button>
+        <button class="publish" v-on:click="CreatePost"> Publier </button>
     </div>
   
     </main>
@@ -124,5 +124,73 @@
 
 </script>
 
-<style src= "@/assets/css/publish_or_edit_your_artwork.css">
+<style>
+
+h1.publish_artwork {
+    text-align: center;
+}
+.artwork {
+    text-align: center;
+}
+label.artwork_title {
+    font-size: 33px;
+}
+input.artwork_champ {
+    width: 16%;
+}
+input#file {
+   color: blanchedalmond;
+    background-color: black;
+}
+button.favorite.styled {
+    position: relative;
+    left: 55px;
+}
+.art_form {
+    text-align: center;
+}
+label.art_form_title {
+     font-size: 33px;
+}
+select.art_form_category {
+width: 20%;
+
+}
+.description_artwork {
+text-align: center;
+}
+
+label.description_artwork_title {
+    font-size: 32px;
+    position: relative;
+    left: 108px;
+    top: 18px;
+}
+input.description_artwork_cadr {
+    width: 23%;
+    position: relative;
+    top: 44px;
+    right: 143px;
+    padding-bottom: 25px;
+}
+main {
+    padding-bottom: 7%;
+    border: solid 1px;
+    position: relative;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    background-color: rgb(224, 181, 138)
+}
+
+button.publish {
+    position: relative;
+    left: 45%;
+    top: 58px;
+    width: 10%;
+    background-color: black;
+    color: blanchedalmond;
+}
+
 </style>
