@@ -12,7 +12,7 @@ const apiClient = axios.create({
 
 export default {
 
-    register(data, callback) {
+    register(data, callback) {  
         apiClient.post('/wp/v2/users/register', data)
             .catch(
                 (error) => {

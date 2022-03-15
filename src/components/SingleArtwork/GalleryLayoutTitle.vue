@@ -32,8 +32,8 @@ export default {
         }
     },
     mounted() {
-    console.log(this.categoryId);
-    console.log(this.category);
+    //console.log(this.categoryId);
+    //console.log(this.category);
     ArtworksService.findByCategory(this.categoryId).then(
          // We are using the find functions with the category id from the SingleArtwork view 
          (response) => {
@@ -49,5 +49,32 @@ export default {
 </script>
 
 
-<style src="@/assets/css/artwork.css">
+<style scoped>
+
+        h1::before {
+            border-top: 0.2rem solid #FFDE59;
+            display: block;
+            position: relative;
+            top: -1rem;
+            margin: 0 auto;
+            width: 40%;
+            content: "";
+        }
+
+        .related_work {
+            text-align: center;
+            margin: 1rem;
+        }
+        
+        h1 {
+            font-size: 1.5rem;
+        }
+
+@media (min-width: 768px) {
+    .gallery {
+        margin: 1rem;
+        display: flex;
+        justify-content: space-evenly; 
+    }
+}
 </style>

@@ -7,12 +7,14 @@ export default createStore({
         token: null,
         userID: null,
         userRole: null,
+        userFav: null
     },
     getters: {
         checkUserRole: (state) => (roles) => {
           console.log(state.userRole, roles)
           return roles.includes(state.userRole);
         }
+        
     },
     mutations: {
         setToken(state, newToken) {
@@ -23,6 +25,9 @@ export default createStore({
         },
         setUserRole(state, newUserRole) {
             state.userRole = newUserRole;
+        },
+        setUserFav(state, newUserFav) {
+            state.userFav = newUserFav;
         }
     },
     actions: {},

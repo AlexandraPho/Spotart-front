@@ -12,6 +12,7 @@
 <script>
 import GalleryLayoutArtworks from '@/components/SingleArtwork/GalleryLayoutArtworks.vue';
 import FavouritesService from '@/services/FavouritesService.js';
+import store from '@/store/index.js';
 
 export default {
     name: "FavouriteTitle",
@@ -25,11 +26,11 @@ export default {
         }
     },
     mounted() {
-    //? carefull we are not dealing with all the errors - 404 ?
-    console.log(this.$route.params.id); 
+    
+    //console.log(this.$route.params.id); 
     FavouritesService.findFavouriteByUserID(this.$route.params.id).then(response => {
     this.artworks = response.data;
-
+    store.commit('setUserFav', this.artworks);
     });
     }
     
@@ -37,5 +38,23 @@ export default {
 </script>
 
 
-<style src="@/assets/css/artwork.css">
+<style scoped>
+        h1::before {
+            border-top: 0.2rem solid #FFDE59;
+            display: block;
+            position: relative;
+            top: -1rem;
+            margin: 0 auto;
+            width: 40%;
+            content: "";
+        }
+
+        .related_work {
+            text-align: center;
+            margin: 1rem;
+        }
+        
+        h1 {
+            font-size: 1.5rem;
+        }
 </style>

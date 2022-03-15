@@ -18,8 +18,23 @@ export default {
 </script>
 
 <style scoped>
-.gallery{
-display:flex;
-flex-direction: row;    
+
+    img:hover {
+    transform: scale(1.2); 
+    transition: 0.8s; 
+    }   
+        
+@media (min-width: 768px) {
+
+
+}
+@media (max-width: 768px) {
+        .gallery_single_artwork{
+            margin: 1rem;
+        }
+
+        .gallery {
+            display:inline-block;   
+        }
 }
 </style>

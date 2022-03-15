@@ -31,7 +31,7 @@
         <section class="description">
             <p v-html="content"></p>
         </section>
-        <div class="button_fav" v-on:click="addToFav"><button class="favorite styled" type="button">Ajouter en favoris</button></div>
+        <div class="button_fav" v-on:click="addToFav"><button class="favorite styled" type="button">{{button}}</button></div>
     </section>
     </article>
 </template>
@@ -52,6 +52,24 @@ export default {
         date: String,
         categoryId: Number
     },
+    data() {
+        return {
+          artworks:null,
+          button: 'Ajouter à mes favoris',
+        }
+    },
+    mounted() {
+    //     console.log('here');
+    // // We are managing here the appearance of the button "add to fav" or "delete of our fav"
+    // // depending if the 
+    //     if(this.$store.state.token){
+    //     FavouritesService.findFavouriteByUserID(this.$store.state.userID).then(response => {
+    //         console.log('je suis dans mounted call API FindFavouritebyUserID')
+    //         console.log(response.data);
+    //         this.artworks = response.data;
+    //         console.log(this.artworks.filter( function(number) { return number   });
+    //         );  
+    },              
     methods: {
     getDate : function (date) {
         moment.locale('fr', {
@@ -91,6 +109,93 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
+
+
+    * {
+        box-sizing: border-box;
+    }
+
+    h1{
+        font-size: 1.5rem;
+    }
+    
+    li {
+        list-style-type:none;
+    }
+
+    .categories li {
+        border-radius: 10px;
+        background-color: #FFDE59;
+        padding: 1rem;
+        display: inline-block;
+
+    }
+
+    .styled {
+        justify-content: center;
+        border: 0;
+        line-height: 2.5;
+        padding: 0 20px;
+        font-size: 1rem;
+        text-align: center;
+        color: #fff;
+        text-shadow: 1px 1px 1px #000;
+        background-color: rgb(0, 0, 0);
+    }
+
+    .styled:hover {
+    background-color: rgb(88, 87, 87);
+    cursor: pointer;
+}
+
+@media (max-width: 768px){
+
+.main-picture{
+    max-width:100%;
+    height:auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+}
+
+@media (min-width: 768px){
+
+.artwork {
+    width: 100%;
+    display: flex;
+    margin: 1.5rem;
+    padding: 0.5rem;
+}
+
+.informations{
+    width: 50%;
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+    margin-left: 1rem;
+}
+
+.media-image{
+    width: 50%;
+    display: block;
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+    margin-left: 1rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+.main-picture{
+    box-sizing: border-box;
+    width: 100%;
+    max-height: 500px;
+    margin-right: auto;
+    margin-left: auto;
+}
+}
 
 </style>
