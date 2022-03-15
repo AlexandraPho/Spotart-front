@@ -72,7 +72,11 @@ const routes = [
         path: '/events/:id',
         name: 'SingleEvent',
         component: () => import('../views/SingleEventApp.vue')
-    }
+    },
+   
+
+
+
 ]
 const router = createRouter({
     history: createWebHistory(process.env.BASE_URL),
