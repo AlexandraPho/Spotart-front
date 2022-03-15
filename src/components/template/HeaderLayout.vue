@@ -19,7 +19,7 @@
 </template>
 
 <script>
-    import ArtFormsService from '@/services/ArtFormsService'
+    import ArtFormsService from '@/services/ArtFormsService';
 
     export default {
         name: 'HeaderLayout',
