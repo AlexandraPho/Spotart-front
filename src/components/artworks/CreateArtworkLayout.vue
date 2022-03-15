@@ -16,16 +16,23 @@
       <input type="file" class="artwork_pic_file"><br>
     </div><br> -->
 
+<!--     <div class="art_form">
+        <label class="art_form_title">Forme d'art :</label>
+        <select v-model="artforms" class="art_form_category">
+            <option v-for="artform in artforms" :key="artform.name" :value="artform.id" v-html="artform.name"></option>
+        </select>
+    </div> -->
+    
     <div class="art_form">
         <label class="art_form_title">Forme d'art :</label>
         <select v-model="artforms" class="art_form_category">
-            <option value="sculp">Sculpture</option>
-            <option value="paint">Peinture</option>
-            <option value="photo">Photographie</option>
-            <option value="draw">Dessin</option>
+            <option value="2">Dessin</option>
+            <option value="3">Photographie</option>
+            <option value="4">Peinture</option>
+            <option value="5">Sculpture</option>
         </select>
     </div>
-    <br>
+
 <!-- 
   <div class="dimension">
     <label class="dimension_title">Dimensions (en cm):</label><br>
@@ -56,6 +63,7 @@
 
 <script>
     import ArtworksService from '@/services/ArtworksService.js';
+    import ArtformsService from '@/services/ArtFormsService.js';
 
     export default {
         name: 'CreateArtworkLayout',
@@ -97,10 +105,14 @@
                     }
                 })
             }
+        },
+        mounted() {
+            ArtformsService.findAll().then(
+                (response) => {
+                    console.log('Artforms Options', response.data);
+                    this.artforms = response.data;
+                }
+            );
         }
     }
 </script>
-
-<style src= "@/assets/css/publish_or_edit_your_artwork.css">
-
-</style>

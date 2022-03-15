@@ -1,7 +1,7 @@
 <template>
     <div class="background">
-        <router-link :to="{title: 'SingleEvent', params: { id: id }}">
-            <img :src="imgSrc" :alt="imgAlt">
+        <router-link :to="{name: 'SingleEvent', params: { id: id }}">
+            <img class="events-img" :src="imgSrc" :alt="imgAlt">
         </router-link>
     </div>
 </template>

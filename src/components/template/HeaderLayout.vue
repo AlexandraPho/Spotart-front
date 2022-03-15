@@ -7,7 +7,7 @@
                 <router-link class="header-anchor-element" :to="{name: 'ArtForms', params: {id: artform.id}}">{{ artform.name }}s</router-link>
             </li>
         </ul>
-        <div>
+        <div class="right-header">
             <router-link class="connexion-link" :to="{name: 'Login'}">Connexion</router-link>
             <router-link :to="{name: 'CreateArtwork'}">
                 <button class="publish-button">Partagez vos créations</button>
@@ -42,56 +42,104 @@
 
 <style scoped>
 
-    header {
-        background-color: #000000;
-        display: flex;
-        align-items: center;
-        width: 100vw;
-        max-width: 100%;
-    }
-    header .title-logo a {
-        padding-left: 40px;
-        flex-grow: 1;
-        text-decoration: none;
-        color: #ffffff;
-        font-family: Cormorant Garamond;
-    }
-    header .title-logo router-link {
-        text-decoration: none;
-        color: #ffffff;
-    }
-    header .header-links-list {
-        list-style: none;
+    header
+    {
+        background-color: black;
         display: inline-flex;
-        justify-content: center;
-        gap: 20px;
-        flex-grow: 2;
-        color: #ffffff;
-        font-size: xx-large;
+        justify-content: space-between;
+        width: 100%;
+        /* position: fixed; */
+        z-index: 1000;
     }
-    header .header-links-list .header-anchor-element {
-        color: #ffffff;
-        font-size: xx-large;
+
+    header h1
+    {
+        margin: 10px 0 10px 50px;
+        font-size: xxx-large;
+        background: linear-gradient(to bottom right, white 60%,#ffde59  40%);
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip 15s linear infinite;
+        color: white;
+        cursor: pointer;
+        display: inline-block;
+        flex-grow: 1;
+
+    }
+    @keyframes textclip {
+        to {
+            background-position: 200% center;
+        }
+    }
+
+    header h1 a
+    {
         text-decoration: none;
     }
-    header div {
+
+    .header-links-list
+    {
+        margin: 10px 0 10px 0;
         display: flex;
-        flex-grow: 1;
-        justify-content: flex-end;
+        flex-direction: row;
         align-items: center;
-        padding-right: 40px;
+        justify-content: center;
+        list-style: none;
         gap: 20px;
+        padding: 0;
+        flex-grow: 3;
     }
-    header div .connexion-link {
+
+    .header-anchor-element
+    {
+        text-decoration: none;
+        color: white;
         font-size: xx-large;
+    }
+
+    .header-anchor-element:hover
+    {
         color: #ffde59;
     }
-    header div .publish-button {
+
+    .right-header
+    {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin: 10px 50px 10px 0;
+    }
+
+    .connexion-link
+    {
+        color: white;
+        font-size: xx-large;
+        text-decoration: none;
+    }
+
+    .connexion-link:hover
+    {
+        color: #ffde59;
+    }
+
+    .publish-button
+    {
+        color: #ffde59;
+        font-size: xx-large;
+        border: solid 3px #ffde59;
+        border-radius: 10px;
+        background-color: black;
+    }
+
+    .publish-button:hover
+    {
         background-color: #ffde59;
-        border-color: #ffde59;
-        font-size: x-large;
-        width: 250px;
-        height: 50px;
+        color: black;
         cursor: pointer;
     }
+
 </style>
