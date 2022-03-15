@@ -4,7 +4,7 @@
             <h1>Dernières oeuvres de la catégorie {{ category }}</h1>
         </header>
         <div class="gallery">
-    <GalleryLayoutArtworks v-bind:image="artwork._embedded['wp:featuredmedia'][0].source_url" v-bind:id="artwork.id" v-bind:title="artwork.slug" v-for="artwork in artworks" v-bind:key="artwork.image"/>
+    <GalleryLayoutArtworks v-bind:image="artwork._embedded['wp:featuredmedia'][0].source_url" v-bind:id="artwork.id" v-bind:title="artwork.slug" v-for="artwork in artworks" v-bind:key="artwork.id" />
         </div>
     </section>
 </template>
@@ -32,7 +32,6 @@ export default {
         }
     },
     mounted() {
-    //? carefull we are not dealing with all the errors - 404 ?
     console.log(this.categoryId);
     console.log(this.category);
     ArtworksService.findByCategory(this.categoryId).then(
@@ -40,9 +39,11 @@ export default {
          (response) => {
              console.log(response.data);
              this.artworks = response.data;
-         }
-    );
-
+         });             
+    },
+    beforeRouteUpdate(to) {
+         console.log(to.params.id);
+    
     }
 }
 </script>
