@@ -16,13 +16,18 @@
         <section class="informations">
             <h1 v-html="title"></h1>
             <ul>
-                <li>Artiste: {{ author }}</li>
+                <router-link to="/foo"><li>Artiste: {{ author }}</li></router-link>
                 <li>Date: {{ getDate(date) }} </li>
                 <!-- <li>Dimension: 1023.6 x 892.7 cm</li> -->
             </ul>
         <section class="categories">
             <ul>
-                <li><a href="#" v-html="category"></a></li>
+                <li><a href="#" v-html="category"></a>
+<!--
+                <router-link
+          class="header-anchor-element"
+          :to="{ name: 'ArtForms', params: { id: artform.id } }">{{ artform.name }}s</router-link>
+-->                </li>
             </ul>
         </section>
         <section class="description">

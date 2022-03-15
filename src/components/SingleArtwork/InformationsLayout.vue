@@ -23,9 +23,11 @@
             </ul>
         <section class="categories">
             <ul>
-                <li><a href="#" v-html="category"></a></li>
+                <li><router-link :to="{ name: 'ArtForms', params: { id: categoryId } }"><a  v-html="category"></a>
+        </router-link></li>            
             </ul>
         </section>
+
         <section class="description">
             <p v-html="content"></p>
         </section>
@@ -47,7 +49,8 @@ export default {
         category: String,
         content: String,
         image: String,
-        date: String
+        date: String,
+        categoryId: Number
     },
     methods: {
     getDate : function (date) {
