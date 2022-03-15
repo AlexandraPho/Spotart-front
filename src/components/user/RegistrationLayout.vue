@@ -120,6 +120,3 @@
         }
     }
 </script>
-
-<style  src="@/assets/css/signup.css">
-</style>

@@ -22,6 +22,3 @@
         }
     }
 </script>
-
-<style  src="@/assets/css/artist-profile.css">
-</style>

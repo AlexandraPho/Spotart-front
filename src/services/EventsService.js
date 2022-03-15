@@ -13,4 +13,7 @@ export default {
     findAll() {
         return apiClient.get('/events?_embed');
     },
+    find(id) {
+        return apiClient.get(`/events/${id}?_embed`);
+    },
 }
