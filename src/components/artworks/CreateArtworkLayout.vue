@@ -124,5 +124,3 @@
 
 </script>
 
-<style src= "@/assets/css/publish_or_edit_your_artwork.css">
-</style>
