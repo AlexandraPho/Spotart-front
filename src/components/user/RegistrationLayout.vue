@@ -1,37 +1,33 @@
 <template>
     <h1 class="title">Créer un compte</h1>
-    <hr>
-    <p v-if="success">{{ success }}</p>
-    <p v-for="error in errors" :key="error">{{ error }}</p>
 
     <div class="container-form1">
         <div class="container">
-            <form>
-                <div class="email">
-                    <label for="email">Adresse email</label>
-                    <input v-model="email" type="email" id="email" name="email" placeholder="robert@gmail.com" />
-                    <i class="fas fa-at"></i>
+            <form class="signup-form">
+
+                <p v-if="success">{{ success }}</p>
+                <p v-for="error in errors" :key="error">{{ error }}</p>
+
+                <div class="field">
+                    <label class="field__label" for="email">Adresse email</label>
+                    <input class="field__input" v-model="email" type="email" id="email" name="email" placeholder="robert@gmail.com" />
                 </div>
 
-                <div class="password">
-                    <label for="password">Mot de passe</label>
-                    <input v-model="password" type="password" id="password" name="password" placeholder="Mot de passe" />
-                    <i class="fa fa-lock" aria-hidden="true"></i>
+                <div class="field">
+                    <label class="field__label" for="password">Mot de passe</label>
+                    <input class="field__input" v-model="password" type="password" id="password" name="password" placeholder="Mot de passe" />
                 </div>
 
-                <div class="password">
-                    <label for="password-confirmation">Confirmation du mot de passe</label>
-                    <input v-model="password_check" id="password-confirmation" type="password" name="password-confirmation" placeholder="Confirmer votre mot de passe" />
-                    <i class="fa fa-lock" aria-hidden="true"></i>
+                <div class="field">
+                    <label class="field__label" for="password-confirmation">Confirmation du mot de passe</label>
+                    <input class="field__input" v-model="password_check" id="password-confirmation" type="password" name="password-confirmation" placeholder="Confirmez votre mot de passe" />
                 </div>
 
-                <div class="pseudo">
-                    <label for="username">Pseudonyme</label>
-                    <input v-model="username" id="username" type="username" name="username" placeholder="Pseudonyme" />
-                    <i class="fa fa-portrait"></i>
+                <div class="field">
+                    <label class="field__label" for="username">Identifiant</label>
+                    <input class="field__input" v-model="username" id="username" type="username" name="username" placeholder="Identifiant" />
                 </div>
-                <div class="container2">
-        <!--                 <div id="app">
+                <!--<div id="app">
                         <div v-if="!illustration">
                             <h2>Choisir une photo</h2>
                             <input type="file" @change="onFileChange" />
@@ -40,23 +36,16 @@
                             <img :src="illustration">
                             <button @click="removeIllustration">Remove image</button>
                         </div>
-                    </div> -->
-                    <div class="field">
-                        <label for="description">Description (optionnel)</label>
-                        <textarea v-model="description" class="field_input" placeholder="Biographie"></textarea>
-                    </div>
-                </div>
-                <div class="role">
-                    <label class="chose">Choisissez votre type de profil</label>
+                </div> -->
+                <div class="field">
+                    <label class="field__label">Choisissez votre type de profil</label>
                     <select v-model="role">
                         <option value="subscriber">Abonné / Abonnée</option>
-                        <option value="artist">Artist</option>
+                        <option value="artist">Artiste</option>
                     </select>
                 </div>
-                <div class="send-button">
-                    <button v-on:click="sendForm" class="create-account" type="button">Créer un compte</button>
-                </div>
-                <br><br>
+                <button v-on:click="sendForm" class="create-account" type="button">Créer un compte</button>
+                <br><br><br>
             </form>
         </div>
     </div>
@@ -76,8 +65,7 @@
                 password: null,
                 password_check: null,
                 username: null,
-                role: null,  
-                description: null  
+                role: null,   
             }
         },
         methods: {
@@ -90,28 +78,23 @@
                     this.errors.push("Le(s) champ(s) mot de passe et/ou sa confirmation doivent être remplis");
                 }
                 if (this.password !== this.password_check) {
-                    this.errors.push("Les champs mot de passe et sa confirmation, ne sont pas identique");
+                    this.errors.push("Les champs mot de passe et sa confirmation, ne sont pas identiques");
                 }
                 if (!this.username) {
-                    this.errors.push("Le champ de pseudonyme doit être remplis");
+                    this.errors.push("Le champ d'identifiant doit être remplis");
                 }
-                if (!this.role && this.role == "") {
-                    this.errors.push("Un role doit être choisis");
-                }
-                if (!this.description) {
-                    this.errors.push("Le champ de description doit être remplis");
+                if (!this.role || this.role == "") {
+                    this.errors.push("Un rôle doit être choisis");
                 }
                 UsersService.register({
                     email: this.email,
                     password: this.password,
                     username: this.username,
                     role: this.role,
-                    description: this.description,
                 }, (data) => {
-                    this.errors.push(data);
 
                     if(data.type === "success") {
-                        this.success = data.message;
+                        this.success = `Bienvenue, ${this.username}`;
                     } else {
                         this.errors.push(data.message);
                     }
@@ -123,191 +106,114 @@
 
 <style scoped>
 
-h1 {
-  font-family: Cormorant Garamond;
-  text-align: center;
-  position: relative;
-  bottom: 18px;
-}
-.title {
-  margin: 20px 0 0 0;
-}
-.email {
-  width: 90%;
-}
-.password {
-  width: 90%;
-}
-.pseudo {
-  width: 90%;
-}
-.role {
-  width: 90%;
-}
-.field {
-  width: 90%;
-}
-input {
-  font-size: large;
-}
-input[type="text"],
-textarea,
-input[type="email"] {
-  width: 100%;
-  padding: 12px;
-  border: 2px solid black;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  margin-right: 0px;
-  margin-left: 39px;
-  resize: vertical;
-}
-label {
-  width: 90%;
-  display: block;
-  font: 1rem "Fira Sans", sans-serif;
-  position: relative;
-  left: 40px;
-}
-input[type="submit"] {
-  background-color: #1255a2;
-  color: white;
-  padding: 12px 20px;
-  border: 2px solid black;
-  border-radius: 4px;
-  cursor: pointer;
-}
-input[type="submit"]:hover {
-  background-color: #1872d9;
-}
-.container-form1 {
-  display: flex;
-  justify-content: center;
-}
-.second-container {
-  width: 50%;
-  /*     float: right;
-    position: relative;
-    float: 15%;
-    left: 47%; */
-  bottom: 465px;
-}
-input[type="file"] {
-  border-bottom-left-radius: 50%;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  border-bottom-right-radius: 50%;
-  width: 105px;
-  height: 107px;
-  background-color: #ffde59;
-}
-textarea#story {
-  left: 14px;
-}
-h1 {
-  font-family: Cormorant Garamond;
-  text-align: center;
-}
-h2 {
-  text-align: center;
-  font-family: Cormorant Garamond;
-  font-size: 26px;
-}
-input#email {
-  width: 100%;
-  padding: 12px;
-  border: 2px solid black;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  margin-right: 0px;
-  margin-left: 39px;
-  resize: vertical;
-}
-input#password {
-  width: 100%;
-  padding: 12px;
-  border: 2px solid black;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  margin-right: 0px;
-  margin-left: 39px;
-  resize: vertical;
-}
-input#password-confirmation {
-  width: 100%;
-  padding: 12px;
-  border: 2px solid black;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  margin-right: 0px;
-  margin-left: 39px;
-  resize: vertical;
-}
-input#username {
-  width: 100%;
-  padding: 12px;
-  border: 2px solid black;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  margin-right: 0px;
-  margin-left: 39px;
-  resize: vertical;
-}
-select {
-  position: relative;
-  left: 41px;
-  border: solid;
-}
-.container2 {
-  width: 100%;
-  display: flex;
-}
-.container2 .field {
-  width: 90%;
-}
-label {
-  width: 90%;
-  display: block;
-  font: 1rem "Fira Sans", sans-serif;
-}
-input,
-label {
-  margin: 0.4rem 0;
-}
-.send-button {
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  left: 42px;
-}
-.container {
-  width: 50%;
-  border: solid 2px;
-  position: relative;
-  right: 5p;
-  top: -22px;
-  background-color: #ffe990;
-}
-button.create-account {
-   
-    border-color: #ffde59;
-    font-size: x-large;
-    width: 250px;
-    height: 50px;
-    cursor: pointer;
-    background-color: black;
-    color: #ffde59;
-}
+    .signup-form
+    {
+        margin: 50px 350px 0 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    p
+    {
+        text-align: center;
+        font-size: x-large;
+    }
+    .create-account {
+        text-align: center;
+        border-radius: 10px;
+        background-color: #FFDE59;
+        margin: 2em 1em 7em 1em;
+        padding: 0.5em;
+        display: inline-block;
+        border: 4px #CCCCCC;
+        width: 15%;
+        transition: all 0.5s;
+        cursor: pointer;
+        font-size: large;
+    }
+
+    button:hover
+    {
+        background-color: #FAECB3;
+    }
+
+    h1::after
+    {
+        border-top: 0.2rem solid #FFDE59;
+        display: block;
+        position: relative;
+        top: 0.5rem;
+        margin: 0 auto;
+        width: 10%;
+        content: "";
+    }
+
+    h1
+    {
+        margin-top: 50px;
+        text-align: center;
+        font-size: xx-large;
+    }
+
+    .main-container
+    {
+        padding: 0.5rem;
+        width: 90%;
+    }
+
+    .right_section
+    {
+        border: none;
+    }
+
+    .left_section
+    {
+        border: none
+    }
+
+    .field__label
+    {
+        text-align: left;
+        font-size: x-large;
+        margin-bottom: 5px
+    }
+
+    .field__input
+    {
+        border: 1px solid rgb(184, 182, 182);
+        border-radius: 0.5rem;
+        background-color: #F0F4EE;
+        margin-bottom: 0.5rem;
+        background-color: #D3D3D3;
+        padding: 0 10px 0 10px;
+        font-size: x-large;
+        height: 40px;
+        width: 1000px;
+    }
+
+    .field__input:focus
+    {
+        outline-color: #FFDE59;
+        outline-width: 1px;
+    }
+
+    .textarea.field__input
+    {
+        width: 100%;
+        height: 8rem;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .field
+    {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 30px 350px 0 350px;
+    }
 
 </style>

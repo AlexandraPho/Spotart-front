@@ -2,6 +2,7 @@
     <br>
     <h1>Connexion</h1>
     <br>
+    <!-- <form class="login-form"> -->
         <p v-if="success">{{ success }}</p>
         <p v-for="error in errors" :key="error">{{ error }}</p>
     
@@ -21,6 +22,7 @@
         <div class="div_button_submit">
             <button class="signup-button"><router-link :to="{name: 'Registration'}">Inscription</router-link></button>
         </div>
+    <!-- </form> -->
     <div class="white-background"></div>
 </template>
 
@@ -70,7 +72,10 @@
 
     .login-form
     {
-        margin: 200px 350px 0 350px;
+        margin: 50px 350px 0 350px;
+        /* display: flex;
+        flex-direction: column;
+        align-items: center; */
     }
 
     p
@@ -177,9 +182,11 @@
         border-radius: 0.5rem;
         background-color: #F0F4EE;
         margin-bottom: 0.5rem;
-        background-color: #D3D3D3; /* #FFEBCD */
+        background-color: #D3D3D3;
         padding: 0 10px 0 10px;
         font-size: x-large;
+        height: 40px;
+        /* width: 1000px; */
     }
 
     .field__input:focus
