@@ -3,8 +3,7 @@
         <div class="events-carousel">
             <NewsLayout v-for="news in newsList" :key="news.title" :id="news.id" :imgSrc="news._embedded['wp:featuredmedia'][0].source_url" :imgAlt="news._embedded['wp:featuredmedia'][0].alt_text" :title="news.title.rendered" />
             <div class="arrows-events">
-                <i class="lni lni-arrow-left-circle"></i>
-                <i class="lni lni-arrow-right-circle"></i>
+                
             </div>
         </div>
     </section>
@@ -37,7 +36,7 @@
 
 <style scoped>
 
-    .news-img
+/*     .news-img
     {
         height: 40vh;
     }
@@ -46,7 +45,7 @@
     {
         object-fit: cover;
         width: 100%;
-        /* background: linear-gradient(to right, transparent 0%, black 100%); */
-    }
+        // background: linear-gradient(to right, transparent 0%, black 100%);
+    } */
 
 </style>

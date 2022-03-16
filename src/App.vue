@@ -30,14 +30,65 @@
         font-family: Belleza;
     }
 
+@media (min-width: 320px) and (max-width: 768px) {
+
     h2 {
         text-align: center;
         margin-bottom: 5px;
     }
     hr {
         border: #ffde59 solid 1px;
-        width: 8%;
+        width: 38%;
     }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+
+    h2 {
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    hr {
+        border: #ffde59 solid 1px;
+        width: 25%;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1440px) {
+
+    h2 {
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    hr {
+        border: #ffde59 solid 1px;
+        width: 20%;
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 1600px) {
+
+    h2 {
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    hr {
+        border: #ffde59 solid 1px;
+        width: 18%;
+    }
+}
+
+@media (min-width: 1600px) {
+
+    h2 {
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    hr {
+        border: #ffde59 solid 1px;
+        width: 18%;
+    }
+}
 
 /*     h1,
     img,

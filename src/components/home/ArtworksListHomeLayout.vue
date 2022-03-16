@@ -1,7 +1,7 @@
 <template>
     <section class="latest-artworks">
         <h2>Les dernières Oeuvres</h2>
-        <hr><br>
+        <hr><br><br>
         <div class="artworks">
             <ArtworkLayout v-for="artwork in artworks" :key="artwork.title" :id="artwork.id" :imgSrc="artwork._embedded['wp:featuredmedia'][0].source_url" :imgAlt="artwork._embedded['wp:featuredmedia'][0].alt_text" :title="artwork.title.rendered" />
         </div>
@@ -35,27 +35,189 @@
 
 <style>
 
-    .artworks
-    {
-        display: flex;
-        justify-content: center;
-        gap: 7vw;
-        height: 30vh;
+    @media (min-width: 320px) and (max-width: 768px) {
+
+        .artworks
+        {
+            display: flex;
+            justify-content: center;
+            gap: 6.5vw;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        article
+        {
+            height: 70vw;
+        }
+
+        .latest-artworks img
+        {
+            width: 65vw;
+            height: 75%;
+            border-radius: 10px;
+            filter: drop-shadow(0 0 0.50rem black);
+            box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
+            -webkit-transition: all 0.2s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+
+        .latest-artworks img:hover{
+            width:15em;
+            height:15em;
+            border : 2px solid #000000;
+            box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
+            transform:scale(1.3);
+            cursor: pointer;
+        }
+
+        .artworks h3
+        {
+            margin-top: 5px;
+            text-align: center;
+            font-size: large;
+        }
+        
     }
 
-    .latest-artworks img
-    {
-        width: 12vw;
-        height: 75%;
-        border-radius: 10px;
-        filter: drop-shadow(0 0 0.50rem black);
+    @media (min-width: 768px) and (max-width: 1200px) {
+
+        .artworks
+        {
+            display: flex;
+            justify-content: center;
+            gap: 6.5vw;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        article
+        {
+            height: 60vw;
+        }
+
+        .latest-artworks img
+        {
+            width: 38vw;
+            height: 75%;
+            border-radius: 10px;
+            filter: drop-shadow(0 0 0.50rem black);
+            box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
+            -webkit-transition: all 0.2s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+
+        .latest-artworks img:hover{
+            width:15em;
+            height:15em;
+            border : 2px solid #000000;
+            box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
+            transform:scale(1.3);
+            cursor: pointer;
+        }
+
+        .artworks h3
+        {
+            margin-top: 5px;
+            text-align: center;
+            font-size: x-large;
+        }
     }
 
-    .artworks h3
-    {
-        margin-top: 5px;
-        text-align: center;
-        font-size: x-large;
+    @media (min-width: 1200px) and (max-width: 1600px) {
+
+        .artworks
+        {
+            display: flex;
+            justify-content: center;
+            gap: 6.5vw;
+        }
+
+        article
+        {
+            height: 25vw;
+        }
+
+        .latest-artworks img
+        {
+            width: 18vw;
+            height: 75%;
+            border-radius: 10px;
+            filter: drop-shadow(0 0 0.50rem black);
+            box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
+            -webkit-transition: all 0.2s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+
+        .latest-artworks img:hover{
+            width:15em;
+            height:15em;
+            border : 2px solid #000000;
+            box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
+            transform:scale(1.3);
+            cursor: pointer;
+        }
+
+        .artworks h3
+        {
+            margin-top: 5px;
+            text-align: center;
+            font-size: x-large;
+        }
+    }
+
+    @media (min-width: 1600px) {
+
+        .artworks
+        {
+            display: flex;
+            justify-content: center;
+            gap: 4vw;
+        }
+
+        article
+        {
+            height: 25vw;
+        }
+
+        .latest-artworks img
+        {
+            width: 19vw;
+            height: 75%;
+            border-radius: 10px;
+            filter: drop-shadow(0 0 0.50rem black);
+            box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
+            -webkit-transition: all 0.2s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+
+        .latest-artworks img:hover{
+            width: 19vw;
+            height: 70%;
+            border : 2px solid #000000;
+            box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
+            transform:scale(1.3);
+            cursor: pointer;
+        }
+
+        .artworks h3
+        {
+            margin-top: 5px;
+            text-align: center;
+            font-size: x-large;
+        }
     }
 
 </style>

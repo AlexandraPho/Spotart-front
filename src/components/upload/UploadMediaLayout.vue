@@ -1,28 +1,27 @@
 <template>
-<main>
-<h1 class="publish_artwork">Publiez votre oeuvre</h1>
-  <div class="artwork">    
-    <div class="errors" v-if="errors.length > 0">
-      <p v-for="error in errors" :key="error">{{ error }}</p>
+  <main>
+  <h1 class="publish_artwork">Publiez votre oeuvre</h1>
+      <div class="artwork">    
+          <div class="errors" v-if="errors.length > 0">
+            <p v-for="error in errors" :key="error">{{ error }}</p>
+          </div>
+          <div v-if="success">
+            <img v-if="newFileInfo.media_type == 'image'" v-bind:src="newFileInfo.media_details.sizes.medium.source_url" />
+          </div>
+          <div>
+            <label class="artwork_title" for="file">Choisissez un fichier</label>
+            <input @change="upload" name="file" id="file" placeholder="choisissez l'image de votre oeuvre..." type="file" :accept="fileTypes">
+        <!--
+            <label for="title">Titre de votre fichier</label>
+            <InputText :disabled="loading" name="title" id="title" placeholder="Titre du fichier" type="text" @inputChange="updateInputValue" />
+        -->
+        </div>
+      <div class="center-button">
+      <button class="favorite styled" v-on:click="uploadFile">Ajouter l'image</button>
+      </div>
     </div>
-    <div v-if="success">
-      <img v-if="newFileInfo.media_type == 'image'" v-bind:src="newFileInfo.media_details.sizes.medium.source_url" />
-    </div>
-    <div>
-      <label class="artwork_title" for="file">Choisissez un fichier</label>
-      <input @change="upload" name="file" id="file" placeholder="choisissez l'image de votre oeuvre..." type="file" :accept="fileTypes">
-  <!--
-      <label for="title">Titre de votre fichier</label>
-      <InputText :disabled="loading" name="title" id="title" placeholder="Titre du fichier" type="text" @inputChange="updateInputValue" />
-  -->
-  </div>
-<div class="center-button">
-<button class="favorite styled" v-on:click="uploadFile">Ajouter l'image</button>
-</div>
-</div>
-</main>
+  </main>
 </template>
-
 
 <script>
 import UploadMediasService from "@/services/UploadMediasService.js";
@@ -50,7 +49,7 @@ export default {
     methods: {
     //File info are upload in component's data when the file is selected by user
     upload: function(event){
-      console.log('je suis dans la methode upload et le console log qui suit coorespond a event.target.files[0] ')
+      console.log('je suis dans la methode upload et le console log qui suit correspond a event.target.files[0] ')
       console.log(event.target.files[0]);
       this.file = event.target.files[0];
       this.dataForm.append('file', this.file);      

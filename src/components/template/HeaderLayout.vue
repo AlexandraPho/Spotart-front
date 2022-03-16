@@ -8,22 +8,12 @@
             </li>
         </ul>
         <div class="right-header">
-            <router-link class="connexion-link" :to="{name: 'Login'}">Connexion</router-link>
+            <router-link class="connexion-link" v-if="!this.$store.state.token" :to="{name: 'Login'}">Connexion</router-link>
+            <button class="connexion-link" @click="disconnect" v-if="this.$store.state.token">Deconnexion</button>
             <router-link :to="{name: 'CreateArtwork'}">
                 <button class="publish-button">Partagez vos créations</button>
             </router-link>
-
-        <!-- <div>  <router-link class="connexion-link"  v-if="this.$store.state.token == null" to="/connection">{{ this.$store.state.token == null ? 'Connexion' : 'mon compte'  }}</router-link> -->
         </div>
-
-    // <div>
-      // <router-link class="link" v-if="!this.$store.state.token" to="/registration">Inscription</router-link>
-      // <router-link class="login" v-if="!this.$store.state.token" to="/login">Connexion</router-link>
-      // <router-link class="create" v-if="this.$store.state.token && this.$store.getters.checkUserRole(['artist'])" to='/artworks/create'>Publiez vos oeuvres</router-link>
-      // <router-link class="update" v-if="this.$store.state.token && this.$store.getters.checkUserRole(['artist'])" to='/artworks/update/:id'>Modifiez votre oeuvre</router-link>
-      // <button @click="disconnect" v-if="this.$store.state.token">Deconnexion</button>
-      <!-- <div>  <router-link class="connexion-link"  v-if="this.$store.state.token == null" to="/connection">{{ this.$store.state.token == null ? 'Connexion' : 'mon compte'  }}</router-link> -->
-    // </div>
   </header>
 
 </template>
@@ -36,15 +26,16 @@ export default {
    data() {
     return {
       artforms: null,
-      homeUrl: "/",
     };
   },
   mounted() {
-    ArtFormsService.findAll().then((response) => {
-      console.log("Artforms", response.data);
-      this.artforms = response.data;
-    });
-  },
+        ArtFormsService.findAll().then(
+            (response) => {
+                console.log("Artforms", response.data);
+                this.artforms = response.data;
+            }
+        );
+    },
   methods: {
     disconnect() {
       console.log("disconnect");
@@ -57,103 +48,506 @@ export default {
 </script>
 
 <style scoped>
-    header
-    {
-        background-color: black;
-        display: inline-flex;
-        justify-content: space-between;
-        width: 100%;
-        /* position: fixed; */
-        z-index: 1000;
+
+    @media (min-width: 320px) and (max-width: 768px) {
+
+        
     }
 
-    header h1
-    {
-        margin: 10px 0 10px 50px;
-        font-size: xxx-large;
-        background: linear-gradient(to bottom right, white 60%,#ffde59  40%);
-        background-size: auto auto;
-        background-clip: border-box;
-        background-size: 200% auto;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: textclip 15s linear infinite;
-        color: white;
-        cursor: pointer;
-        display: inline-block;
-        flex-grow: 1;
+    @media (min-width: 768px) and (max-width: 1200px) {
 
-    }
-    @keyframes textclip {
-        to {
-            background-position: 200% center;
+        header
+        {
+            background-color: black;
+            display: inline-flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        header h1
+        {
+            margin: 10px 0 10px 20px;
+            font-size: x-large;
+            background: linear-gradient(to bottom right, white 60%,#ffde59  40%);
+            background-size: auto auto;
+            background-clip: border-box;
+            background-size: 200% auto;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textclip 15s linear infinite;
+            color: white;
+            cursor: pointer;
+            display: inline-block;
+            flex-grow: 1;
+        }
+        @keyframes textclip {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        header h1 a
+        {
+            text-decoration: none;
+        }
+
+        header h1:hover
+        {
+            -webkit-transition: all 0.2s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+            transform:scale(1.1);
+        }
+
+        .header-links-list
+        {
+            margin: 10px 0 10px 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+            gap: 15px;
+            padding: 0;
+            flex-grow: 3;
+        }
+
+        .header-anchor-element
+        {
+            text-decoration: none;
+            color: white;
+            font-size: large;
+        }
+
+        .header-anchor-element:hover
+        {
+            color: #ffde59;
+        }
+
+        .right-header
+        {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 10px 20px 10px 0;
+        }
+
+        .connexion-link
+        {
+            color: white;
+            font-size: large;
+            text-decoration: none;
+        }
+
+        .signup
+        {
+        display: none;
+        }
+
+        .right-header button:hover
+        {
+            background-color: #ffde59;
+            color: black;
+            cursor: pointer;
+        }
+
+        .connexion-link:hover
+        {
+            color: #ffde59;
+        }
+
+        .publish-button
+        {
+            color: #ffde59;
+            border: solid 3px #ffde59;
+            border-radius: 10px;
+            background-color: black;
+        }
+
+        .publish-button:hover
+        {
+            background-color: #ffde59;
+            color: black;
+            cursor: pointer;
         }
     }
 
-    header h1 a
-    {
-        text-decoration: none;
+    @media (min-width: 1200px) and (max-width: 1440px) {
+
+        header
+        {
+            background-color: black;
+            display: inline-flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        header h1
+        {
+            margin: 10px 0 10px 30px;
+            font-size: xxx-large;
+            background: linear-gradient(to bottom right, white 60%,#ffde59  40%);
+            background-size: auto auto;
+            background-clip: border-box;
+            background-size: 200% auto;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textclip 15s linear infinite;
+            color: white;
+            cursor: pointer;
+            display: inline-block;
+            flex-grow: 1;
+        }
+        @keyframes textclip {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        header h1 a
+        {
+            text-decoration: none;
+        }
+
+        header h1:hover
+        {
+            -webkit-transition: all 0.2s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+            transform:scale(1.1);
+        }
+
+        .header-links-list
+        {
+            margin: 10px 0 10px 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+            gap: 20px;
+            padding: 0;
+            flex-grow: 3;
+        }
+
+        .header-anchor-element
+        {
+            text-decoration: none;
+            color: white;
+            font-size: x-large;
+        }
+
+        .header-anchor-element:hover
+        {
+            color: #ffde59;
+        }
+
+        .right-header
+        {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin: 10px 30px 10px 0;
+        }
+
+        .connexion-link
+        {
+            color: white;
+            font-size: x-large;
+            text-decoration: none;
+        }
+
+        .right-header button
+        {
+            color: #ffde59;
+            font-size: large;
+            border: solid 3px #ffde59;
+            border-radius: 10px;
+            background-color: black;
+        }
+
+        .right-header button:hover
+        {
+            background-color: #ffde59;
+            color: black;
+            cursor: pointer;
+        }
+
+        .connexion-link:hover
+        {
+            color: #ffde59;
+        }
+
+        .publish-button
+        {
+            color: #ffde59;
+            border: solid 3px #ffde59;
+            border-radius: 10px;
+            background-color: black;
+        }
+
+        .publish-button:hover
+        {
+            background-color: #ffde59;
+            color: black;
+            cursor: pointer;
+        }
     }
 
-    .header-links-list
-    {
-        margin: 10px 0 10px 0;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        list-style: none;
-        gap: 20px;
-        padding: 0;
-        flex-grow: 3;
+    @media (min-width: 1440px) and (max-width: 1600px) {
+
+        header
+        {
+            background-color: black;
+            display: inline-flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        header h1
+        {
+            margin: 10px 0 10px 30px;
+            font-size: xxx-large;
+            background: linear-gradient(to bottom right, white 60%,#ffde59  40%);
+            background-size: auto auto;
+            background-clip: border-box;
+            background-size: 200% auto;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textclip 15s linear infinite;
+            color: white;
+            cursor: pointer;
+            display: inline-block;
+            flex-grow: 1;
+        }
+        @keyframes textclip {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        header h1 a
+        {
+            text-decoration: none;
+        }
+
+        header h1:hover
+        {
+            -webkit-transition: all 0.2s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+            transform:scale(1.1);
+        }
+
+        .header-links-list
+        {
+            margin: 10px 0 10px 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+            gap: 20px;
+            padding: 0;
+            flex-grow: 3;
+        }
+
+        .header-anchor-element
+        {
+            text-decoration: none;
+            color: white;
+            font-size: xx-large;
+        }
+
+        .header-anchor-element:hover
+        {
+            color: #ffde59;
+        }
+
+        .right-header
+        {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin: 10px 30px 10px 0;
+        }
+
+        .connexion-link
+        {
+            color: white;
+            font-size: x-large;
+            text-decoration: none;
+        }
+
+        .right-header button
+        {
+            color: #ffde59;
+            font-size: large;
+            border: solid 3px #ffde59;
+            border-radius: 10px;
+            background-color: black;
+        }
+
+        .right-header button:hover
+        {
+            background-color: #ffde59;
+            color: black;
+            cursor: pointer;
+        }
+
+        .connexion-link:hover
+        {
+            color: #ffde59;
+        }
+
+        .publish-button
+        {
+            color: #ffde59;
+            border: solid 3px #ffde59;
+            border-radius: 10px;
+            background-color: black;
+        }
+
+        .publish-button:hover
+        {
+            background-color: #ffde59;
+            color: black;
+            cursor: pointer;
+        }
     }
 
-    .header-anchor-element
-    {
-        text-decoration: none;
-        color: white;
-        font-size: xx-large;
+    @media (min-width: 1600px) {
+
+        header
+        {
+            background-color: black;
+            display: inline-flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        header h1
+        {
+            margin: 10px 0 10px 50px;
+            font-size: xxx-large;
+            background: linear-gradient(to bottom right, white 60%,#ffde59  40%);
+            background-size: auto auto;
+            background-clip: border-box;
+            background-size: 200% auto;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textclip 15s linear infinite;
+            color: white;
+            cursor: pointer;
+            display: inline-block;
+            flex-grow: 1;
+        }
+        @keyframes textclip {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        header h1 a
+        {
+            text-decoration: none;
+        }
+
+        header h1:hover
+        {
+            -webkit-transition: all 0.2s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+            transform:scale(1.1);
+        }
+
+        .header-links-list
+        {
+            margin: 10px 0 10px 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+            gap: 20px;
+            padding: 0;
+            flex-grow: 3;
+        }
+
+        .header-anchor-element
+        {
+            text-decoration: none;
+            color: white;
+            font-size: xx-large;
+        }
+
+        .header-anchor-element:hover
+        {
+            color: #ffde59;
+        }
+
+        .right-header
+        {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin: 10px 50px 10px 0;
+        }
+
+        .connexion-link
+        {
+            color: white;
+            font-size: x-large;
+            text-decoration: none;
+        }
+
+        .right-header button
+        {
+            color: #ffde59;
+            font-size: xx-large;
+            border: solid 3px #ffde59;
+            border-radius: 10px;
+            background-color: black;
+        }
+
+        .right-header button:hover
+        {
+            background-color: #ffde59;
+            color: black;
+            cursor: pointer;
+        }
+
+        .connexion-link:hover
+        {
+            color: #ffde59;
+        }
+
+        .publish-button
+        {
+            color: #ffde59;
+            border: solid 3px #ffde59;
+            border-radius: 10px;
+            background-color: black;
+        }
+
+        .publish-button:hover
+        {
+            background-color: #ffde59;
+            color: black;
+            cursor: pointer;
+        }
     }
 
-    .header-anchor-element:hover
-    {
-        color: #ffde59;
-    }
-
-    .right-header
-    {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        margin: 10px 50px 10px 0;
-    }
-
-    .connexion-link
-    {
-        color: white;
-        font-size: xx-large;
-        text-decoration: none;
-    }
-
-    .connexion-link:hover
-    {
-        color: #ffde59;
-    }
-
-    .publish-button
-    {
-        color: #ffde59;
-        font-size: xx-large;
-        border: solid 3px #ffde59;
-        border-radius: 10px;
-        background-color: black;
-    }
-
-    .publish-button:hover
-    {
-        background-color: #ffde59;
-        color: black;
-        cursor: pointer;
-    }
 </style>

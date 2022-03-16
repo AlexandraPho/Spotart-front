@@ -31,24 +31,21 @@ export default {
         }
     },
     mounted() {
-    //console.log(this.$route.params.id);
-    // vue router allow us to acces the context of the page => here we can access the id of the artwork in the URL
-    //? carefull we are not dealing with all the errors - 404 ?
-    ArtworksService.find(this.$route.params.id).then(
-        // We are using the find functions with the id artwork in the url 
-        // and recupering the artwork object to use it (display in other component)
-        (response) => {
-            console.log(response.data);
-            this.artwork = response.data;
-        }
-    );
+        ArtworksService.find(this.$route.params.id).then(
+            // We are using the find functions with the id artwork in the url 
+            // and recupering the artwork object to use it (display in other component)
+            (response) => {
+                console.log(response.data);
+                this.artwork = response.data;
+            }
+        );
     },
     beforeRouteUpdate(to) {
-        ArtworksService.find(this.$route.params.id).then(
+        ArtworksService.find(to.params.id).then(
         // We are using the find functions with the id artwork in the url 
         // and recupering the artwork object to use it (display in other component)
             (response) => {
-                console.log(response.data);
+                console.log('Artwork', response.data);
                 this.artwork = response.data;
             }
         );
@@ -61,3 +58,247 @@ export default {
     }
 }
 </script>
+
+<style>
+
+@media (max-width: 700px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  .main-container {
+    width: 100%;
+    margin: 1rem;
+    padding: 0.5rem;
+  }
+
+  article.artwork {
+    margin: 1.5rem;
+    padding: 0.5rem;
+  }
+  article.artwork h1 {
+    text-align: center;
+  }
+  article.artwork li {
+    list-style-type: none;
+  }
+  article.artwork .categories ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  article.artwork .categories li {
+    width: 20%;
+    list-style-type: none;
+    border-radius: 10px;
+    background-color: #FFDE59;
+    margin: 1em;
+    padding: 0.5em;
+  }
+
+  .media-image .main-picture {
+    width: 100%;
+    margin-right: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+  .media-image .gallery-picture {
+    display: none;
+  }
+
+  .informations h1 {
+    font-size: 1.5rem;
+  }
+
+  .related_work {
+    text-align: center;
+    margin: 1rem;
+  }
+  .related_work h1::before {
+    border-top: 0.2rem solid #FFDE59;
+    display: block;
+    position: relative;
+    top: -1rem;
+    margin: 0 auto;
+    width: 40%;
+    content: "";
+  }
+  .related_work h1 {
+    font-size: 1.5rem;
+  }
+  .related_work .gallery {
+    margin: 1rem;
+    transition: 0.8s;
+  }
+  .related_work .gallery img:hover {
+    transform: scale(1.2);
+  }
+}
+@media only screen and (min-width: 700px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  .main-container {
+    width: 100%;
+    margin: 1rem;
+    padding: 0.5rem;
+  }
+
+  article.artwork {
+    display: flex;
+    margin: 1.5rem;
+    padding: 0.5rem;
+  }
+  article.artwork h1 {
+    text-align: center;
+  }
+  article.artwork li {
+    list-style-type: none;
+  }
+  article.artwork .categories ul {
+    display: flex;
+  }
+  article.artwork .categories li {
+    border-radius: 10px;
+    background-color: #FFDE59;
+    margin: 1em;
+    padding: 0.5em;
+  }
+
+  .media-image {
+    display: block;
+    max-width: 60%;
+  }
+  .media-image .main-picture {
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+    margin-right: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+  .media-image .gallery-picture {
+    display: inline-flex;
+    width: 25%;
+    margin: 1rem;
+  }
+
+  .informations {
+    width: 40%;
+  }
+  .informations h1 {
+    font-size: 1.5rem;
+  }
+
+  .related_work {
+    text-align: center;
+    margin: 1rem;
+  }
+  .related_work h1::before {
+    border-top: 0.2rem solid #FFDE59;
+    display: block;
+    position: relative;
+    top: -1rem;
+    margin: 0 auto;
+    width: 40%;
+    content: "";
+  }
+  .related_work h1 {
+    font-size: 1.5rem;
+  }
+  .related_work .gallery {
+    margin: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    transition: 0.8s;
+  }
+  .related_work .gallery img:hover {
+    transform: scale(1.2);
+  }
+}
+
+@media (min-width:1200px) {
+      * {
+    box-sizing: border-box;
+  }
+
+  .main-container {
+    width: 100%;
+    margin: 1rem;
+    padding: 0.5rem;
+  }
+
+  article.artwork {
+    display: flex;
+    margin: 1.5rem;
+    padding: 0.5rem;
+  }
+  article.artwork h1 {
+    text-align: center;
+  }
+  article.artwork li {
+    list-style-type: none;
+  }
+  article.artwork .categories ul {
+    display: flex;
+  }
+  article.artwork .categories li {
+    border-radius: 10px;
+    background-color: #FFDE59;
+    margin: 1em;
+    padding: 0.5em;
+  }
+
+  .media-image {
+    display: block;
+    max-width: 60%;
+  }
+  .media-image .main-picture {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    margin-right: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+  .media-image .gallery-picture {
+    display: inline-flex;
+    width: 25%;
+    margin: 1rem;
+  }
+
+  .informations {
+    width: 40%;
+  }
+  .informations h1 {
+    font-size: 1.5rem;
+  }
+
+  .related_work {
+    text-align: center;
+    margin: 1rem;
+  }
+  .related_work h1::before {
+    border-top: 0.2rem solid #FFDE59;
+    display: block;
+    position: relative;
+    top: -1rem;
+    margin: 0 auto;
+    width: 40%;
+    content: "";
+  }
+  .related_work h1 {
+    font-size: 1.5rem;
+  }
+  .related_work .gallery {
+    margin: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    transition: 0.8s;
+  }
+  .related_work .gallery img:hover {
+    transform: scale(1.2);
+  }
+}
+
+</style>

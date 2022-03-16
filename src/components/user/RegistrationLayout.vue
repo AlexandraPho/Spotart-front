@@ -1,7 +1,7 @@
 <template>
     <h1 class="title">Créer un compte</h1>
     <hr>
-    <!-- <p v-if="success">{{ success }}</p> -->
+    <p v-if="success">{{ success }}</p>
     <p v-for="error in errors" :key="error">{{ error }}</p>
 
     <div class="container-form1">
@@ -70,7 +70,7 @@
         name: "RegistrationLayout",
         data() {
             return {
-                /* success: null, */
+                success: null,
                 errors: [],
                 email: null,
                 password: null,

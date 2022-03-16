@@ -1,6 +1,5 @@
 <template>
  
-  <main>
     <p v-if="success">{{ success }}</p>
     <p v-for="error in errors" :key="error">{{ error }}</p>
     <div class="artwork">
@@ -14,14 +13,14 @@
       <input type="file" class="artwork_pic_file"><br>
     </div><br> -->
 
-<!--     <div class="art_form">
+    <div class="art_form">
         <label class="art_form_title">Forme d'art :</label>
-        <select v-model="artforms" class="art_form_category">
+        <select v-model="artform" class="art_form_category">
             <option v-for="artform in artforms" :key="artform.name" :value="artform.id" v-html="artform.name"></option>
         </select>
-    </div> -->
+    </div>
     
-    <div class="art_form">
+<!--     <div class="art_form">
         <label class="art_form_title">Forme d'art :</label>
         <select v-model="artforms" class="art_form_category">
             <option value="2">Dessin</option>
@@ -29,23 +28,8 @@
             <option value="4">Peinture</option>
             <option value="5">Sculpture</option>
         </select>
-    </div>
+    </div> -->
 
-<!-- 
-  <div class="dimension">
-    <label class="dimension_title">Dimensions (en cm):</label><br>
-
-  <div class="dimension_length
-    <label> Longueur = </label>
-      <input v-model="longueur" type="number">
-
-    <label> Largeur = </label>
-      <input v-model="largeur" type="number">
-    <label> Hauteur = </label>
-      <input v-model="hauteur" type="number"><br>
-  </div>
-   
-  </div> -->
 
     <div class="description_artwork">
         <label class="description_artwork_title"> Description de l'oeuvre</label>
@@ -54,8 +38,6 @@
     <div>
         <button v-on:click="CreatePost"> Publier </button>
     </div>
-  
-    </main>
 </template>
 
 <script>
@@ -72,7 +54,8 @@
                 success: null,
                 errors: [],
                 title: null,
-                artform: [],
+                artforms: [],
+                artform: null,
                 content: null,
                 status: "publish",
                 author: this.$store.state.userID
@@ -85,7 +68,7 @@
                 if(!this.title) {
                     this.errors.push("Title must not be empty");
                 }
-                if(!this.artforms) {
+                if(!this.artform) {
                     this.errors.push("Category must not be empty");
                 }
                 if(!this.content) {
@@ -96,7 +79,7 @@
                 }
                 ArtworksService.CreatePost({
                     title: this.title,
-                    artform: [this.artform],
+                    artforms: [this.artform],
                     content: this.content,
                     status: this.status,
                     featured_media: this.mediaId,
