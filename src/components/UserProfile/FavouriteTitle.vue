@@ -12,6 +12,7 @@
 <script>
 import GalleryLayoutArtworks from '@/components/SingleArtwork/GalleryLayoutArtworks.vue';
 import FavouritesService from '@/services/FavouritesService.js';
+
 import store from '@/store/index.js';
 
 export default {
