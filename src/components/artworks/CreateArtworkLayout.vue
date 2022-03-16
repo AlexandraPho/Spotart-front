@@ -181,7 +181,7 @@ main {
     margin-right: 25%;
     margin-bottom: 5%;
     margin-top: 5%;
-    background-color: rgb(224, 181, 138)
+    background-color: #ffe990
 }
 
 button.publish {
