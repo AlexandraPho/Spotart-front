@@ -57,20 +57,16 @@
             height: 75%;
             border-radius: 10px;
             filter: drop-shadow(0 0 0.50rem black);
-            -webkit-transition: all 0.2s;
-            -moz-transition: all 0.3s;
-            -ms-transition: all 0.3s;
-            -o-transition: all 0.3s;
             transition: all 0.3s;
         }
 
         .artists img:hover
         {
-            width:15em;
-            height:15em;
+            width: 23em;
+            height: 23em;
             border : 2px solid #000000;
             box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
-            transform:scale(1.3);
+            transform: scale(1.2);
             cursor: pointer;
         }
 
@@ -104,20 +100,16 @@
             height: 75%;
             border-radius: 10px;
             filter: drop-shadow(0 0 0.50rem black);
-            -webkit-transition: all 0.2s;
-            -moz-transition: all 0.3s;
-            -ms-transition: all 0.3s;
-            -o-transition: all 0.3s;
             transition: all 0.3s;
         }
 
         .artists img:hover
         {
-            width:15em;
-            height:15em;
+            width: 25em;
+            height: 25em;
             border : 2px solid #000000;
             box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
-            transform:scale(1.3);
+            transform: scale(1.2);
             cursor: pointer;
         }
 
@@ -149,17 +141,13 @@
             height: 75%;
             border-radius: 10px;
             filter: drop-shadow(0 0 0.50rem black);
-            -webkit-transition: all 0.2s;
-            -moz-transition: all 0.3s;
-            -ms-transition: all 0.3s;
-            -o-transition: all 0.3s;
             transition: all 0.3s;
         }
 
         .artists img:hover
         {
-            width:15em;
-            height:15em;
+            width: 15em;
+            height: 15em;
             border : 2px solid #000000;
             box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
             transform:scale(1.3);
@@ -194,17 +182,13 @@
             height: 75%;
             border-radius: 10px;
             filter: drop-shadow(0 0 0.50rem black);
-            -webkit-transition: all 0.2s;
-            -moz-transition: all 0.3s;
-            -ms-transition: all 0.3s;
-            -o-transition: all 0.3s;
             transition: all 0.3s;
         }
 
         .artists img:hover
         {
-            width:15em;
-            height:15em;
+            width: 17em;
+            height: 17em;
             border : 2px solid #000000;
             box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
             transform:scale(1.3);

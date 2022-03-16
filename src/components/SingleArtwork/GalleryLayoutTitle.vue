@@ -4,7 +4,7 @@
             <h1>Dernières oeuvres de la catégorie {{ category }}</h1>
         </header>
         <div class="gallery">
-    <GalleryLayoutArtworks v-bind:image="artwork._embedded['wp:featuredmedia'][0].source_url" v-bind:id="artwork.id" v-bind:title="artwork.slug" v-for="artwork in artworks" v-bind:key="artwork.id" />
+            <GalleryLayoutArtworks v-bind:image="artwork._embedded['wp:featuredmedia'][0].source_url" v-bind:id="artwork.id" v-bind:title="artwork.slug" v-for="artwork in artworks" v-bind:key="artwork.id" />
         </div>
     </section>
 </template>
@@ -38,7 +38,7 @@ export default {
          // We are using the find functions with the category id from the SingleArtwork view 
          (response) => {
              console.log(response.data);
-             this.artworks = response.data;
+             this.artworks = response.data.slice(0,4);
          });             
     },
     beforeRouteUpdate(to) {

@@ -1,43 +1,27 @@
 <template>
-
-      <div>
-    <section>
-      <h1 class="connexion">Connexion</h1>
-      <hr class="hr-login">
-      <p v-if="success">{{ success }}</p>
-      <p v-for="error in errors" :key="error">{{ error }}</p>
-      <div>
-        <label for="username" class="username">Pseudo :</label>
-        <input
-          type="text"
-          id="username"
-          name="username"
-          placeholder="Pseudo"
-          v-model="username"
-        />
-      </div>
-
-      <div>
-        <label class="pw" for="password">Mot de passe :</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="Mot de passe"
-          v-model="password"
-        />
-      </div>
-
-      <button class="send" v-on:click="sendForm">Se connecter</button>
-      <router-link :to="{name: 'Registration'}"><button class="send-signup">Inscription</button></router-link>
-      <br><br>
-
-      <br /><br />
-    </section>
-  </div>
     <br>
+    <h1>Connexion</h1>
+    <br>
+        <p v-if="success">{{ success }}</p>
+        <p v-for="error in errors" :key="error">{{ error }}</p>
     
-    <br>
+        <div class="field">
+            <label class="field__label" for="username">Identifiant</label>
+            <input class="field__input" v-model="username" id="username" type="username" name="username" placeholder="Identifiant" />
+        </div>
+        <div class="field">
+            <label class="field__label" for="password">Mot de passe</label>
+            <input class="field__input" v-model="password" type="password" id="password" name="password" placeholder="Mot de passe" />
+        </div>
+        <br>
+        <div class="div_button_submit">
+            <button class="login-button" v-on:click="sendForm">Se connecter</button>
+        </div>
+        <br>
+        <div class="div_button_submit">
+            <button class="signup-button"><router-link :to="{name: 'Registration'}">Inscription</router-link></button>
+        </div>
+    <div class="white-background"></div>
 </template>
 
 <script>
@@ -57,10 +41,10 @@
             sendForm() {
                 this.errors = [];
                 if(!this.username) {
-                    this.errors.push("Username must not be empty");
+                    this.errors.push("Le champs identifiant doit être fourni");
                 }
                 if(!this.password) {
-                    this.errors.push("Password must not be empty");
+                    this.errors.push("Le champs mot de passe doit être fourni");
                 }
                 if(this.errors.length === 0) {
 
@@ -84,104 +68,141 @@
 
 <style scoped>
 
-.hr-login
-{
-  position: relative;
-  top: -245px;
-  left: -14px;
-}
+    .login-form
+    {
+        margin: 200px 350px 0 350px;
+    }
 
-input#username {
-  position: relative;
-  left: 114px;
-  bottom: 50px;
-  width: 56%;
-  height: 35px;
-  border: solid 1px;
-  border-radius: 5px;
-  font-size: large;
-}
-input#password {
-  position: relative;
-  left: 55px;
-  width: 56%;
-  height: 35px;
-  border: solid 1px;
-  bottom: -33px;
-  border-radius: 5px;
-  font-size: large;
-}
-p {
-  position: relative;
-  left: 58em;
-  bottom: 10px;
-}
-label {
-  position: relative;
-  left: 13em;
-  bottom: 25px;
-  font-weight: 600;
-}
+    p
+    {
+        text-align: center;
+    }
 
-label.username {
-  position: relative;
-  left: 8em;
-  bottom: 90px;
-  font-size: x-large;
-}
+    .white-background
+    {
+        margin-top: 360px;
+    }
 
-label.pw {
-  position: relative;
-  bottom: 10px;
-  left: 193px;
-  font-size: x-large;
-}
-button.send {
-  position: relative;
-  left: 195px;
-  height: 30px;
-  border-radius: 5px;
-  color: #ffde59;
-  background-color: black;
-  top: 54px;
-  font-size: x-large;
-}
-a.compte {
-  position: relative;
-  left: 56em;
-  font-size: 14px;
-  color: black;
-}
-section {
-  padding-bottom: 16%;
-  margin-top: 12%;
-  padding: 85px;
-  border: solid;
-  margin-left: 30%;
-  margin-right: 30%;
-  height: 15p;
-  position: relative;
-  top: -50px;
-  background-color: #ffe990;
-  border-radius: 10px;
-}
-h1.connexion {
-  text-align: center;
-  position: relative;
-  bottom: 224px;
-  left: -15px;
-  font-size: 2em;
-}
+    .login-button {
+        text-align: center;
+        border-radius: 10px;
+        background-color: #FFDE59;
+        margin: 1em;
+        padding: 0.5em;
+        display: inline-block;
+        border: 4px #CCCCCC;
+        width: 15%;
+        transition: all 0.5s;
+        cursor: pointer;
+        font-size: large;
+    }
 
-button.send-signup {
-  position: relative;
-  left: 420px;
-  height: 30px;
-  border-radius: 5px;
-  color: #ffde59;
-  background-color: black;
-  top: 54px;
-  font-size: x-large;
-}
+    .signup-button {
+
+        text-align: center;
+        border-radius: 10px;
+        background-color: #D3D3D3;
+        margin: 1em;
+        padding: 0.5em;
+        display: inline-block;
+        border: 4px #D3D3D3;
+        width: 15%;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+
+    .signup-button a
+    {
+        text-decoration: none;
+        color: black;
+        font-size: large;
+    }
+
+    button:hover
+    {
+        background-color: #FAECB3;
+    }
+
+    .div_button_submit
+    {
+        display:flex;
+        justify-content: center;
+    }
+
+    h1::after
+    {
+        border-top: 0.2rem solid #FFDE59;
+        display: block;
+        position: relative;
+        top: 0.5rem;
+        margin: 0 auto;
+        width: 10%;
+        content: "";
+    }
+
+    h1
+    {
+        margin-top: 50px;
+        text-align: center;
+        font-size: xx-large;
+    }
+
+    .main-container
+    {
+        padding: 0.5rem;
+        width: 90%;
+    }
+
+    .right_section
+    {
+        border: none;
+    }
+
+    .left_section
+    {
+        border: none
+    }
+
+    .field__label
+    {
+        text-align: left;
+        font-size: x-large;
+        margin-bottom: 5px
+    }
+
+    .field__input
+    {
+        border: 1px solid rgb(184, 182, 182);
+        border-radius: 0.5rem;
+        background-color: #F0F4EE;
+        margin-bottom: 0.5rem;
+        background-color: #D3D3D3; /* #FFEBCD */
+        padding: 0 10px 0 10px;
+        font-size: x-large;
+    }
+
+    .field__input:focus
+    {
+        outline-color: #FFDE59;
+        outline-width: 1px;
+    }
+
+    .textarea.field__input
+    {
+        width: 100%;
+        height: 8rem;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .field
+    {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 30px 350px 0 350px;
+    }
 
 </style>

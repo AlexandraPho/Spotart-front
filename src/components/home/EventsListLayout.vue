@@ -46,23 +46,19 @@
 
         .events-img
         {
-            height: 10vh;
-            width: 15vh;
+            height: 25vh;
+            width: 50vw;
             border-radius: 10px;
             filter: drop-shadow(0 0 0.50rem black);
-            box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
-            -webkit-transition: all 0.2s;
-            -moz-transition: all 0.3s;
-            -ms-transition: all 0.3s;
-            -o-transition: all 0.3s;
+            box-shadow: 8px 8px 10px 0 rgba(0,0,0,0.5);
             transition: all 0.3s;
         }
 
         .events-img:hover
         {
-            border : 2px solid #000000;
-            box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
-            transform:scale(1.05);
+            border: 2px solid #000000;
+            box-shadow: 8px 8px 10px 0 rgba(0,0,0,0.5);
+            transform: scale(1.2);
             cursor: pointer;
         }
     }

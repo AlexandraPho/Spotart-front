@@ -21,7 +21,13 @@ export default {
     img:hover {
         transform: scale(1.2); 
         transition: 0.8s; 
-    }   
+    }
+    
+    img
+    {
+        border-radius: 10px;
+        filter: drop-shadow(0 0 0.50rem black);
+    }
         
     @media (max-width: 768px) {
 
