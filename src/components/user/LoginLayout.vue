@@ -54,7 +54,7 @@
                     }, (data) => {
                         console.log('Users', data);
                         if(data.type === "success") {
-                            this.success = data.message;
+                            this.success = "Vous êtes authentifié !";
                         } else {
                             this.errors.push(data.message);
                         }
@@ -76,6 +76,7 @@
     p
     {
         text-align: center;
+        font-size: x-large;
     }
 
     .white-background
