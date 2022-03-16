@@ -59,17 +59,21 @@ export default {
         }
     },
     mounted() {
-    //     console.log('here');
-    // // We are managing here the appearance of the button "add to fav" or "delete of our fav"
-    // // depending if the 
-    //     if(this.$store.state.token){
-    //     FavouritesService.findFavouriteByUserID(this.$store.state.userID).then(response => {
-    //         console.log('je suis dans mounted call API FindFavouritebyUserID')
-    //         console.log(response.data);
-    //         this.artworks = response.data;
-    //         console.log(this.artworks.filter( function(number) { return number   });
-    //         );  
-    },              
+        console.log('here');
+     // We are managing here the appearance of the button "add to fav" or "delete of our fav"
+     // depending if the 
+         if(this.$store.state.token){
+         FavouritesService.findFavouriteByUserID(this.$store.state.userID).then(response => {
+            // console.log('je suis dans mounted call API FindFavouritebyUserID')
+            // console.log(response.data);
+            this.artworks = response.data;
+            this.artworks.some(a=>a.ID == this.id);
+            if(this.artworks.some(a=>a.ID == this.id)){
+                this.button = 'Enlever de mes favoris';
+                }  
+            })        
+        }
+    },             
     methods: {
     getDate : function (date) {
         moment.locale('fr', {

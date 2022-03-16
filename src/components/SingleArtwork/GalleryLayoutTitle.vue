@@ -51,24 +51,24 @@ export default {
 
 <style scoped>
 
-        h1::before {
-            border-top: 0.2rem solid #FFDE59;
-            display: block;
-            position: relative;
-            top: -1rem;
-            margin: 0 auto;
-            width: 40%;
-            content: "";
-        }
+    h1::before {
+        border-top: 0.2rem solid #FFDE59;
+        display: block;
+        position: relative;
+        top: -1rem;
+        margin: 0 auto;
+        width: 40%;
+        content: "";
+    }
 
-        .related_work {
-            text-align: center;
-            margin: 1rem;
-        }
-        
-        h1 {
-            font-size: 1.5rem;
-        }
+    .related_work {
+        text-align: center;
+        margin: 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
 
 @media (min-width: 768px) {
     .gallery {
