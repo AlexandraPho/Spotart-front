@@ -120,3 +120,194 @@
         }
     }
 </script>
+
+<style scoped>
+
+h1 {
+  font-family: Cormorant Garamond;
+  text-align: center;
+  position: relative;
+  bottom: 18px;
+}
+.title {
+  margin: 20px 0 0 0;
+}
+.email {
+  width: 90%;
+}
+.password {
+  width: 90%;
+}
+.pseudo {
+  width: 90%;
+}
+.role {
+  width: 90%;
+}
+.field {
+  width: 90%;
+}
+input {
+  font-size: large;
+}
+input[type="text"],
+textarea,
+input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  margin-right: 0px;
+  margin-left: 39px;
+  resize: vertical;
+}
+label {
+  width: 90%;
+  display: block;
+  font: 1rem "Fira Sans", sans-serif;
+  position: relative;
+  left: 40px;
+}
+input[type="submit"] {
+  background-color: #1255a2;
+  color: white;
+  padding: 12px 20px;
+  border: 2px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background-color: #1872d9;
+}
+.container-form1 {
+  display: flex;
+  justify-content: center;
+}
+.second-container {
+  width: 50%;
+  /*     float: right;
+    position: relative;
+    float: 15%;
+    left: 47%; */
+  bottom: 465px;
+}
+input[type="file"] {
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  width: 105px;
+  height: 107px;
+  background-color: #ffde59;
+}
+textarea#story {
+  left: 14px;
+}
+h1 {
+  font-family: Cormorant Garamond;
+  text-align: center;
+}
+h2 {
+  text-align: center;
+  font-family: Cormorant Garamond;
+  font-size: 26px;
+}
+input#email {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  margin-right: 0px;
+  margin-left: 39px;
+  resize: vertical;
+}
+input#password {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  margin-right: 0px;
+  margin-left: 39px;
+  resize: vertical;
+}
+input#password-confirmation {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  margin-right: 0px;
+  margin-left: 39px;
+  resize: vertical;
+}
+input#username {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  margin-right: 0px;
+  margin-left: 39px;
+  resize: vertical;
+}
+select {
+  position: relative;
+  left: 41px;
+  border: solid;
+}
+.container2 {
+  width: 100%;
+  display: flex;
+}
+.container2 .field {
+  width: 90%;
+}
+label {
+  width: 90%;
+  display: block;
+  font: 1rem "Fira Sans", sans-serif;
+}
+input,
+label {
+  margin: 0.4rem 0;
+}
+.send-button {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  left: 42px;
+}
+.container {
+  width: 50%;
+  border: solid 2px;
+  position: relative;
+  right: 5p;
+  top: -22px;
+  background-color: #ffe990;
+}
+button.create-account {
+   
+    border-color: #ffde59;
+    font-size: x-large;
+    width: 250px;
+    height: 50px;
+    cursor: pointer;
+    background-color: black;
+    color: #ffde59;
+}
+
+</style>

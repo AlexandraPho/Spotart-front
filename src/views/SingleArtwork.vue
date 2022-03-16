@@ -61,7 +61,7 @@ export default {
 
 <style>
 
-@media (max-width: 700px) {
+/* @media (max-width: 700px) {
   * {
     box-sizing: border-box;
   }
@@ -299,6 +299,6 @@ export default {
   .related_work .gallery img:hover {
     transform: scale(1.2);
   }
-}
+} */
 
 </style>

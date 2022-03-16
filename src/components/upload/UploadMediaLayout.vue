@@ -1,7 +1,7 @@
 <template>
   <main>
   <h1 class="publish_artwork">Publiez votre oeuvre</h1>
-      <div class="artwork">    
+      <div class="artwork">
           <div class="errors" v-if="errors.length > 0">
             <p v-for="error in errors" :key="error">{{ error }}</p>
           </div>
@@ -9,6 +9,7 @@
             <img v-if="newFileInfo.media_type == 'image'" v-bind:src="newFileInfo.media_details.sizes.medium.source_url" />
           </div>
           <div>
+          <div class="cheat">
             <label class="artwork_title" for="file">Choisissez un fichier</label>
             <input @change="upload" name="file" id="file" placeholder="choisissez l'image de votre oeuvre..." type="file" :accept="fileTypes">
         <!--
@@ -18,6 +19,7 @@
         </div>
       <div class="center-button">
       <button class="favorite styled" v-on:click="uploadFile">Ajouter l'image</button>
+      </div>
       </div>
     </div>
   </main>

@@ -17,9 +17,17 @@ export default {
 </script>
 
 <style scoped>
-    .gallery
-    {
-        display:flex;
-        flex-direction: row;    
+
+    img:hover {
+        transform: scale(1.2); 
+        transition: 0.8s; 
+    }   
+        
+    @media (max-width: 768px) {
+
+        .gallery_single_artwork
+        {
+            margin: 2rem;
+        }
     }
 </style>

@@ -72,6 +72,11 @@ const routes = [
         path: '/events/:id',
         name: 'SingleEvent',
         component: () => import('../views/SingleEventApp.vue')
+    },
+    {
+        path: '/failed',
+        name: 'Failed',
+        component: () => import('../views/user/FailedApp.vue')
     }
 ]
 const router = createRouter({
