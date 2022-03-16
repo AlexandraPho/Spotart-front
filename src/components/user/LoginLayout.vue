@@ -203,7 +203,7 @@ section {
   height: 15p;
   position: relative;
   top: -50px;
-  background-color: #fdf1bf;
+  background-color: #ffe990;
 }
 
 h1.connexion {
