@@ -1,41 +1,42 @@
 <template>
+    <div class="container-form">
+        <div class="container">
 
-    <div class="publish-artwork-form">
+            <form class="publish-artwork-form">
 
-        <p v-if="success">{{ success }}</p>
-        <p v-for="error in errors" :key="error">{{ error }}</p>
+                <p v-if="success">{{ success }}</p>
+                <p v-for="error in errors" :key="error">{{ error }}</p>
 
-        <div class="field">
-            <label class="field__label">Titre de l'oeuvre</label>
-            <input v-model="title" type="text" class="field__input">
+                <div class="field">
+                    <label class="field__label">Titre de l'oeuvre</label>
+                    <input v-model="title" type="text" class="field__input">
+                </div>
+
+                <div class="field">
+                    <label class="field__label">Description de l'oeuvre</label>
+                    <input v-model="content" type="textarea" class="field__input"><br>
+                </div>
+
+                <div class="field">
+                    <label class="field__label">Choisissez la forme d'art</label>
+                    <select v-model="artform">
+                        <option v-for="artform in artforms" :key="artform.name" :value="artform.id" v-html="artform.name"></option>
+                    </select>
+                </div>
+
+                <br><br><br>
+            </form>
+
         </div>
-        <br>
-
-        <div class="field">
-            <label class="field__label">Description de l'oeuvre</label>
-            <input v-model="content" type="textarea" class="field__input"><br>
-        </div>
-
-        <div class="field">
-            <label class="field__label">Choisissez la forme d'art</label>
-            <select v-model="artform">
-                <option v-for="artform in artforms" :key="artform.name" :value="artform.id" v-html="artform.name"></option>
-            </select>
-        </div>
-        
-        <br>
-        <button class="post-button" v-on:click="CreatePost"> Publier </button>
-
     </div>
 </template>
 
 <script>
-
     import ArtworksService from '@/services/ArtworksService.js';
-    import ArtformsService from '@/services/ArtFormsService.js';
+    import ArtformsService from '@/services/ArtFormsService.js'; 
 
     export default {
-        name: 'CreateArtworkLayout',
+        name: "CreateArtworkInformationsLayout",
         props: {
             mediaId: Number,
         },
@@ -52,19 +53,20 @@
             }
         },
         methods: {
+
             CreatePost() {
                 this.errors = [];
                 if(!this.title) {
                     this.errors.push("Le champ de titre doit être rempli");
                 }
                 if(!this.artform) {
-                    this.errors.push("Une forme d'art doit être choisie");
+                    this.errors.push("Une forme d'art doit être choisi");
                 }
                 if(!this.content) {
                     this.errors.push("Le champ de description doit être rempli");
                 }
                 if(!this.mediaId) {
-                    this.errors.push("Une image doit être choisie");
+                    this.errors.push("Vous devez choisir une image");
                 }
                 ArtworksService.CreatePost({
                     title: this.title,
@@ -74,8 +76,10 @@
                     featured_media: this.mediaId,
                     author: this.author
                 }, (data) => {
+                    this.errors.push(data);
+
                     if(data.type === "success") {
-                        this.success = "Votre oeuvre à été publiée !";
+                        this.success = "Vous avez publiez votre oeuvre !";
                     } else {
                         this.errors.push(data.message);
                     }
@@ -93,12 +97,11 @@
     }
 </script>
 
-
 <style scoped>
 
     .publish-artwork-form
     {
-        margin: 10px 350px 0 350px;
+        margin: 50px 350px 0 350px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -168,21 +171,6 @@
         flex-direction: column;
         flex-wrap: wrap;
         margin: 30px 350px 0 350px;
-    }
-
-    .post-button
-    {
-        text-align: center;
-        border-radius: 10px;
-        background-color: #FFDE59;
-        margin: 2em 1em 7em 1em;
-        padding: 0.5em;
-        display: inline-block;
-        border: 4px #CCCCCC;
-        width: 15%;
-        transition: all 0.5s;
-        cursor: pointer;
-        font-size: x-large;
     }
 
 </style>

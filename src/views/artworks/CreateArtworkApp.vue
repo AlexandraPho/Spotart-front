@@ -1,7 +1,7 @@
 <template>
     <div>
         <HeaderLayout/>
-        <UploadMediaLayout fileTypes="image/*" @uploadComplete="getFileId" />
+        <UploadMediaLayout fileTypes="image/*" @uploadComplete="getFileId"/>
         <CreateArtworkLayout  v-bind:mediaId="mediaId" />
         <FooterLayout/>
     </div>

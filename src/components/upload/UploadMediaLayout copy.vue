@@ -1,6 +1,4 @@
 <template>
-
-    <h1 class="publish_artwork">Publiez votre oeuvre</h1>
     <div class="artwork">
         <div class="publish-artwork-form">
 
@@ -18,19 +16,20 @@
                 <input class="field__input file-input" @change="upload" name="file" id="file" type="file" :accept="fileTypes">
             </div>
 
+            <div> 
+                <!--<label for="title">Titre de votre fichier</label>
+                <InputText :disabled="loading" name="title" id="title" placeholder="Titre du fichier" type="text" @inputChange="updateInputValue" />-->
+            </div>
+                
             <button class="add-file-button" v-on:click="uploadFile">Ajouter l'image</button>
 
-        <!--
-            <label for="title">Titre de votre fichier</label>
-            <InputText :disabled="loading" name="title" id="title" placeholder="Titre du fichier" type="text" @inputChange="updateInputValue" />
-        -->
         </div>
     </div>
-
 </template>
 
 <script>
 import UploadMediasService from "@/services/UploadMediasService.js";
+
 export default {
     name: "UploadMediaLayout",
     props: {
@@ -48,7 +47,7 @@ export default {
           dataForm: new FormData(),
           file: File,
           fileID: null,
-          //title: null
+          // title: null
       };
     },
     methods: {
@@ -61,6 +60,7 @@ export default {
     },
     //calls service to add media to WP mibrary and then displays the file to the user if this is an image
     // ID of the new inserted media is sent to the parent (and can be used as a part of a form with serveral other form elements)
+
     uploadFile(){
       console.log('call API for upload');
       UploadMediasService.uploadMedia(this.dataForm, (data) => {
@@ -70,33 +70,16 @@ export default {
                 this.newFileInfo = data.newFileInfo;
                 this.$emit('uploadComplete', {fileID: this.newFileInfo.id});
           } else {
-            this.errors.push(data.message);
+                this.errors.push("Echec de l'envoi");
           }
         });
     }
+    
   }
 };
 </script>
 
 <style scoped>
-
-    h1::after
-    {
-        border-top: 0.2rem solid #FFDE59;
-        display: block;
-        position: relative;
-        top: 0.5rem;
-        margin: 0 auto;
-        width: 10%;
-        content: "";
-    }
-
-    h1
-    {
-        margin-top: 50px;
-        text-align: center;
-        font-size: xx-large;
-    }
 
     .publish-artwork-form
     {
@@ -157,5 +140,5 @@ export default {
         margin-top: 5px;
         padding: 10px 0 10px 10px;
     }
-    
+
 </style>
