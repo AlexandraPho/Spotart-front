@@ -1,7 +1,7 @@
 <template>
       <section class="related_work">
         <header>
-            <h1>Dernières oeuvres de la catégorie {{ category }}</h1>
+            <h1> Autre {{ category }}s</h1>
         </header>
         <div class="gallery">
             <GalleryLayoutArtworks v-bind:image="artwork._embedded['wp:featuredmedia'][0].source_url" v-bind:id="artwork.id" v-bind:title="artwork.slug" v-for="artwork in artworks" v-bind:key="artwork.id" />
@@ -65,14 +65,16 @@ export default {
     }
     
     h1 {
-        font-size: 1.5rem;
+        font-size: 30px;
+        padding-bottom: 5px;
     }
 
     @media (min-width: 768px) {
         .gallery {
             margin: 1rem;
             display: flex;
-            justify-content: space-evenly; 
+            justify-content: space-evenly;
+            padding-bottom: 10px;
         }
     }
     

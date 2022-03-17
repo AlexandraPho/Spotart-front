@@ -48,7 +48,9 @@
                 <br><br><br>
             </form>
         </div>
+        <div class="white-background"></div>
     </div>
+    
 </template>
 
 
@@ -214,6 +216,11 @@
         flex-direction: column;
         flex-wrap: wrap;
         margin: 30px 350px 0 350px;
+    }
+
+    .white-background
+    {
+        height: 60px;
     }
 
 </style>

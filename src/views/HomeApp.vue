@@ -1,7 +1,6 @@
 <template>
     <div>
         <HeaderLayout />
-        <NewsListLayout />
         <ArtworksListHomeLayout />
         <ArtistsListHomeLayout />
         <EventsListLayout />        
@@ -11,7 +10,6 @@
 
 <script>
     import HeaderLayout from '@/components/template/HeaderLayout.vue';
-    import NewsListLayout from '@/components/home/NewsListLayout.vue';
     import ArtworksListHomeLayout from '@/components/home/ArtworksListHomeLayout.vue';
     import ArtistsListHomeLayout from '@/components/home/ArtistsListHomeLayout.vue';
     import EventsListLayout from '@/components/home/EventsListLayout.vue';
@@ -22,7 +20,6 @@
         components: {
             HeaderLayout,
             FooterLayout,
-            NewsListLayout,
             ArtworksListHomeLayout,
             ArtistsListHomeLayout,
             EventsListLayout

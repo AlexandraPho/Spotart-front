@@ -26,7 +26,7 @@
             ArtistsService.findAll().then(
                 (response) => {
                     console.log('Artists', response.data);
-                    this.artists = response.data.slice(0, 4);
+                    this.artists = response.data.slice(0, 5); //todo Change to 4 after presentation
                 }
             );
         },
@@ -178,10 +178,11 @@
 
         .artists img
         {
-            width: 19vw;
-            height: 75%;
+            width: 15vw; /*todo Change to 18vw after presentation */
+            height: 65%; /*todo Change to 70% after presentation */
             border-radius: 10px;
             filter: drop-shadow(0 0 0.50rem black);
+            box-shadow: 8px 8px 10px 0 rgba(0,0,0,0.5);
             transition: all 0.3s;
         }
 
@@ -190,8 +191,8 @@
             width: 17em;
             height: 17em;
             border : 2px solid #000000;
-            box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
-            transform:scale(1.3);
+            box-shadow: 8px 8px 10px 0 rgba(0,0,0,0.5);
+            transform: scale(1.3);
             cursor: pointer;
         }
 

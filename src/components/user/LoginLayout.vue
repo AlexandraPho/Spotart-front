@@ -2,7 +2,7 @@
     <br>
     <h1>Connexion</h1>
     <br>
-    <!-- <form class="login-form"> -->
+    <div class="login-form">
         <p v-if="success">{{ success }}</p>
         <p v-for="error in errors" :key="error">{{ error }}</p>
     
@@ -22,13 +22,12 @@
         <div class="div_button_submit">
             <button class="signup-button"><router-link :to="{name: 'Registration'}">Inscription</router-link></button>
         </div>
-    <!-- </form> -->
+    </div>
     <div class="white-background"></div>
 </template>
 
 <script>
     import UsersService from '@/services/UsersService';
-
     export default {
         name: "LoginLayout",
         data() {
@@ -49,7 +48,6 @@
                     this.errors.push("Le champs mot de passe doit être fourni");
                 }
                 if(this.errors.length === 0) {
-
                     UsersService.connect({
                         username: this.username,
                         password: this.password
@@ -65,30 +63,25 @@
             }
         }
     }
-
 </script>
 
 <style scoped>
-
     .login-form
     {
         margin: 50px 350px 0 350px;
-        /* display: flex;
+        display: flex;
         flex-direction: column;
-        align-items: center; */
+        align-items: center;
     }
-
     p
     {
         text-align: center;
         font-size: x-large;
     }
-
     .white-background
     {
         margin-top: 360px;
     }
-
     .login-button {
         text-align: center;
         border-radius: 10px;
@@ -101,10 +94,9 @@
         transition: all 0.5s;
         cursor: pointer;
         font-size: large;
+        width: 249px;
     }
-
     .signup-button {
-
         text-align: center;
         border-radius: 10px;
         background-color: #D3D3D3;
@@ -115,26 +107,23 @@
         width: 15%;
         transition: all 0.5s;
         cursor: pointer;
+        width: 249px;
     }
-
     .signup-button a
     {
         text-decoration: none;
         color: black;
         font-size: large;
     }
-
     button:hover
     {
         background-color: #FAECB3;
     }
-
     .div_button_submit
     {
         display:flex;
         justify-content: center;
     }
-
     h1::after
     {
         border-top: 0.2rem solid #FFDE59;
@@ -145,30 +134,25 @@
         width: 10%;
         content: "";
     }
-
     h1
     {
         margin-top: 50px;
         text-align: center;
         font-size: xx-large;
     }
-
     .main-container
     {
         padding: 0.5rem;
         width: 90%;
     }
-
     .right_section
     {
         border: none;
     }
-
     .left_section
     {
         border: none
     }
-
     .field__label
     {
         text-align: left;
@@ -182,27 +166,16 @@
         border-radius: 0.5rem;
         background-color: #F0F4EE;
         margin-bottom: 0.5rem;
-        background-color: #D3D3D3;
+        background-color: #D3D3D3; /* #FFEBCD */
         padding: 0 10px 0 10px;
         font-size: x-large;
         height: 40px;
-        /* width: 1000px; */
+        width: 1000px;
     }
-
     .field__input:focus
     {
         outline-color: #FFDE59;
         outline-width: 1px;
-    }
-
-    .textarea.field__input
-    {
-        width: 100%;
-        height: 8rem;
-        padding: 1rem 2rem;
-        border: none;
-        border-radius: 0.5rem;
-        margin-bottom: 1rem;
     }
 
     .field
@@ -212,5 +185,4 @@
         flex-wrap: wrap;
         margin: 30px 350px 0 350px;
     }
-
 </style>

@@ -70,7 +70,7 @@ export default {
                 this.newFileInfo = data.newFileInfo;
                 this.$emit('uploadComplete', {fileID: this.newFileInfo.id});
           } else {
-            this.errors.push(data.message);
+            this.errors.push("Echec de l'envoi");
           }
         });
     }
@@ -104,6 +104,12 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    p
+    {
+        text-align: center;
+        font-size: x-large;
     }
 
     button:hover

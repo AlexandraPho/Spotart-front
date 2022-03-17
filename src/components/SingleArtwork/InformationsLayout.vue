@@ -18,7 +18,7 @@
         <section class="informations">
             <h1 v-html="title"></h1>
             <hr>
-            <ul>
+            <ul class="list-infos">
                 <li>Artiste: {{ author }}</li>
                 <li>Date: {{ getDate(date) }} </li>
             </ul>
@@ -28,7 +28,7 @@
             </ul>
         </section>
         <section class="description">
-            <p v-html="content"></p>
+            <p class="content" v-html="content"></p>
         </section>
         <div class="button_fav" v-on:click="addToFav"><button class="favorite styled" type="button">Ajouter en favoris</button></div>
     </section>
@@ -122,16 +122,8 @@ export default {
         background-color: rgb(88, 87, 87);
         cursor: pointer;
     }
-    @media (max-width: 768px) and (max-width: 1200px) {
-        .main-picture{
-            max-width:100%;
-            height:auto;
-            margin-right: auto;
-            margin-left: auto;
-        }
-    }
 
-    @media (min-width: 768px){
+    @media (min-width: 768px) and (max-width: 1200px) {
         .artwork {
             width: 100%;
             display: flex;
@@ -170,7 +162,7 @@ export default {
         {
             width: 100%;
             display: flex;
-            justify-content: flex-start;
+            flex-direction: row;
             margin: 1.5rem;
             padding: 0.5rem;
         }
@@ -197,32 +189,49 @@ export default {
 
         .media-image
         {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 40%;
-            display: block;
-            margin-bottom: 1rem;
+            /* margin-bottom: 1rem;
             margin-right: 2rem;
-            margin-left: 1rem;
+            margin-left: 1rem; */
         }
+
+        .list-infos
+        {
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
         h1
         {
             font-size: xx-large;
             margin-bottom: 1px;
+            margin-top: 0;
+            text-align: center;
         }
 
         .categories ul li a
         {
             text-decoration: none;
             color: black;
-            cursor: auto;
+            cursor: auto; /*todo Change to make the cursor link appear again after the presentation  */
         }
 
         .main-picture
         {
             box-sizing: border-box;
             width: 80%;
-            max-height: 500px;
-            margin-right: auto;
-            margin-left: auto;
+            max-height: 600px;
+            border-radius: 20px;
+        }
+
+        .content
+        {
+            font-size: 18px
         }
     }
 </style>

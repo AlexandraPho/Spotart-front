@@ -180,21 +180,21 @@
 
         .latest-artworks img
         {
-            width: 19vw;
-            height: 75%;
+            width: 17vw;
+            height: 65%;
             border-radius: 10px;
             filter: drop-shadow(0 0 0.50rem black);
-            box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
+            box-shadow: 8px 8px 10px 0 rgba(0,0,0,0.5);
             transition: all 0.3s;
         }
 
         .latest-artworks img:hover
         {
-            width: 17em;
-            height: 17em;
+            width: 19em;
+            height: 17.5em;
             border : 2px solid #000000;
-            box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
-            transform:scale(1.3);
+            box-shadow: 8px 8px 10px 0 rgba(0,0,0,0.5);
+            transform: scale(1.3);
             cursor: pointer;
         }
 

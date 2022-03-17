@@ -9,12 +9,15 @@
             <label class="field__label">Titre de l'oeuvre</label>
             <input v-model="title" type="text" class="field__input">
         </div>
+
         <br>
 
         <div class="field">
             <label class="field__label">Description de l'oeuvre</label>
-            <input v-model="content" type="textarea" class="field__input"><br>
+            <textarea v-model="content" type="textarea" class="textarea"></textarea>
         </div>
+
+        <br>
 
         <div class="field">
             <label class="field__label">Choisissez la forme d'art</label>
@@ -24,9 +27,11 @@
         </div>
         
         <br>
+
         <button class="post-button" v-on:click="CreatePost"> Publier </button>
 
     </div>
+    
 </template>
 
 <script>
@@ -74,8 +79,9 @@
                     featured_media: this.mediaId,
                     author: this.author
                 }, (data) => {
-                    if(data.type === "success") {
-                        this.success = "Votre oeuvre à été publiée !";
+                    if(data.status === "created") {
+                        alert ("Votre oeuvre à été publiée !");  
+                        //this.success = "Votre oeuvre à été publiée !";
                     } else {
                         this.errors.push(data.message);
                     }
@@ -152,14 +158,17 @@
         outline-width: 1px;
     }
 
-    .textarea.field__input
+    .textarea
     {
-        width: 100%;
-        height: 8rem;
-        padding: 1rem 2rem;
-        border: none;
+        border: 1px solid rgb(184, 182, 182);
         border-radius: 0.5rem;
-        margin-bottom: 1rem;
+        background-color: #F0F4EE;
+        margin-bottom: 0.5rem;
+        background-color: #D3D3D3;
+        padding: 0 10px 0 10px;
+        font-size: x-large;
+        height: 200px;
+        width: 1000px;
     }
 
     .field
@@ -183,6 +192,11 @@
         transition: all 0.5s;
         cursor: pointer;
         font-size: x-large;
+    }
+
+    button:hover
+    {
+        background-color: #FAECB3;
     }
 
 </style>
