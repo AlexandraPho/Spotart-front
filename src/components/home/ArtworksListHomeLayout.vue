@@ -39,39 +39,44 @@
 
         .artworks {
             display: flex;
-            /* justify-content: center; */
-            /* gap: 6.5vw; */
-            /* flex-direction: row; */
-            flex-wrap: wrap;
+            align-items: flex-end;
+            justify-content: center;
             margin: 1rem;
-            text-align: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            /* justify-content: center; */
+            /* flex-direction: row; */
+            /* text-align: center;*/
         }
 
         article {
-            height: 50%;
-            margin-bottom: 1.5rem
+            width: 40%;
+            margin-bottom: 1rem;
+            text-align: center;
         }
 
         .latest-artworks img {
-            width: 60%;
-            height: 15%;
-            margin: 1.5rem;
-            border-radius: 10px;
-            filter: drop-shadow(0 0 0.50rem black);
-            /*transition: all 0.3s;*/
+            width: 8rem;
+            border-radius: 0.2rem;
+            filter: drop-shadow(0 0 0.2rem black);
+            /* transition: all 0.3s;
+            /* height: 15%; */
+            /* margin: 0.5rem; */
         }
+        
 
         .latest-artworks img:hover {
+            cursor: pointer;
+            box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
             /*width: 23em;
             height: 23em;*/
             /*border : 2px solid #000000;*/
-            box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
             /*transform: scale(1.2);*/
-            cursor: pointer;
+            
         }
 
         .artworks h3 {
-            margin-top: 5px;
+            margin-top: 0.2rem;
             text-align: center;
             /*font-size: large;*/
         } 
@@ -82,36 +87,39 @@
         .artworks {
             display: flex;
             justify-content: center;
-            gap: 6.5vw;
-            /* flex-direction: row; */
+            gap: 6rem;
             flex-wrap: wrap;
+            align-items: flex-end;
+            /* flex-direction: row; */
         }
+        
         .article {
-            height: 10%;
+            width: 30%;
+            margin-bottom: 1rem;
+            text-align: center;
         }
         .latest-artworks img
         {
-            width: 38vw;
-            height: 75%;
+            width: 14rem;
             border-radius: 10px;
             filter: drop-shadow(0 0 0.50rem black);
-            /*transition: all 0.3s;*/
+            /* transition: all 0.3s;
+            /* height: 75%; */
         }
 
         .latest-artworks img:hover {
-
+            box-shadow: 8px 8px 10px 0 rgba(0,0,0,0.5);
+            cursor: pointer;
            /* width: 25em;
             height: 25em;*/
             /*border : 2px solid #000000;*/
-            box-shadow: 8px 8px 10px 0 rgba(0,0,0,0.5);
             /*transform:scale(1.2);*/
-            cursor: pointer;
         }
 
         .artworks h3 {
-            margin-top: 5px;
+            margin-top: 0.2rem;
             text-align: center;
-            font-size: x-large;
+            font-size: 1.5rem;
         }
     }
 
@@ -120,28 +128,35 @@
         .artworks {
             display: flex;
             justify-content: center;
-            gap: 6.5vw;
+            align-items: flex-end;
+            gap: 6rem;
+        }
+
+        .article {
+            /*width: 20%; */
+            margin-bottom: 1.5rem;
+            text-align: center;
         }
 
         .latest-artworks img {
-            width: 15vw;
-            height: 60%;
+            width: 16rem;
             border-radius: 10px;
             filter: drop-shadow(0 0 0.50rem black);
-            /*transition: all 0.3s;*/
+            /* transition: all 0.3s;
+            /* height: 75%; */
         }
 
         .latest-artworks img:hover {
+            cursor: pointer;
+            box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
             /*width: 15em;
             height: 15em;*/
             /*border : 2px solid #000000;*/
-            box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
             /*transform:scale(1.3);*/
-            cursor: pointer;
         }
 
         .artworks h3 {
-            margin-top: 5px;
+            margin-top: 0.2rem;
             text-align: center;
             font-size: x-large;
         }

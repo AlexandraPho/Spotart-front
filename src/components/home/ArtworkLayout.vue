@@ -28,11 +28,7 @@
 
     }
 
-    @media (min-width: 1200px) and (max-width: 1600px) {
-
-    }
-
-    @media (min-width: 1600px) {
-
+    @media (min-width: 1200px) {
+        
     }
 </style>

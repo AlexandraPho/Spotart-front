@@ -83,7 +83,7 @@
         header h1
         {
             margin: 1.5rem;
-            font-size: xx-large;
+            font-size: x-large;
             background: linear-gradient(to bottom right, white 60%,#ffde59  40%);
             background-size: auto auto;
             background-clip: border-box;
@@ -247,7 +247,7 @@
         {
             text-decoration: none;
             color: white;
-            font-size: x-large;
+            font-size: large;
         }
 
         .header-anchor-element:hover

@@ -39,7 +39,7 @@
     hr {
         border: #ffde59 solid 1px;
         width: 40%;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
     }
 }
 

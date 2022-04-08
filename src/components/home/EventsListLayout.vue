@@ -1,12 +1,11 @@
 <template>
     <section class="next-events">
         <h2>Les prochains &Eacute;vénements</h2>
-        <hr><br>
+        <hr>
         <div class="events-carousel">
             <EventLayout v-for="event in events" :key="event.title" :id="event.id" :imgSrc="event._embedded['wp:featuredmedia'][0].source_url" :imgAlt="event._embedded['wp:featuredmedia'][0].alt_text" :title="event.title.rendered" />
         </div>
     </section>
-    <br><br>
 </template>
 
 <script>
@@ -42,16 +41,21 @@
         {
             display: flex;
             justify-content: center;
+            margin: 1rem;
+            margin-bottom: 1.5rem;
+            /* gap: 2rem; */
+            /* flex-wrap: wrap;
+            /* align-items: flex-end; */
         }
 
         .events-img
         {
-            height: 25vh;
-            width: 50vw;
+            height: 12rem;
             border-radius: 10px;
             filter: drop-shadow(0 0 0.50rem black);
-            box-shadow: 8px 8px 10px 0 rgba(0,0,0,0.5);
-            transition: all 0.3s;
+            box-shadow: 8px 8px 10px 0 rgb(0 0 0 / 50%);
+            /* transition: all 0.3s;
+            /* width: 50vw; */
         }
 
         .events-img:hover

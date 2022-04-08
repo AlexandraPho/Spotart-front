@@ -63,27 +63,34 @@ export default {
     
     @media (min-width: 320px) and (max-width: 768px) {
         .related-work {
-            padding: 0.5rem;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        .gallery {
+            text-align: center;
         }
         .title {
             text-align: center;
         }
-        .gallery {
-            /*display: flex; */
-            text-align: center;
-            /* flex-direction: row;*/
+        .image {
+            margin: 1rem;
+            width: 20%;
         }
     }
     @media (min-width: 768px) and (max-width: 1200px) {
         .related-work {
-            text-align: center;
+            width: 100%;
+            margin-bottom: 1rem;
         }
         .gallery {
-            margin: 1rem;
             text-align: center;
         }
         .title {
             text-align: center;
+        }
+        .image {
+            margin: 1rem;
+            width: 20%;
         }
     }
     @media (min-width: 1200px) {

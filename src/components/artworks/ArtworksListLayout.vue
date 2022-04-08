@@ -116,7 +116,7 @@
         cursor: pointer;
         opacity: 1;
     }
-    @media (min-width: 320px) {
+    @media (min-width: 320px) and (max-width: 768px){
         .artist-artwork {
             position: relative;
             margin: 1.5em 0.5em 0.5em 1.9em;
@@ -145,7 +145,7 @@
             text-align: center;
         }
     }
-    @media (min-width: 768px) {
+    @media (min-width: 768px) and (max-width: 1200px) {
         .artist-artwork {
             display: inline-flex;
             justify-content: space-around;
