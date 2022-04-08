@@ -1,20 +1,20 @@
 <template>
     <div>
-        <HeaderLayout/>
+        <HeaderCopy/>
         <RegistrationLayout/>
         <FooterLayout/>
     </div>
 </template>
 
 <script>
-    import HeaderLayout from "@/components/template/HeaderLayout.vue";
+    import HeaderCopy from "@/components/template/HeaderCopy.vue";
     import FooterLayout from "@/components/template/FooterLayout.vue";
     import RegistrationLayout from "@/components/user/RegistrationLayout.vue";
 
     export default {
         name: "RegistrationApp",
         components: {
-            HeaderLayout,
+            HeaderCopy,
             RegistrationLayout,
             FooterLayout
         },

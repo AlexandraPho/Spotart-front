@@ -18,6 +18,7 @@
         <div class="div_button_submit">
             <button class="login-button" v-on:click="sendForm">Se connecter</button>
         </div>
+        <confirm-dialogue ref="confirmDialogue"></confirm-dialogue>
         <br>
         <div class="div_button_submit">
             <button class="signup-button"><router-link :to="{name: 'Registration'}">Inscription</router-link></button>
@@ -28,8 +29,11 @@
 
 <script>
     import UsersService from '@/services/UsersService';
+    import confirmDialogue from '../popup/confirmDialogue.vue'
+
     export default {
         name: "LoginLayout",
+        components: { confirmDialogue },
         data() {
             return {
                 success: null,
@@ -54,7 +58,13 @@
                     }, (data) => {
                         console.log('Users', data);
                         if(data.type === "success") {
-                            this.success = "Vous êtes authentifié !";
+                            this.$refs.confirmDialogue.show({
+                                title: 'Bonjour ' + this.username + ' !',
+                                //okButton: 'Delete Forever',
+                            })
+                            //alert('Bonjour ' + this.username + '!');
+                            //this.success = "Vous êtes authentifié !";
+                            
                         } else {
                             this.errors.push(data.message);
                         }

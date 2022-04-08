@@ -1,29 +1,28 @@
 <template>
     <div>
-        <HeaderCopy/>
+        <HeaderLayout/>
+        <h1 class="publish_artwork">Votre biographie</h1>
         <UploadMediaLayout fileTypes="image/*" @uploadComplete="getFileId"/>
-        <CreateArtworkLayout  v-bind:mediaId="mediaId" />
+        <RegistrationArtistLayout v-bind:mediaId="mediaId" />
         <FooterLayout/>
     </div>
 </template>
 
 <script>
-    import CreateArtworkLayout from '@/components/artworks/CreateArtworkLayout.vue';    
-    import HeaderCopy from '@/components/template/HeaderCopy.vue';
+    import RegistrationArtistLayout from '@/components/user/RegistrationArtistLayout.vue';    
+    import HeaderLayout from '@/components/template/HeaderLayout.vue';
     import FooterLayout from '@/components/template/FooterLayout.vue';
     import UploadMediaLayout from '@/components/upload/UploadMediaLayout.vue'
-
-
     export default {
-        name: 'CreateArtworkApp',
+        name: 'RegistrationArtistApp',
         data() {
             return {
                 mediaId: null
             }
         },
         components: { 
-            CreateArtworkLayout,
-            HeaderCopy,
+            RegistrationArtistLayout,
+            HeaderLayout,
             UploadMediaLayout,
             FooterLayout
         },

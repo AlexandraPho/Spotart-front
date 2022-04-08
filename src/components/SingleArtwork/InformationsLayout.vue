@@ -19,8 +19,8 @@
             <h1 v-html="title"></h1>
             <hr>
             <ul class="list-infos">
-                <li>Artiste: {{ author }}</li>
-                <li>Date: {{ getDate(date) }} </li>
+                <li>Artiste:  {{ author }}</li>
+                <li>Date:  {{ getDate(date) }} </li>
             </ul>
         <section class="categories">
             <ul>
@@ -30,7 +30,7 @@
         <section class="description">
             <p class="content" v-html="content"></p>
         </section>
-        <div class="button_fav" v-on:click="addToFav"><button class="favorite styled" type="button">Ajouter en favoris</button></div>
+        <div class="button-fav" v-on:click="addToFav"><button class="favorite styled" type="button">Ajouter en favoris</button></div>
     </section>
     </article>
 </template>
@@ -122,116 +122,163 @@ export default {
         background-color: rgb(88, 87, 87);
         cursor: pointer;
     }
-
-    @media (min-width: 768px) and (max-width: 1200px) {
+    @media (min-width: 320px) and (max-width: 768px) {
         .artwork {
-            width: 100%;
-            display: flex;
+            /*width: 50%; */
+            height: 10%;
+            /* display: flex; */
             justify-content: flex-start;
-            margin: 1.5rem;
             padding: 0.5rem;
         }
-        .informations{
-            width: 50%;
-            margin-bottom: 1rem;
-            margin-right: 2rem;
-            margin-left: 1rem;
-        }
         .media-image{
-            width: 50%;
-            display: block;
-            margin-bottom: 1rem;
-            margin-right: 2rem;
-            margin-left: 1rem;
-        }
-        h1 {
-            text-align: center;
+            /*width: 80%; */
+            display: flex;
+            justify-content: center;
+            margin: 2rem;
+            /* margin-right: 2rem; */
+            /* margin-left: 1rem;*/
         }
         .main-picture{
-            box-sizing: border-box;
-            width: 100%;
-            max-height: 500px;
-            margin-right: auto;
-            margin-left: auto;
+            /*box-sizing: border-box;*/
+            width: 80%;
+            /*max-height: 500px;*/
+            /*margin-right: auto;*/
+            /*margin-left: auto;*/
+        }
+        .informations{
+            /*width: 80%;*/
+            /* margin-bottom: 1rem; */
+            /* margin-right: 2rem; */
+            margin: 2rem;
+            /* display: block;*/
+        }
+        .list-infos {
+            display: block;
+            text-align: center;
+        }
+        .categories,
+        .button-fav {
+            display: flex;
+            justify-content: center;
+        }
+        h1,
+        p {
+            text-align: center;
+        }
+        ul {
+            padding: 0;
+        }
+        
+    }
+    
+    @media (min-width: 768px) and (max-width: 1200px) {
+        .artwork {
+            /*width: 50%; */
+            height: 10%;
+            display: block;
+            /* justify-content: flex-start; */
+            /* margin: 1.5rem; */
+            padding: 2rem;
+        }
+        .media-image{
+            /*margin-bottom: 1rem; */
+            /* margin-right: 2rem; */
+            /* margin-left: 1rem; */
+            justify-content: center;
+            display: flex;
+        }
+        .main-picture{
+            /* box-sizing: border-box; */
+            /* width: 100%; */
+            /* max-height: 30rem; */
+            /* margin-right: auto; */
+            /* margin-left: auto; */
+            margin-top: 2.5rem;
+            width: 40%;
+        }
+        .informations{
+            /*width: 50%; */
+            /* margin-bottom: 1rem; */
+            /* margin-right: 2rem; */
+            /* margin-left: 1rem; */
+            margin: 1.5rem;
+        }
+        .list-infos,
+        .button-fav,
+        .categories {
+            display: block;
+            text-align: center;
+            padding: 0;
+        }
+        h1,
+        p {
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        ul {
+            padding: 0;
         }
     }
 
     @media (min-width: 1200px) {
 
-        .artwork
-        {
-            width: 100%;
+        .artwork {
+            /*width: 50%; */
+            height: 10%;
             display: flex;
             flex-direction: row;
-            margin: 1.5rem;
-            padding: 0.5rem;
+            margin: 1rem;
+            padding: 1rem;
         }
-        .informations
-        {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            width: 50%;
-            /* margin-bottom: 1rem;
-            margin-right: 2rem;
-            margin-left: 1rem; */
-        }
-
-        .informations ul
-        {
-            padding: 0
-        }
-
-        .informations .categories ul
-        {
-            padding: 0
-        }
-
-        .media-image
-        {
+        .media-image {
             display: flex;
             justify-content: center;
-            align-items: center;
-            width: 40%;
-            /* margin-bottom: 1rem;
-            margin-right: 2rem;
-            margin-left: 1rem; */
+            /* align-items: center; */
+            width: 50%;
+            margin: 1.5rem;
+        }
+        .main-picture {
+            /*box-sizing: border-box; */
+            /* width: 60%; */
+            /* height: 60%; */
+            max-height: 25rem;
+            max-width: 35rem;
+            /* border-radius: 20px;*/
+        }
+        .informations {
+            /* font-size: 20px; */
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            text-align: center;
+            padding: 1rem;
+        }
+        .informations ul {
+            padding: 0
         }
 
-        .list-infos
-        {
+        .informations .categories ul {
+            padding: 0;
+            margin: 0;
+        }
+        .list-infos {
             font-size: 20px;
             display: flex;
             flex-direction: column;
             gap: 10px;
         }
 
-        h1
-        {
+        h1 {
             font-size: xx-large;
             margin-bottom: 1px;
             margin-top: 0;
             text-align: center;
         }
 
-        .categories ul li a
-        {
+        .categories ul li a {
             text-decoration: none;
             color: black;
             cursor: auto; /*todo Change to make the cursor link appear again after the presentation  */
-        }
-
-        .main-picture
-        {
-            box-sizing: border-box;
-            width: 80%;
-            max-height: 600px;
-            border-radius: 20px;
-        }
-
-        .content
-        {
-            font-size: 18px
         }
     }
 </style>

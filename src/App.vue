@@ -34,11 +34,12 @@
 
     h2 {
         text-align: center;
-        margin-bottom: 5px;
+        margin-bottom: 1rem;
     }
     hr {
         border: #ffde59 solid 1px;
-        width: 38%;
+        width: 40%;
+        margin-bottom: 2rem;
     }
 }
 
@@ -46,11 +47,12 @@
 
     h2 {
         text-align: center;
-        margin-bottom: 5px;
+        margin-bottom: 1rem;
     }
     hr {
         border: #ffde59 solid 1px;
-        width: 25%;
+        width: 40%;
+        margin-bottom: 2rem;
     }
 }
 
@@ -58,11 +60,12 @@
 
     h2 {
         text-align: center;
-        margin-bottom: 5px;
+        margin-bottom: 1rem;
     }
     hr {
         border: #ffde59 solid 1px;
         width: 20%;
+        margin-bottom: 2rem;
     }
 }
 
@@ -70,11 +73,12 @@
 
     h2 {
         text-align: center;
-        margin-bottom: 5px;
+        margin-bottom: 1rem;
     }
     hr {
         border: #ffde59 solid 1px;
         width: 18%;
+        margin-bottom: 2rem;
     }
 }
 
@@ -82,11 +86,12 @@
 
     h2 {
         text-align: center;
-        margin-bottom: 5px;
+        margin-bottom: 1rem;
     }
     hr {
         border: #ffde59 solid 1px;
         width: 18%;
+        margin-bottom: 2rem;
     }
 }
 

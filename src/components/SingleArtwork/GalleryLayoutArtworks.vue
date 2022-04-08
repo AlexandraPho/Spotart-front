@@ -1,7 +1,7 @@
 <template>
 
     <router-link class="gallery_single_image" :to="{name: 'SingleArtwork', params: {id: id}}">
-        <img v-bind:src="image" width="300"/>
+        <img class="image" v-bind:src="image" width="300"/>
     </router-link>
 
 </template>
@@ -28,12 +28,30 @@ export default {
         border-radius: 10px;
         filter: drop-shadow(0 0 0.50rem black);
     }
-        
-    @media (max-width: 768px) {
 
-        .gallery_single_artwork
-        {
+    @media (min-width: 320px) and (max-width: 768px) {
+        .gallery_single_image {
             margin: 2rem;
+        }
+        .image {
+            margin: 1.5rem;
+            width: 20%;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 1200px) {
+        .image {
+            /*border-radius: 10px; */
+            /* filter: drop-shadow(0 0 0.50rem black); */
+            margin: 1.5rem;
+            width: 20%;
+        }
+    }
+    @media (min-width: 1200px) {
+        .gallery_single_image {
+            margin: 2rem;
+        }
+        .image {
+            margin: 1.5rem;
         }
     }
 </style>

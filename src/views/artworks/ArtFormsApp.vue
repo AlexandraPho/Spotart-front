@@ -1,6 +1,6 @@
 <template>
     <div>
-        <HeaderLayout/>
+        <HeaderCopy/>
         
         <ArtFormTitleLayout v-if="artform" :name="artform.name + 's'" />
 
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-    import HeaderLayout from '@/components/template/HeaderLayout.vue';
+    import HeaderCopy from '@/components/template/HeaderCopy.vue';
     import FooterLayout from '@/components/template/FooterLayout.vue';
     import ArtFormTitleLayout from '@/components/artforms/ArtFormTitleLayout.vue';
     import ArtworksListLayout from '@/components/artworks/ArtworksListLayout.vue';
@@ -22,7 +22,7 @@
     export default {
         name: 'ArtFormsApp',
         components: {
-            HeaderLayout,
+            HeaderCopy,
             ArtFormTitleLayout,
             ArtworksListLayout,
             FooterLayout

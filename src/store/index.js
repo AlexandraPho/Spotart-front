@@ -7,6 +7,7 @@ export default createStore({
         token: null,
         userID: null,
         userRole: null,
+        users : []
     },
     getters: {
         checkUserRole: (state) => (roles) => {
@@ -23,6 +24,10 @@ export default createStore({
         },
         setUserRole(state, newUserRole) {
             state.userRole = newUserRole;
+        },
+        deleteUser(state, userId) {
+            let users = state.users.filter(u => u.id != userId)
+            state.users = users;
         }
     },
     actions: {},

@@ -1,7 +1,7 @@
 <template>
     <section class="artists-zoom">
         <h2>Zoom sur nos Artistes</h2>
-        <hr><br><br>
+        <hr>
         <div class="artists">
             <ArtistLayout v-for="artist in artists" :key="artist.title" :id="artist.id" :imgSrc="artist._embedded['wp:featuredmedia'][0].source_url" :imgAlt="artist._embedded['wp:featuredmedia'][0].alt_text" :title="artist.title.rendered" />
         </div>
@@ -37,51 +37,47 @@
 
     @media (min-width: 320px) and (max-width: 768px) {
 
-        .artists
-        {
+        .artists {
             display: flex;
-            justify-content: center;
-            gap: 6.5vw;
-            flex-direction: row;
+            /* justify-content: center; */
+            /* gap: 6.5vw; */
+            /* flex-direction: row; */
             flex-wrap: wrap;
+            margin: 1rem;
         }
 
-        article
-        {
-            height: 70vw;
+        .article-artist {
+            text-align: center;
+            margin-bottom: 1.5rem;
         }
 
-        .artists img
-        {
-            width: 65vw;
+        .artists img {
+            width: 60%;
             height: 75%;
             border-radius: 10px;
             filter: drop-shadow(0 0 0.50rem black);
-            transition: all 0.3s;
+            /*transition: all 0.3s;*/
         }
 
-        .artists img:hover
-        {
-            width: 23em;
-            height: 23em;
-            border : 2px solid #000000;
+        .artists img:hover {
+            /*width: 23em;
+            height: 23em;*/
+            /*border : 2px solid #000000;*/
             box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
-            transform: scale(1.2);
+            /*transform: scale(1.2);*/
             cursor: pointer;
         }
 
-        .artists h3
-        {
+        .artists h3 {
             margin-top: 5px;
             text-align: center;
-            font-size: x-large;
+            /*font-size: x-large;*/
         }
     }
 
     @media (min-width: 768px) and (max-width: 1200px) {
 
-        .artists
-        {
+        .artists {
             display: flex;
             justify-content: center;
             gap: 6.5vw;
@@ -89,105 +85,92 @@
             flex-wrap: wrap;
         }
 
-        article
-        {
+        article {
             height: 60vw;
         }
 
-        .artists img
-        {
+        .artists img {
             width: 38vw;
             height: 75%;
             border-radius: 10px;
             filter: drop-shadow(0 0 0.50rem black);
-            transition: all 0.3s;
+            /*transition: all 0.3s;*/
         }
 
-        .artists img:hover
-        {
-            width: 25em;
-            height: 25em;
-            border : 2px solid #000000;
+        .artists img:hover {
+            /*width: 25em;
+            height: 25em;*/
+            /*border : 2px solid #000000;*/
             box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
-            transform: scale(1.2);
+            /*transform: scale(1.2);*/
             cursor: pointer;
         }
 
-        .artists h3
-        {
+        .artists h3 {
             margin-top: 5px;
             text-align: center;
-            font-size: x-large;
+            /*font-size: x-large;*/
         }
     }
 
-    @media (min-width: 1200px) and (max-width: 1600px) {
+    @media (min-width: 1200px) {
 
-        .artists
-        {
+        .artists {
             display: flex;
             justify-content: center;
             gap: 6.5vw;
         }
 
-        article
-        {
+        article {
             height: 25vw;
         }
 
-        .artists img
-        {
-            width: 18vw;
-            height: 75%;
+        .artists img {
+            width: 15vw;
+            height: 60%;
             border-radius: 10px;
             filter: drop-shadow(0 0 0.50rem black);
-            transition: all 0.3s;
+            /*transition: all 0.3s;*/
         }
 
-        .artists img:hover
-        {
-            width: 15em;
-            height: 15em;
-            border : 2px solid #000000;
+        .artists img:hover {
+            /*width: 15em;
+            height: 15em;*/
+            /*border : 2px solid #000000;*/
             box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
-            transform:scale(1.3);
+            /*transform:scale(1.3);*/
             cursor: pointer;
         }
 
-        .artists h3
-        {
+        .artists h3 {
             margin-top: 5px;
             text-align: center;
-            font-size: x-large;
+            /*font-size: x-large;*/
         }
     }
 
-    @media (min-width: 1600px) {
+    /*@media (min-width: 1600px) {
 
-        .artists
-        {
+        .artists {
             display: flex;
             justify-content: center;
             gap: 4vw;
         }
 
-        article
-        {
+        article {
             height: 25vw;
         }
 
-        .artists img
-        {
-            width: 15vw; /*todo Change to 18vw after presentation */
-            height: 65%; /*todo Change to 70% after presentation */
+        .artists img {
+            width: 15vw; 
+            height: 65%; 
             border-radius: 10px;
             filter: drop-shadow(0 0 0.50rem black);
             box-shadow: 8px 8px 10px 0 rgba(0,0,0,0.5);
             transition: all 0.3s;
         }
 
-        .artists img:hover
-        {
+        .artists img:hover {
             width: 17em;
             height: 17em;
             border : 2px solid #000000;
@@ -196,12 +179,11 @@
             cursor: pointer;
         }
 
-        .artists h3
-        {
+        .artists h3 {
             margin-top: 5px;
             text-align: center;
-            font-size: x-large;
+            /*font-size: x-large;
         }
-    }
+    }*/
 
 </style>

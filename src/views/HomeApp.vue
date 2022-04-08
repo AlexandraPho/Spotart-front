@@ -1,6 +1,8 @@
 <template>
     <div>
-        <HeaderLayout />
+        <!--<HeaderMenu />-->
+        <HeaderCopy />
+        <!--<HeaderLayout />-->
         <ArtworksListHomeLayout />
         <ArtistsListHomeLayout />
         <EventsListLayout />        
@@ -9,7 +11,9 @@
 </template>
 
 <script>
-    import HeaderLayout from '@/components/template/HeaderLayout.vue';
+    //import HeaderMenu from '@/components/template/HeaderMenu.vue';
+    import HeaderCopy from '@/components/template/HeaderCopy.vue';
+    //import HeaderLayout from '@/components/template/HeaderLayout.vue';
     import ArtworksListHomeLayout from '@/components/home/ArtworksListHomeLayout.vue';
     import ArtistsListHomeLayout from '@/components/home/ArtistsListHomeLayout.vue';
     import EventsListLayout from '@/components/home/EventsListLayout.vue';
@@ -18,7 +22,9 @@
     export default {
         name: 'HomeApp',
         components: {
-            HeaderLayout,
+            //HeaderMenu,
+            HeaderCopy,
+            //HeaderLayout,
             FooterLayout,
             ArtworksListHomeLayout,
             ArtistsListHomeLayout,

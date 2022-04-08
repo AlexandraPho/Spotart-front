@@ -97,6 +97,7 @@
 
                     if(data.type === "success") {
                         this.success = `Bienvenue, ${this.username}`;
+                        this.$router.push({ name: 'Login' })
                     } else {
                         this.errors.push(data.message);
                     }

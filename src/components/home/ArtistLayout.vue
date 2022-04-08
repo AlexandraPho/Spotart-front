@@ -1,5 +1,5 @@
 <template>
-    <article>
+    <article class="article-artist">
         <router-link :to="{name: 'ArtistProfile', params: { id: id }}">
             <img :src="imgSrc" :alt="imgAlt">
         </router-link>

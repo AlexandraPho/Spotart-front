@@ -2,45 +2,50 @@
     <main class="main-container">
         <h1>Modifier mon compte</h1>
         <form>
-            <div class="account_section_creation">
-            <fieldset class="right_section">
-                <div class="field">
-                    <label class="field__label">Adresse électronique :</label>
-                    <input class="field__input" type="text" v-bind:placeholder="email">
-                </div>
-                <div class="field">
-                    <label class="field__label">Mot de passe :</label>
-                    <input class="field__input" type="password" placeholder="Mot de passe">
-                </div>
-                <div class="field">
-                    <label class="field__label">Prénom :</label>
-                    <input class="field__input" type="text" v-bind:placeholder="name">
-                </div>
-                <div class="field">
-                    <label class="field__label">Nom :</label>
-                    <input class="field__input" type="text" v-bind:placeholder="lastname">
-                </div>
-                <div class="field">
-                    <label class="field__label">Pseudo :</label>
-                    <input class="field__input" type="text" v-bind:placeholder="nickname">
-                </div>
-            </fieldset>
-            <fieldset class="left_section">
-                <div class="field">
-                    <textarea v-bind:placeholder="description" class="field__input" rows="10" cols="50"></textarea>
-                </div>
-            </fieldset>
+            <div class="account_section_creation" >
+                <fieldset class="right_section">
+                    <div class="field">
+                        <label class="field__label">Adresse électronique :</label>
+                        <input class="field__input" type="text" v-bind:placeholder="email">
+                    </div>
+                    <div class="field">
+                        <label class="field__label">Mot de passe :</label>
+                        <input class="field__input" type="password" placeholder="Mot de passe">
+                    </div>
+                    <div class="field">
+                        <label class="field__label">Prénom :</label>
+                        <input class="field__input" type="text" v-bind:placeholder="name">
+                    </div>
+                    <div class="field">
+                        <label class="field__label">Nom :</label>
+                        <input class="field__input" type="text" v-bind:placeholder="lastname">
+                    </div>
+                    <div class="field">
+                        <label class="field__label">Pseudo :</label>
+                        <input class="field__input" type="text" v-bind:placeholder="nickname">
+                    </div>
+                </fieldset>
+                <fieldset class="left_section">
+                    <div class="field">
+                        <textarea v-bind:placeholder="description" class="field__input" rows="10" cols="50"></textarea>
+                    </div>
+                </fieldset>
+                    <div class="div_button_submit">      
+                        <button type="submit" class="button">Modifier votre compte</button>
+                    </div>
+                    <div class="div_button_submit">      
+                        <button type="submit" class="button" v-if="this.$store.state.token && this.$store.getters.checkUserRole(['subscriber', 'artist'])" v-on:click="deleteUser(id)">Supprimer votre compte</button>
+                    </div>
             </div> 
-                <div class="div_button_submit">      
-                    <button type="submit" class="button">Modifier votre compte</button>
-                </div>
         </form>
       </main>
 </template>
 
 <script>
+    //import UsersService from "@/services/UsersService.js";
 
     export default {
+       
         name: 'InformationsUserLayout',
         props: {
         name: String,
@@ -48,7 +53,30 @@
         description: String,
         email: String,
         lastname: String
-        }
+        },
+        data() {
+            return {
+                user:null
+            }
+        },
+        mounted() {
+            //this.getUserbyId()
+        },
+
+        methods: {
+            //getUserbyId() {
+                //UsersService.getUserbyId().then(
+                    //(response) => {
+                        //console.log(response.data);
+                        //this.users = response.data;
+                    //}
+                //)
+            //},
+            deleteUser(id) {
+                this.$delete(this.users, id);
+            },
+        },
+        
     }
 
 </script>

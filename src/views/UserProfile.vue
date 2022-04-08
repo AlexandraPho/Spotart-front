@@ -1,6 +1,6 @@
 <template>
   <div>
-<HeaderLayout />
+<HeaderCopy />
 <InformationsUserLayout v-if="user" v-bind:email="user.email" v-bind:nickname="user.nickname" v-bind:name="user.name" v-bind:lastname="user.last_name" v-bind:description="user.description"/>
 <FavouriteTitle />
 <FooterLayout />
@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import HeaderLayout from '@/components/template/HeaderLayout.vue';
+import HeaderCopy from '@/components/template/HeaderCopy.vue';
 import FooterLayout from '@/components/template/FooterLayout.vue';
 import InformationsUserLayout from '@/components/UserProfile/InformationsUserLayout.vue'
 import FavouriteTitle from '@/components/UserProfile/FavouriteTitle.vue'
@@ -17,7 +17,7 @@ import UsersService from '@/services/UsersService.js';
 export default {
     name: 'UserProfile',
     components: {
-    HeaderLayout,
+    HeaderCopy,
     FooterLayout,
     InformationsUserLayout, 
     FavouriteTitle

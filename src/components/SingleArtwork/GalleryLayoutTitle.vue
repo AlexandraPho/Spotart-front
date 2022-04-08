@@ -1,8 +1,8 @@
 <template>
-      <section class="related_work">
-        <header>
-            <h1> Autre {{ category }}s</h1>
-        </header>
+      <section class="related-work">
+        <div class="title">
+            <h1> Autres {{ category }}s</h1>
+        </div>
         <div class="gallery">
             <GalleryLayoutArtworks v-bind:image="artwork._embedded['wp:featuredmedia'][0].source_url" v-bind:id="artwork.id" v-bind:title="artwork.slug" v-for="artwork in artworks" v-bind:key="artwork.id" />
         </div>
@@ -59,29 +59,51 @@ export default {
         width: 40%;
         content: "";
     }
-    .related_work {
-        text-align: center;
-        margin: 1rem;
-    }
     
-    h1 {
-        font-size: 30px;
-        padding-bottom: 5px;
+    
+    @media (min-width: 320px) and (max-width: 768px) {
+        .related-work {
+            padding: 0.5rem;
+        }
+        .title {
+            text-align: center;
+        }
+        .gallery {
+            /*display: flex; */
+            text-align: center;
+            /* flex-direction: row;*/
+        }
     }
-
-    @media (min-width: 768px) {
+    @media (min-width: 768px) and (max-width: 1200px) {
+        .related-work {
+            text-align: center;
+        }
         .gallery {
             margin: 1rem;
-            display: flex;
-            justify-content: space-evenly;
-            padding-bottom: 10px;
+            text-align: center;
+        }
+        .title {
+            text-align: center;
         }
     }
-    
-    @media (max-width: 768px) {
+    @media (min-width: 1200px) {
+        .related-work {
+            text-align: center;
+            margin: 1rem;
+            padding: 1rem;
+        }
+        .title {
+            margin-bottom: 2rem;
+        }
         .gallery {
-           display: block;
+            /*margin: 1rem; */
+            /*display: flex;*/
+            justify-content: space-between;
+            padding-bottom: 1rem;   
+        }
+        h1 {
+            font-size: 30px;
+            padding-bottom: 5px;
         }
     }
-
 </style>

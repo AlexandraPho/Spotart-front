@@ -1,6 +1,6 @@
 <template>
     <div>
-        <HeaderLayout/>
+        <HeaderCopy/>
         <UpdateArtworkLayout/>
         <FooterLayout/>
     </div>
@@ -8,14 +8,14 @@
 
 <script>
     import UpdateArtworkLayout from '@/components/artworks/UpdateArtworkLayout.vue'
-    import HeaderLayout from '@/components/template/HeaderLayout.vue'
+    import HeaderCopy from '@/components/template/HeaderCopy.vue'
     import FooterLayout from '@/components/template/FooterLayout.vue'
 
     export default {
         name: 'UpdateArtworkApp',
         components: { 
             UpdateArtworkLayout,
-            HeaderLayout,
+            HeaderCopy,
             FooterLayout
         },
 

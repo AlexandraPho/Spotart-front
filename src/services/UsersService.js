@@ -52,6 +52,19 @@ export default {
         return apiClient.get(`wp/v2/user/${id}`)
     },
 
+    delete(id, callback) {
+        apiClient.delete(`wp/v2/user/${id}`, {
+            headers: {
+                'Authorization': 'Bearer ' + store.state.token
+            }
+        })
+        .then(
+            (response) => {
+                callback(response);
+            }
+        )
+    },
+
     connect(data, callback) {
         return apiClient.post('/jwt-auth/v1/token', data)
         .catch(

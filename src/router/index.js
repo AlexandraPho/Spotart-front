@@ -19,6 +19,11 @@ const routes = [
         component: () => import('../views/user/RegistrationApp.vue')
     },
     {
+        path: '/artist/registration',
+        name: 'ArtistRegistration',
+        component: () => import('../views/user/RegistrationArtistApp.vue')
+    },
+    {
         path: '/artwork/:id',
         name: 'SingleArtwork',
         component: () => import('../views/SingleArtwork.vue')
@@ -66,6 +71,11 @@ const routes = [
     {
         path: '/user/:id',
         name: 'UserAccount',
+        component: () => import('../views/UserProfile.vue')
+    },
+    {
+        path: '/user/delete/:id',
+        name: 'UserAccountDelete',
         component: () => import('../views/UserProfile.vue')
     },
     {

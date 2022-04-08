@@ -138,7 +138,7 @@ export default {
         .connexion-link
         {
             color: white;
-            font-size: large;
+            font-size: 1rem;
             text-decoration: none;
         }
 
@@ -175,7 +175,7 @@ export default {
         }
     }
 
-    @media (min-width: 1200px) and (max-width: 1440px) {
+    @media (min-width: 1200px) {
 
         header
         {
@@ -300,7 +300,7 @@ export default {
         }
     }
 
-    @media (min-width: 1440px) and (max-width: 1600px) {
+    /*@media (min-width: 1440px) and (max-width: 1600px) {
 
         header
         {
@@ -548,6 +548,6 @@ export default {
             color: black;
             cursor: pointer;
         }
-    }
+    }*/
 
 </style>
