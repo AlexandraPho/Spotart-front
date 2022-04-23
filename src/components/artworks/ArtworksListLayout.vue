@@ -1,18 +1,17 @@
 <template>
-    <div class="artist-artwork">
-        <div class="photos-titles">
-            <router-link :to="{ name: 'SingleArtwork', params: { id: id }}">
-                <img v-bind:src="image" v-bind:alt="title">
-                <div class="overlay-author-title">
-                    <p class="artwork-title" v-html="title"></p>
-                    <p class="artwork-author">{{ author }}</p>
-                </div>
-            </router-link>
+    <section class="latest-artworks">
+        <h2>Les dernières Oeuvres</h2>
+        <hr>
+        <div class="artworks">
+            <ArtworkLayoutArtforms v-for="artwork in artworks" :key="artwork.title" :id="artwork.id" :imgSrc="artwork._embedded['wp:featuredmedia'][0].source_url" :imgAlt="artwork._embedded['wp:featuredmedia'][0].alt_text" :title="artwork.title.rendered" />
         </div>
-    </div>
+    </section>
 </template>
 
 <script>
+
+import ArtworkLayoutArtforms from '@/components/home/ArtworkLayout.vue';
+
     export default {
         name: 'ArtworksListLayout',
         props: {
@@ -20,6 +19,9 @@
             image: String,
             author: String,
             id: Number
+        },
+        components: {
+            ArtworkLayoutArtforms
         },
     }
     
@@ -68,12 +70,12 @@
         display: flex;
         margin-top: 0.2em;
         justify-content: center;
-    } */
+    } 
 
     .artist-artwork {
         display: inline-flex;
         justify-content: space-around;
-       /* margin: 1.5em 3em 0.2em 9em;*/
+       /* margin: 1.5em 3em 0.2em 9em;
         gap: 7vw;
         height: 30vh;
         position: relative;
@@ -116,10 +118,14 @@
         cursor: pointer;
         opacity: 1;
     }
+*/
+
     @media (min-width: 320px) and (max-width: 768px){
-        .artist-artwork {
-            position: relative;
-            margin: 1.5em 0.5em 0.5em 1.9em;
+        .artist-artwork 
+        {
+            display: inline-flex;
+            justify-content: space-around;
+            margin: 1.5em 3em 0.2em 5em;
             
         }
         .artist-artwork img {

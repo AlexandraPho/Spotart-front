@@ -37,7 +37,8 @@
 
     @media (min-width: 320px) and (max-width: 768px) {
 
-        .artists {
+        .artists 
+        {
             display: flex;
             align-items: flex-end;
             justify-content: center;
@@ -49,13 +50,15 @@
             /* text-align: center;*/
         }
 
-        .article-artist {
+        .article-artist 
+        {
             width: 40%;
             margin-bottom: 1.5rem;
             text-align: center;
         }
 
-        .artists img {
+        .artists img 
+        {
             width: 8rem;
             border-radius: 0.2rem;
             filter: drop-shadow(0 0 0.2rem black);
@@ -64,7 +67,8 @@
             /* margin: 0.5rem; */
         }
 
-        .artists img:hover {
+        .artists img:hover 
+        {
             cursor: pointer;
             box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
             /*width: 23em;
@@ -73,16 +77,18 @@
             /*transform: scale(1.2);*/
         }
 
-        .artists h3 {
-            margin-top: 5px;
+        .artists h3 
+        {
+            margin-top: 0.2rem;
             text-align: center;
-            /*font-size: x-large;*/
+            /*font-size: large;*/
         }
     }
 
     @media (min-width: 768px) and (max-width: 1200px) {
 
-        .artists {
+        .artists 
+        {
             display: flex;
             justify-content: center;
             gap: 6rem;
@@ -91,13 +97,15 @@
             /* flex-direction: row; */
         }
 
-        article {
+        article 
+        {
             width: 30%;
             margin-bottom: 1rem;
             text-align: center;
         }
 
-        .artists img {
+        .artists img 
+        {
             width: 14rem;
             border-radius: 10px;
             filter: drop-shadow(0 0 0.50rem black);
@@ -105,7 +113,8 @@
             /* height: 75%; */
         }
 
-        .artists img:hover {
+        .artists img:hover 
+        {
             box-shadow: 8px 8px 10px 0 rgba(0,0,0,0.5);
             cursor: pointer;
            /* width: 25em;
@@ -114,7 +123,8 @@
             /*transform:scale(1.2);*/
         }
 
-        .artists h3 {
+        .artists h3 
+        {
             margin-top: 0.2rem;
             text-align: center;
             font-size: 1.5rem;
@@ -123,28 +133,29 @@
 
     @media (min-width: 1200px) {
 
-        .artists {
+        .artists 
+        {
             display: flex;
             justify-content: center;
             align-items: flex-end;
-            gap: 7rem;
         }
 
-        article {
-            /*width: 20%; */
-            margin-bottom: 1.5rem;
+        article 
+        {
+            width: 30%;
+            margin-bottom: 1rem;
             text-align: center;
         }
 
-        .artists img {
-            width: 16rem;
-            border-radius: 10px;
+        .artists img 
+        {
+            width: 80%;
+            border-radius: 1rem;
             filter: drop-shadow(0 0 0.50rem black);
-            /* transition: all 0.3s;
-            /* height: 75%; */
         }
 
-        .artists img:hover {
+        .artists img:hover 
+        {
             cursor: pointer;
             box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
             /*width: 15em;
@@ -153,48 +164,11 @@
             /*transform:scale(1.3);*/
         }
 
-        .artists h3 {
+        .artists h3 
+        {
             margin-top: 0.2rem;
             text-align: center;
             font-size: x-large;
         }
     }
-
-    /*@media (min-width: 1600px) {
-
-        .artists {
-            display: flex;
-            justify-content: center;
-            gap: 4vw;
-        }
-
-        article {
-            height: 25vw;
-        }
-
-        .artists img {
-            width: 15vw; 
-            height: 65%; 
-            border-radius: 10px;
-            filter: drop-shadow(0 0 0.50rem black);
-            box-shadow: 8px 8px 10px 0 rgba(0,0,0,0.5);
-            transition: all 0.3s;
-        }
-
-        .artists img:hover {
-            width: 17em;
-            height: 17em;
-            border : 2px solid #000000;
-            box-shadow: 8px 8px 10px 0 rgba(0,0,0,0.5);
-            transform: scale(1.3);
-            cursor: pointer;
-        }
-
-        .artists h3 {
-            margin-top: 5px;
-            text-align: center;
-            /*font-size: x-large;
-        }
-    }*/
-
 </style>
